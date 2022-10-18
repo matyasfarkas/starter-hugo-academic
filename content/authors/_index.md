@@ -54,7 +54,7 @@ social:
 #  link: https://twitter.com/GeorgeCushen
 - icon: google-scholar
   icon_pack: ai
-  link:https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
+  link: https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
 - icon: github
   icon_pack: fab
   link: https://github.com/matyasfarkas
