@@ -44,7 +44,7 @@ experience:
     
   - title: Research Assistant at the Institute for Monetary and Financial Stability
     company: Goethe University Frankfurt, IMFS
-    company_url: 'https://www.imfs-frankfurt.de/'
+    company_url: 'https://www.macromodelbase.com/'
     company_logo: mmb-logo
     location: Frankfurt am Main
     date_start: '2016-01-01'
