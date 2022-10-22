@@ -62,9 +62,8 @@ experience:
     date_start: '2017-09-01'
     date_end: '2018-12-31'
     description: |2-
-    
-     Consultant in DG-MP, Monetary Policy Strategy Division:
-     Operationalization of policy tool to assess the balance of risks around ECB projections. Exploration of methodologies to identify and quantify skewness.
+    Consultant in DG-MP, Monetary Policy Strategy Division:
+    Operationalization of policy tool to assess the balance of risks around ECB projections. Exploration of methodologies to identify and quantify skewness.
 - title: 	Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
@@ -73,7 +72,6 @@ experience:
     date_start: '2016-09-01'
     date_end: '2017-03-31'
     description: |2-
-    
     PhD Trainee in DG-MP, Monetary Policy Strategy Division:
     Development of policy tool to assess balance of risks around ECB projections. Model selection based on forecast performance evaluation.
  - title: 	Trainee 
@@ -104,7 +102,7 @@ experience:
     date_start: '2008-02-01'
     date_end: '2011-07-30'
     description: |2-
-Tutor at the Department of Informatics, Department of Mathematics, Department of Macroeconomics and Department of Investments and Corporate Finance $\mid$ Budapest, Hungaryl
+Tutor at the Department of Informatics, Department of Mathematics, Department of Macroeconomics and Department of Investments and Corporate Finance:
 Courses taught: Foundations of Informatics (MS Office, Databases), Foundations of Mathematics I. and II. (Calculus, Probability theory); Macroeconomics; Advanced Corporate  Finance II.
 
 design:
