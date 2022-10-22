@@ -62,7 +62,7 @@ experience:
     date_start: '2017-09-01'
     date_end: '2018-12-31'
     description: |2-
-       Consultant in DG-MP, Monetary Policy Strategy Division       
+       Consultant in DG-MP, Monetary Policy Strategy Division:      
        *   Operationalization of policy tool to assess the balance of risks around ECB projections.
        *   Exploration of methodologies to identify and quantify skewness.
       
