@@ -78,7 +78,7 @@ experience:
        *   Development of policy tool to assess the balance of risks around ECB projections.
        *   Forecast based model selection.
       
-  # - title: 	Masters Trainee 
+  - title: 	Masters Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
     company_logo: logo_only
