@@ -30,7 +30,6 @@ experience:
     date_start: '2018-09-01'
     date_end: ''
     description: |2-
-       
        DG-MP, Monetary Policy Strategy Division: 
        *   AnalysingOperationalizing favorable financing conditions,
        *   SMA coordination,
@@ -51,7 +50,6 @@ experience:
     date_start: '2016-01-01'
     date_end: '2018-08-31'
     description:  |2-
-    
     Developer of the Macroeconomic Model Data Base: Lead developer of the MMB, platform development, for forecast performance comparison. Research on monetary policy transmission in heterogeneous expectations based DSGE.
 - title: 	Consultant 
     company: European Central Bank
