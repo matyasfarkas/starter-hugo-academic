@@ -39,7 +39,7 @@ experience:
        DG-E, Forecasting and Policy Modelling Division:
        *   Development of the adaptive learning version of the NAWMII,
        *   climate change modelling with adaptive expectations.
-       Graduate Programme Participant
+       Graduate Programme Participant:
        * DG-R, Monetary Policy Research Division: DSGE based theoretical contribution to the discussion paper: On the Effectiveness of Macroprudential Policy 
        * DG-MIP, Market Infrastructure Management Division: Target Analytical Team
     
@@ -51,8 +51,9 @@ experience:
     date_start: '2016-01-01'
     date_end: '2018-08-31'
     description:  |2-
-    Member of the Macroeconomic Model Data Base: Lead developer of the MMB, platform development, for forecast performance comparison.
-    Research on monetary policy transmission in heterogeneous expectations based DSGE.
+    
+    Developer of the Macroeconomic Model Data Base: 
+    Lead developer of the MMB, platform development, for forecast performance comparison. Research on monetary policy transmission in heterogeneous expectations based DSGE.
     
 - title: 	Consultant 
     company: European Central Bank
@@ -73,6 +74,7 @@ experience:
     date_start: '2016-09-01'
     date_end: '2017-03-31'
     description: |2-
+    
     PhD Trainee in DG-MP, Monetary Policy Strategy Division:
     Development of policy tool to assess balance of risks around ECB projections. Model selection based on forecast performance evaluation.
     
