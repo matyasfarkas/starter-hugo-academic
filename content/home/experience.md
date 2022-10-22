@@ -51,6 +51,7 @@ experience:
     date_end: '2018-08-31'
     description:  |2-
       Developer of the Macroeconomic Model Data Base: Lead developer of the MMB, platform development, for forecast performance comparison. Research on monetary policy transmission in heterogeneous expectations based DSGE.
+      
   - title: 	Consultant 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
@@ -60,6 +61,7 @@ experience:
     date_end: '2018-12-31'
     description: |2-
       Consultant in DG-MP, Monetary Policy Strategy Division: Operationalization of policy tool to assess the balance of risks around ECB projections. Exploration of methodologies to identify and quantify skewness.
+      
   - title: 	Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
@@ -69,6 +71,7 @@ experience:
     date_end: '2017-03-31'
     description: |2-
       PhD Trainee in DG-MP, Monetary Policy Strategy Division: Development of policy tool to assess balance of risks around ECB projections. Model selection based on forecast performance evaluation.
+      
    - title: 	Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
@@ -78,6 +81,7 @@ experience:
     date_end: '2013-06-31'
     description: |2-
       Masters Trainee in DG-I, External Developments Division: Data and computational support to colleagues; forecast evaluation of the ESCB's forecasts; maintenance of routines and codes, development of emerging markets database.
+      
   - title: 	Trainee 
     company: European Parliament
     company_url: 'https://www.europarl.europa.eu/portal/en'
@@ -87,6 +91,7 @@ experience:
     date_end: '2011-11-30'
     description: |2-
       Trainee at the office of Dr. Alajos Mészáros (MEP): Reporting on Committee sessions, meetings, research on background material for the topics: Six pack of the EU, energy efficiency directive, legal regulation of property rights, speech-writing.
+      
   - title: 	Tutor 
     company: Corvinus University Budapest
     company_url: 'https://www.uni-corvinus.hu/'
