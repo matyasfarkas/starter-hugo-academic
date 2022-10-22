@@ -108,7 +108,7 @@ experience:
   - title: 	Tutor 
     company: Corvinus University Budapest
     company_url: 'https://www.uni-corvinus.hu/'
-    company_logo:
+    company_logo: corvinus
     location: Budapest
     date_start: '2008-02-01'
     date_end: '2011-07-30'
