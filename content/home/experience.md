@@ -46,7 +46,7 @@ experience:
     company: Goethe University Frankfurt, IMFS
     company_url: 'https://www.imfs-frankfurt.de/'
     company_logo: mmb-logo
-    location: California
+    location: Frankfurt am Main
     date_start: '2016-01-01'
     date_end: '2018-08-31'
     description: |2-
@@ -66,7 +66,7 @@ experience:
        *   Operationalization of policy tool to assess the balance of risks around ECB projections.
        *   Exploration of methodologies to identify and quantify skewness.
       
- # - title: 	PhD Trainee 
+  - title: 	PhD Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
     company_logo: logo_only
