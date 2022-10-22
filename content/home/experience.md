@@ -66,7 +66,7 @@ experience:
        *   Operationalization of policy tool to assess the balance of risks around ECB projections.
        *   Exploration of methodologies to identify and quantify skewness.
       
-  - title: 	Trainee 
+  - title: 	PhD Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
     company_logo: logo_only
@@ -74,10 +74,10 @@ experience:
     date_start: '2016-09-01'
     date_end: '2017-03-31'
     description: |2-
-       PhD Trainee in DG-MP, Monetary Policy Strategy Division:
+       DG-MP, Monetary Policy Strategy Division: 
        *   Development of policy tool to assess balance of risks around ECB projections. Model selection based on forecast performance evaluation.
       
-   - title: 	Trainee 
+   - title: 	Masters Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
     company_logo: logo_only
@@ -85,7 +85,7 @@ experience:
     date_start: '2012-11-01'
     date_end: '2013-06-31'
     description: |2-
-       Masters Trainee in DG-I, External Developments Division: 
+       DG-I, External Developments Division: 
        *   Data and computational support to colleagues; 
        *   forecast evaluation of the ESCB's forecasts; 
        *   maintenance of routines and codes,
