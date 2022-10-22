@@ -74,8 +74,9 @@ experience:
     date_start: '2016-09-01'
     date_end: '2017-03-31'
     description: |2-
-       DG-MP, Monetary Policy Strategy Division: 
-       *   Development of policy tool to assess balance of risks around ECB projections. Model selection based on forecast performance evaluation.
+       Consultant in DG-MP, Monetary Policy Strategy Division       
+       *   Development of policy tool to assess the balance of risks around ECB projections.
+       *   Forecast based model selection.
       
    - title: 	Masters Trainee 
     company: European Central Bank
