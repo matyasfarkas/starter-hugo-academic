@@ -96,7 +96,7 @@ experience:
     company: European Parliament
     company_url: 'https://www.europarl.europa.eu/portal/en'
     company_logo: European_Parliament_logo
-    location: Frankfurt am Main
+    location: Bruxelles
     date_start: '2011-09-01'
     date_end: '2011-11-30'
     description: |2-
