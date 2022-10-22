@@ -66,7 +66,7 @@ experience:
        *   Operationalization of policy tool to assess the balance of risks around ECB projections.
        *   Exploration of methodologies to identify and quantify skewness.
       
-  - title: 	PhD Trainee 
+ # - title: 	PhD Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
     company_logo: logo_only
@@ -78,7 +78,7 @@ experience:
        *   Development of policy tool to assess the balance of risks around ECB projections.
        *   Forecast based model selection.
       
-   - title: 	Masters Trainee 
+  # - title: 	Masters Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
     company_logo: logo_only
@@ -92,7 +92,7 @@ experience:
        *   maintenance of routines and codes,
        *   development of emerging markets database.
       
-  - title: 	Trainee 
+  # - title: 	Trainee 
     company: European Parliament
     company_url: 'https://www.europarl.europa.eu/portal/en'
     company_logo: European_Parliament_logo
@@ -105,7 +105,7 @@ experience:
        *   research on background material for the topics: Six pack of the EU, energy efficiency directive, legal regulation of property rights.        
        *   Speech-writing.
       
-  - title: 	Tutor 
+  # - title: 	Tutor 
     company: Corvinus University Budapest
     company_url: 'https://www.uni-corvinus.hu/'
     company_logo:
