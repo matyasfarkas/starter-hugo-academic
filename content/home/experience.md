@@ -84,7 +84,7 @@ experience:
     company_logo: logo_only
     location: Frankfurt am Main
     date_start: '2012-11-01'
-    date_end: '2013-06-31'
+    date_end: '2013-06-30'
     description: |2-
        DG-I, External Developments Division: 
        *   Data and computational support to colleagues; 
