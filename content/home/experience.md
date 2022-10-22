@@ -105,7 +105,7 @@ experience:
        *   research on background material for the topics: Six pack of the EU, energy efficiency directive, legal regulation of property rights.        
        *   Speech-writing.
       
-  # - title: 	Tutor 
+  - title: 	Tutor 
     company: Corvinus University Budapest
     company_url: 'https://www.uni-corvinus.hu/'
     company_logo:
