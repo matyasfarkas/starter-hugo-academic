@@ -92,7 +92,7 @@ experience:
        *   maintenance of routines and codes,
        *   development of emerging markets database.
       
-  # - title: 	Trainee 
+  - title: 	Trainee 
     company: European Parliament
     company_url: 'https://www.europarl.europa.eu/portal/en'
     company_logo: European_Parliament_logo
