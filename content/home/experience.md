@@ -45,7 +45,7 @@ experience:
     
   - title: Research Assistant at the Institute for Monetary and Financial Stability
     company: Goethe University Frankfurt, IMFS
-    company_url: ''
+    company_url: 'https://www.imfs-frankfurt.de/'
     company_logo: mmb-logo
     location: California
     date_start: '2016-01-01'
@@ -87,9 +87,9 @@ experience:
     Masters Trainee in DG-I, External Developments Division:
     Data and computational support to colleagues; forecast evaluation of the ESCB's forecasts; maintenance of routines and codes, development of emerging markets database.
     
-     - title: 	Trainee 
+- title: 	Trainee 
     company: European Parliament
-    company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
+    company_url: 'https://www.europarl.europa.eu/portal/en'
     company_logo: European_Parliament_logo
     location: Frankfurt am Main
     date_start: '2011-09-01'
@@ -98,7 +98,17 @@ experience:
     Trainee at the office of Dr. Alajos Mészáros (MEP):
     Reporting on Committee sessions, meetings, research on background material for the topics: Six pack of the EU, energy efficiency directive, legal regulation of property rights, speech-writing.
 
-    
+- title: 	Tutor 
+    company: Corvinus University Budapest
+    company_url: 'https://www.uni-corvinus.hu/'
+    company_logo:
+    location: Budapest
+    date_start: '2008-02-01'
+    date_end: '2011-07-30'
+    description: |2-
+Tutor at the Department of Informatics, Department of Mathematics, Department of Macroeconomics and Department of Investments and Corporate Finance $\mid$ Budapest, Hungaryl
+Courses taught: Foundations of Informatics (MS Office, Databases), Foundations of Mathematics I. and II. (Calculus, Probability theory); Macroeconomics; Advanced Corporate  Finance II.
+
 
 design:
   columns: '2'
