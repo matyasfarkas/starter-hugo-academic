@@ -25,17 +25,17 @@ experience:
   - title: 	Economist
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
-    company_logo: org-gc
+    company_logo: logo_only
     location: Frankfurt am Main
     date_start: '2018-09-01'
     date_end: ''
     description: |2-
        
        DG-MP, Monetary Policy Strategy Division: 
-       *   AnalysingOperationalizing favorable financing conditions, 
+       *   AnalysingOperationalizing favorable financing conditions,
        *   SMA coordination,
        *   Risk of inflation expectation de-anchoring modelling,
-		   *   DSGE modelling, monetary policy book preparation. 
+       *   DSGE modelling, monetary policy book preparation. 
 		   DG-E, Forecasting and Policy Modelling Division:
        *   Development of the adaptive learning version of the NAWMII,
        *   climate change modelling with adaptive expectations.
@@ -46,7 +46,7 @@ experience:
   - title: Research Assistant at the Institute for Monetary and Financial Stability
     company: Goethe University Frankfurt, IMFS
     company_url: ''
-    company_logo: org-x
+    company_logo: mmb-logo
     location: California
     date_start: '2016-01-01'
     date_end: '2018-08-31'
@@ -57,7 +57,7 @@ experience:
 - title: 	Consultant 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
-    company_logo: org-gc
+    company_logo: logo_only
     location: Frankfurt am Main
     date_start: '2017-09-01'
     date_end: '2018-12-31'
@@ -68,7 +68,7 @@ experience:
 - title: 	Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
-    company_logo: org-gc
+    company_logo: logo_only
     location: Frankfurt am Main
     date_start: '2016-09-01'
     date_end: '2017-03-31'
@@ -79,21 +79,21 @@ experience:
  - title: 	Trainee 
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
-    company_logo: org-gc
+    company_logo: logo_only
     location: Frankfurt am Main
-    date_start: '2016-09-01'
-    date_end: '2017-03-31'
+    date_start: '2012-11-01'
+    date_end: '2013-06-31'
     description: |2-
     Masters Trainee in DG-I, External Developments Division:
     Data and computational support to colleagues; forecast evaluation of the ESCB's forecasts; maintenance of routines and codes, development of emerging markets database.
     
      - title: 	Trainee 
-    company: European Central Bank
+    company: European Parliament
     company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
-    company_logo: org-gc
+    company_logo: European_Parliament_logo
     location: Frankfurt am Main
-    date_start: '2016-09-01'
-    date_end: '2017-03-31'
+    date_start: '2011-09-01'
+    date_end: '2011-11-30'
     description: |2-
     Trainee at the office of Dr. Alajos Mészáros (MEP):
     Reporting on Committee sessions, meetings, research on background material for the topics: Six pack of the EU, energy efficiency directive, legal regulation of property rights, speech-writing.
