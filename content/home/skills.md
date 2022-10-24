@@ -16,6 +16,6 @@ feature:
   - description: null
     icon: code
     icon_pack: fas
-    name: Code
+    name: Software Development
 widget_id: skills
 ---
