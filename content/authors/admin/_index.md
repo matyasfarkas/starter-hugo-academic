@@ -1,7 +1,7 @@
 ---
 organizations:
   - name: European Central Bank
-    url: https://www.ecb.europa.eu/
+    url: https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
 superuser: true
 authors:
   - admin
