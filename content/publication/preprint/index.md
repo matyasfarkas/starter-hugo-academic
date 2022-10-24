@@ -17,11 +17,7 @@ publication_types: ["3"]
 publication: "ECB Working Paper No 2559"
 publication_short: ""
 
-abstract: Since the global financial crises, many countries have implemented macroprudential
-policies with the aim to render the financial system more resilient to shocks and limit
-the procyclicality of the financial system. We present theoretical and empirical
-evidence on the effectiveness of macroprudential policy, on both, financial stability and
-economic growth focussing on capital measures and borrower-based measures. 
+abstract: Since the global financial crises, many countries have implemented macroprudential policies with the aim to render the financial system more resilient to shocks and limit the procyclicality of the financial system. We present theoretical and empirical evidence on the effectiveness of macroprudential policy, on both, financial stability and economic growth focussing on capital measures and borrower-based measures. 
 
 # Summary. An optional shortened abstract.
 summary: This paper presents theoretical and empirical evidence on the effectiveness of macroprudential policy, with special emphasis on the European Union. We find clear evidence that macroprudential policies have a positive impact on financial stability, and long-term growth.
