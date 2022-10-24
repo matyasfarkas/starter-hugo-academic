@@ -8,11 +8,11 @@ feature:
   - description: null
     icon: open-data 
     icon_pack: ai 
-    name: Policy
+    name: Monetary Policy
   - description: null
     icon: chart-line
     icon_pack: fas
-    name: Econometrics
+    name: Macroeconometrics
   - description: null
     icon: code
     icon_pack: fas
