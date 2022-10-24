@@ -19,7 +19,7 @@ social:
     icon_pack: fas
     link: mailto:Matyas.Farkas@ecb.europa.eu
   - icon: euro-sign-solid
-    icon_pack: ai
+    icon_pack: custom
     link: https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
   - icon: github
     icon_pack: fab
