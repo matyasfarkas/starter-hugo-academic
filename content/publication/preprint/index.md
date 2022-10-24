@@ -1,8 +1,7 @@
 ---
-title: "An example preprint / working paper"
-authors:
-- admin
-date: "2019-04-07T00:00:00Z"
+title: "On the effectiveness of macroprudential policy"
+authors: Miguel Ampudia, Marco Lo Duca, Mátyás Farkas, Gabriel Pérez-Quiós, Mara Pirovano, Gerhard Rünstler, Eugen Tereanu 
+date: "2021-05-01T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -15,13 +14,17 @@ publishDate: "2017-01-01T00:00:00Z"
 publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
+publication: "ECB Working Paper No 2559"
 publication_short: ""
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Since the global financial crises, many countries have implemented macroprudential
+policies with the aim to render the financial system more resilient to shocks and limit
+the procyclicality of the financial system. We present theoretical and empirical
+evidence on the effectiveness of macroprudential policy, on both, financial stability and
+economic growth focussing on capital measures and borrower-based measures. 
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: This paper presents theoretical and empirical evidence on the effectiveness of macroprudential policy, with special emphasis on the European Union. We find clear evidence that macroprudential policies have a positive impact on financial stability, and long-term growth.
 
 tags:
 - Source Themes
@@ -30,19 +33,19 @@ featured: false
 links:
 - name: Custom Link
   url: http://example.org
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-url_dataset: '#'
-url_poster: '#'
-url_project: ''
-url_slides: ''
-url_source: '#'
-url_video: '#'
+url_pdf: https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2559~15125406fd.en.pdf?4bf9f2baccb8cc4659b796a8e491185c
+# url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
+# url_dataset: '#'
+# url_poster: '#'
+# url_project: ''
+# url_slides: ''
+# url_source: '#'
+# url_video: '#'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: 'Transmission of capital-based measures on credit volatility in the 3D model'
   focal_point: ""
   preview_only: false
 
@@ -51,19 +54,14 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-- internal-project
+# projects:
+# - internal-project
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+# slides: example
 ---
 
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
-
-Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).
