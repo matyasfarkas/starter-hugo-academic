@@ -27,8 +27,8 @@ tags:
 featured: false
 
 links:
-- name: Custom Link
-  url: http://example.org
+# - name: Custom Link
+#  url: http://example.org
 url_pdf: https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2559~15125406fd.en.pdf?4bf9f2baccb8cc4659b796a8e491185c
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: '#'
