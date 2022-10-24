@@ -41,7 +41,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Transmission of capital-based measures on credit volatility in the 3D model'
+  caption: 'Endogenous belief switching in a 3 equation NK model'
   focal_point: ""
   preview_only: false
 
