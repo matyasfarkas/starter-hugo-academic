@@ -5,17 +5,17 @@ weight: 10
 title: Skills
 subtitle: null
 feature:
-  - description: 90%
-    icon: r-project
-    icon_pack: fab
-    name: R
-  - description: 100%
+  - description: 
+    icon: custom
+    icon_pack: euro-sign-solid
+    name: Policy
+  - description: 
     icon: chart-line
     icon_pack: fas
-    name: Statistics
-  - description: 10%
-    icon: camera-retro
+    name: Econometrics
+  - description: 
+    icon: code
     icon_pack: fas
-    name: Photography
+    name: Code
 widget_id: skills
 ---
