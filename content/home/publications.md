@@ -3,7 +3,7 @@ widget: collection
 widget_id: Publications
 headless: true
 weight: 90
-title: Publications
+title: Research
 subtitle: ""
 content:
   filters:
