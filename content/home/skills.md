@@ -6,8 +6,8 @@ title: Skills
 subtitle: null
 feature:
   - description: null
-    icon: custom
-    icon_pack: euro-sign-solid
+    icon: ai
+    icon_pack: open-data
     name: Policy
   - description: null
     icon: chart-line
