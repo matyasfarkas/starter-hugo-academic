@@ -6,8 +6,8 @@ title: Skills
 subtitle: null
 feature:
   - description: null
-    icon: ai
-    icon_pack: open-data
+    icon: open-data 
+    icon_pack: ai 
     name: Policy
   - description: null
     icon: chart-line
