@@ -17,7 +17,7 @@ content:
 
    # Contact details (edit or remove options as required)
   email: matyas.farkas@ecb.europa.eu
-    address:
+  address:
     street: Sonnemannstraße 20, 60314
     city:  Frankfurt am Main
     postcode: '60314'
