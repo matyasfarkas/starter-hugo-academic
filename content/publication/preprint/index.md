@@ -1,6 +1,6 @@
 ---
 title: "On the effectiveness of macroprudential policy"
-authors: Miguel Ampudia, Marco Lo Duca, Mátyás Farkas, Gabriel Pérez-Quiós, Mara Pirovano, Gerhard Rünstler, Eugen Tereanu 
+authors: ["Miguel Ampudia", "Marco Lo Duca", "Mátyás Farkas", "Gabriel Pérez-Quiós" , "Mara Pirovano"," Gerhard Rünstler", "Eugen Tereanu"]
 date: "2021-05-01T00:00:00Z"
 doi: ""
 
