@@ -1,8 +1,8 @@
 ---
 title: "Bayesian Estimation of DSGE Models with Hamiltonian Monte Carlo"
-authors: ["Mátyás Farkas"]
+authors: [ "Mátyás Farkas", "Bálint Tatár"]
 date: "2022-08-01T00:00:00Z"
-doi: ""
+doi: ""   
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2017-01-01T00:00:00Z"
@@ -17,10 +17,11 @@ publication_types: ["3"]
 publication: "Draft"
 publication_short: ""
 
-abstract:  I propose the framework of endogenous belief switching to explain the role of learning and dynamic expectation formation, when thinking about the impact of unconventional monetary policy.  I propose endogenous belief switching, a fundamental alternative to both rational and adaptive learning. In it expectations are determined by central bank action, and so the effectiveness of forward guidance is endogenous. Learning monetary policy  implementation agents learn to form expectations about future macroeconomic variables -  either by responding to pre-announced future policy rate changes, following forward looking beliefs, or neglecting them and focusing only on current conditions, forming backward looking beliefs. I endogenize belief switching using a mean squared learning transition between the two beliefs. Estimating a switching Kálmán filter agents update their beliefs about the probability that either of the regimes is the best descriptor of the economy, and thus dynamically decide to become forward or backward looking. The forward guidance puzzle is nonexistent if agents are adaptive and backward looking. The puzzle emerges, if expectations are adaptive and forward looking. The framework predicts that forward guidance is highly effective in low uncertainty environments, where the model fits the data well and there is small observation error, while it can become ineffective in high uncertainty economies.
+abstract: In this paper we adapt the Hamiltonian Monte Carlo (HMC) estimator to DSGE models, a method presently applied in various fields due to its superior sampling and diagnostic properties. We implement it into a state-of-the-art, freely available high-performance software package, Stan. We estimate a small scale textbook New-Keynesian model and the Smets-Wouters model using US data. Our results and sampling diagnostics confirm the parameter estimates available in existing literature. In addition, we find bimodality in the Smets Wouters model even if we estimate the model using the original tight priors. Finally, we combine the HMC framework with the Sequential Monte Carlo (SMC) algorithm to create a powerful tool which permits the estimation of DSGE models with ill-behaved posterior densities.
+
 
 # Summary. An optional shortened abstract.
-summary: This paper presents theoretical solution to the forward guidance puzzle amid adaptive expectations. It argues that the effectiveness of forward guidance is endogenous and argues that central bank action can determine expectation formation and establish or destroy credibility of forward guidance. 
+summary: This paper introduces the Hamiltonian Monte Carlo (HMC) estimator to DSGE models. 
 
 tags:
 - Source Themes
@@ -29,7 +30,7 @@ featured: false
 links:
 # - name: Custom Link
 #  url: http://example.org
-# url_pdf: https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2559~15125406fd.en.pdf?4bf9f2baccb8cc4659b796a8e491185c
+ url_pdf: https://www.imfs-frankfurt.de/fileadmin/user_upload/IMFS_WP/IMFS_WP_144.pdf
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: '#'
 # url_poster: '#'
@@ -41,7 +42,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Endogenous belief switching in a 3 equation NK model'
+  caption: 'Bimodality in SW07 model - SHMC'
   focal_point: ""
   preview_only: false
 
