@@ -30,7 +30,7 @@ featured: false
 links:
 # - name: Custom Link
 #  url: http://example.org
- url_pdf: https://www.imfs-frankfurt.de/fileadmin/user_upload/IMFS_WP/IMFS_WP_144.pdf
+# url_pdf: https://www.imfs-frankfurt.de/fileadmin/user_upload/IMFS_WP/IMFS_WP_144.pdf
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: '#'
 # url_poster: '#'
