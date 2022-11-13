@@ -44,7 +44,7 @@ user_groups:
   - Visitors
 ---
 
-I am an Economist in the Monetary Policy Strategy Division, Strategy Issues section of the European Central Bank. My research focuses on expectation formation, monetary policy and DSGE estimation.
+I am an Economist in the [Monetary Policy Strategy Division, Strategy Issues section](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html) of the European Central Bank. My research focuses on expectation formation, monetary policy and DSGE estimation.
 
 I was part of the development team for [Macroecomomic Model Data Base](https://www.macromodelbase.com/), a Dyanre based macroeconomic model comparison platform.
 
