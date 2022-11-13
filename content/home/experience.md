@@ -35,12 +35,8 @@ experience:
        *   SMA coordination,
        *   Risk of inflation expectation de-anchoring modelling,
        *   DSGE modelling, monetary policy book preparation. 
-       DG-E, Forecasting and Policy Modelling Division:
-       *   Development of the adaptive learning version of the NAWMII,
-       *   climate change modelling with adaptive expectations.
-       Graduate Programme Participant:
-       * DG-R, Monetary Policy Research Division: DSGE based theoretical contribution to the discussion paper: On the Effectiveness of Macroprudential Policy 
-       * DG-MIP, Market Infrastructure Management Division: Target Analytical Team
+       *   Economist in DG-E, Forecasting and Policy Modelling Division:  Development of the adaptive learning version of the NAWMII, climate change modelling with adaptive expectations.
+       *   Graduate Programme Participant: DG-R, Monetary Policy Research Division: DSGE based theoretical contribution to the discussion paper: On the Effectiveness of Macroprudential Policy;  DG-MIP, Market Infrastructure Management Division: Target Analytical Team
     
   - title: Research Assistant at the Institute for Monetary and Financial Stability
     company: Goethe University Frankfurt, IMFS
