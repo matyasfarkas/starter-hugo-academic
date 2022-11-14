@@ -16,11 +16,11 @@ content:
   autolink: true
 
    # Contact details (edit or remove options as required)
-  email: matyas.farkas@ecb.europa.eu
+  email: matyi.farkas@gmail.com
   address:
-    street: Sonnemannstraße 20, 60314
+    street: Kirchhainer Str. 10, 60433
     city:  Frankfurt am Main
-    postcode: '60314'
+    postcode: '60433'
     country: Germany
     country_code: DE
   coordinates:
