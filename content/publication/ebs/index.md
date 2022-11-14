@@ -34,7 +34,7 @@ links:
 # url_dataset: '#'
 # url_poster: '#'
 # url_project: ''
- url_slides: 'https://github.com/matyasfarkas/starter-hugo-academic/blob/main/content/publication/ebs/EBS_presentation.pdf'
+url_slides: https://github.com/matyasfarkas/starter-hugo-academic/blob/main/content/publication/ebs/EBS_presentation.pdf
 # url_source: '#'
 # url_video: '#'
 
