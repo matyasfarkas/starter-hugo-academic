@@ -31,7 +31,7 @@ experience:
     date_end: ''
     description: |2-
        DG-MP, Monetary Policy Strategy Division: 
-       *   AnalysingOperationalizing favorable financing conditions,
+       *   Developing and operationalizing favorable financing conditions indicators,
        *   SMA coordination,
        *   Risk of inflation expectation de-anchoring modelling,
        *   DSGE modelling, monetary policy book preparation. 
