@@ -34,7 +34,7 @@ links:
 # url_dataset: '#'
 # url_poster: '#'
 # url_project: ''
-# url_slides: ''
+ url_slides: 'EBS_presentation'
 # url_source: '#'
 # url_video: '#'
 
@@ -58,6 +58,6 @@ image:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: "EBS_presentation"
+# slides: "EBS_presentation"
 ---
 
