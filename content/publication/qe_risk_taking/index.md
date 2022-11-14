@@ -31,7 +31,7 @@ links:
 # - name: Custom Link
 #  url: http://example.org
 # url_pdf: https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2559~15125406fd.en.pdf?4bf9f2baccb8cc4659b796a8e491185c
-# url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
+url_code: 'https://github.com/matyasfarkas/Code_qe_risk_taking'
 # url_dataset: '#'
 # url_poster: '#'
 # url_project: ''
