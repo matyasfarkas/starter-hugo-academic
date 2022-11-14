@@ -17,7 +17,7 @@ interests:
 social:
   - icon: envelope
     icon_pack: fas
-    link: mailto:Matyas.Farkas@ecb.europa.eu
+    link: mailto:matyi.farkas@gmail.com
 #  - icon: euro-sign-solid
 #    icon_pack: custom
 #    link: https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
