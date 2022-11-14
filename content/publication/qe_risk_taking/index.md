@@ -26,15 +26,15 @@ tags:
 - Source Themes
 featured: false
 
-links:
+# links:
 # - name: Custom Link
 #  url: http://example.org
 # url_pdf: https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp2559~15125406fd.en.pdf?4bf9f2baccb8cc4659b796a8e491185c
-  url_code: 'https://github.com/matyasfarkas/Code_qe_risk_taking'
+url_code: 'https://github.com/matyasfarkas/Code_qe_risk_taking'
 # url_dataset: '#'
 # url_poster: '#'
 # url_project: ''
-  url_slides: 'https://prezi.com/view/IrSgBIAmIjYTVDamXjeZ/'
+url_slides: 'https://prezi.com/view/IrSgBIAmIjYTVDamXjeZ/'
 # url_source: '#'
 # url_video: '#'
 
