@@ -1,12 +1,12 @@
 ---
 organizations:
-  - name: European Central Bank
-    url: https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
+  - name: IMF
+    url: www.imf.org #https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
 superuser: true
 authors:
   - admin
 title: Mátyás Farkas
-role: Economist
+role: Financial Sector Expert
 bio: My research interests include macroeconomics, monetary policy, and
   econometrics.
 interests:
@@ -44,7 +44,9 @@ user_groups:
   - Visitors
 ---
 
-I am an Economist in the [Monetary Policy Strategy Division, Strategy Issues section](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html) of the European Central Bank. My research focuses on expectation formation, monetary policy and DSGE estimation.
+I am a Financial Sector Expert in the IMF's Monetary Policy Modeling Unit in MCM. I work on model based analysis of monetary and maroprudentail policy.
+
+Previously I worked as an Economist in the [Monetary Policy Strategy Division, Strategy Issues section](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html) of the European Central Bank. My research focuses on expectation formation, monetary policy and DSGE estimation.
 
 I was part of the development team for [Macroecomomic Model Data Base](https://www.macromodelbase.com/), a Dynare based macroeconomic model comparison platform.
 

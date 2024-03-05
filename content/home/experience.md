@@ -22,13 +22,25 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: 	Financial Sector Expert
+    company: International Monetary Fund
+    company_url: 'https://www.imf.org/'
+    company_logo: imf-seal
+    location: Washington, D.C.
+    date_start: '2024-02-26'
+    date_end: ''
+    description: |2-
+       MCM Monetary Policy Modelling Unit: 
+       *   Model based analysis of monetary and macroprudential policy,
+       *   Contribution to the development of the IMF's Integrated Policy Framework.
+
   - title: 	Economist
     company: European Central Bank
-    company_url: 'https://www.ecb.europa.eu/home/html/index.en.html'
+    company_url: 'https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html'
     company_logo: logo_only
     location: Frankfurt am Main
     date_start: '2018-09-01'
-    date_end: ''
+    date_end: '2024-02-25'
     description: |2-
        DG-MP, Monetary Policy Strategy Division: 
        *   Developing and operationalizing favorable financing conditions indicators,
