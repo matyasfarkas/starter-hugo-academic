@@ -1,7 +1,7 @@
 ---
 organizations:
-  - name: IMF
-    url: www.imf.org #https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
+  - name: International Monetary Fund
+    url: https://www.imf.org/en/Home #https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html
 superuser: true
 authors:
   - admin
