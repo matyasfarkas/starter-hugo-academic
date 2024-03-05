@@ -33,7 +33,7 @@ experience:
        MCM Monetary Policy Modelling Unit: 
        *   Model based analysis of monetary and macroprudential policy,
        *   Contribution to the development of the IMF's Integrated Policy Framework.
-
+    
   - title: 	Economist
     company: European Central Bank
     company_url: 'https://www.ecb.europa.eu/pub/research/authors/profiles/matyas-farkas.en.html'
