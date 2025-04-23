@@ -48,6 +48,6 @@ I am a Financial Sector Expert in the IMF's Monetary Policy Modeling Unit in MCM
 
 Previously I worked as an Economist in the [Monetary Policy Strategy Division, Strategy Issues section](https://www.ecb.europa.eu/mopo/strategy/html/index.en.html) of the European Central Bank. My research focuses on expectation formation, monetary policy and DSGE estimation.
 
-I was part of the development team for [Macroecomomic Model Data Base](https://www.macromodelbase.com/), a Dynare based macroeconomic model comparison platform.
+I was member of the development team for [Macroecomomic Model Data Base](https://www.macromodelbase.com/), a Dynare based macroeconomic model comparison platform.
 
 Disclaimer: The views expressed on this website are my own and do not reflect those of the European Central Bank. 
