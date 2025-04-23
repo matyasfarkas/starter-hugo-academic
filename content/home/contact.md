@@ -18,11 +18,11 @@ content:
    # Contact details (edit or remove options as required)
   email: matyi.farkas@gmail.com
   address:
-    street: Kirchhainer Str. 10, 60433
-    city:  Frankfurt am Main
-    postcode: '60433'
-    country: Germany
-    country_code: DE
+    street: 305 Creek Valley Ln
+    city:  Washington, D.C.
+    postcode: '20850'
+    country: United States of America
+    country_code: USA
   coordinates:
     latitude: '50.13144237725917'
     longitude: '8.689898304473655'
