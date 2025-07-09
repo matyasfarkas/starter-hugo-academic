@@ -28,7 +28,7 @@ featured: false
 links:
 # - name: Custom Link
 #  url: http://example.org
-url_pdf: Christoffel_Farkas_(2025)_Managing_the_Risks_of_Inflation_Expectation_De_anchoring.pdf
+url_pdf: Christoffel_Farkas_2025_Managing_the_Risks_of_Inflation_Expectation_De_anchoring.pdf
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: '#'
 # url_poster: '#'
