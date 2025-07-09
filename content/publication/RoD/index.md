@@ -11,7 +11,7 @@ publishDate: "2025-07-01T00:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Working paper"
@@ -28,7 +28,7 @@ featured: false
 links:
 # - name: Custom Link
 #  url: http://example.org
-url_pdf: Christoffel_Farkas_2025_Managing_the_Risks_of_Inflation_Expectation_De_anchoring.pdf
+url_pdf: publication/RoD/Christoffel_Farkas_2025_Managing_the_Risks_of_Inflation_Expectation_De_anchoring.pdf
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: '#'
 # url_poster: '#'
