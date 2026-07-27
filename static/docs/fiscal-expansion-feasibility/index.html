@@ -1,0 +1,3027 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Fiscal-block expansion — data-availability audit (27 candidate blocs) - Monetary-Financial-Fiscal Macromodel — Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fiscal-block-expansion-data-availability-audit-27-candidate-blocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Monetary-Financial-Fiscal Macromodel — Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fiscal-block expansion — data-availability audit (27 candidate blocs)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Monetary-Financial-Fiscal Macromodel — Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USER_GUIDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methodology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Methodology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenario-cookbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scenario Cookbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euro-cross-border/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Euro-area Spillover & Harmonization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fiscal-block-methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fiscal Block Methodology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anchor-review-2026-07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anchor Review (July 2026)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-block-methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Block Methodology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EMPIRICAL_EVALUATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empirical Evaluation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE_FOR_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PIPELINE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MODULES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules & API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DATA_SCHEMA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Schemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BUILD_AND_CI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build & CI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintainer's Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Maintainer's Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MAINTAINER_OPERATIONS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ADDING_A_COUNTRY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a Country
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../REESTIMATING_MODELS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-estimating Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fiscal-block-expansion-data-availability-audit-27-candidate-blocs">Fiscal-block expansion — data-availability audit (27 candidate blocs)<a class="headerlink" href="#fiscal-block-expansion-data-availability-audit-27-candidate-blocs" title="Permanent link">&para;</a></h1>
+<p><strong>Purpose.</strong> Extend the 4-variable fiscal block (<code>FREV_GDP</code>, <code>FPEXP_GDP</code>, <code>EFFI</code>, <code>SFA</code> + the debt
+recursion) to the blocs that lack it. Requested 2026-07-09. Per-economy ingredients audited:
+quarterly general-government <strong>revenue</strong>, <strong>total expenditure + interest paid</strong> (primary
+expenditure = total − interest), <strong>gross debt</strong> (d0 seed + SFA residual + back-cast), and the
+<strong>effective interest rate</strong> — with the user-sanctioned fallback to the <strong>10-year government bond
+yield</strong> where no interest-paid/maturity data exists. Perimeter (GG vs central government) and
+seasonal-adjustment seams flagged; the SFA machinery absorbs perimeter seams but they must be
+declared, never hidden. Sources verified live by the audit agents (Eurostat/BIS APIs fetched;
+anything unverifiable is marked UNVERIFIED). The no-synthetic-data rule applies throughout:
+blocked ingredients block the bloc — no interpolation.</p>
+<p><strong>Candidates</strong> (50 deployed − 23 with fiscal blocks): CH KR MX AU TR SE PL NO DK IN BR RU ID SA
+AR ZA TH MY CL CO CR CZ HU IL IS NZ TW.</p>
+<hr />
+<h1 id="quarterly-government-finance-data-audit-group-se-pl-dk-cz-hu-no-is-ch-tr-ru">Quarterly Government-Finance Data Audit — Group: SE PL DK CZ HU NO IS CH TR RU<a class="headerlink" href="#quarterly-government-finance-data-audit-group-se-pl-dk-cz-hu-no-is-ch-tr-ru" title="Permanent link">&para;</a></h1>
+<p><strong>Verification method.</strong> All Eurostat spans below were pulled live from the Eurostat dissemination API (<code>gov_10q_ggnfa</code>, <code>gov_10q_ggdebt</code>, <code>gov_10q_ggfa</code>, vintage 2026-04-22); BIS spans live from the BIS SDMX API (<code>WS_TC</code>); Statistics Iceland from the PX-Web API; FRED/HMB/Minfin via web verification. Anything I could not confirm end-to-end is marked <strong>UNVERIFIED</strong>. Repo facts read from <code>app/public/data/bvar/&lt;CC&gt;/spec.json</code> and <code>app/public/data/coverage_manifest.json</code>.</p>
+<p><strong>Cross-cutting findings</strong></p>
+<ul>
+<li><strong>SE, PL, DK, CZ, HU, NO are all fully covered by the exact same two Eurostat datasets already used for the 22 existing Eurostat fiscal blocs</strong> (<code>FREV_GDP/FPEXP_GDP/EFFI/SFA</code>, source string "national/Eurostat gov-finance"): <code>gov_10q_ggnfa</code> (S13; <code>TR</code>=revenue, <code>TE</code>=total expenditure, <code>D41PAY</code>=interest payable; units <code>MIO_NAC</code> and <code>PC_GDP</code>) + <code>gov_10q_ggdebt</code> (S13, <code>GD</code>, <code>MIO_NAC</code>/<code>PC_GDP</code>). All end <strong>2025Q4</strong> (current). These six slot into the existing pipeline with no new provider.</li>
+<li><strong>EFFI needs no yield fallback for SE/PL/DK/CZ/HU/NO</strong> — <code>D41PAY</code> + lagged <code>GD</code> gives the true effective rate, as in the shipped blocs.</li>
+<li><strong>Seasonal adjustment:</strong> <code>gov_10q_ggnfa</code> is NSA; an <code>SCA</code> (seasonally+calendar adjusted) variant exists for SE/PL/DK/CZ/HU/IS but <strong>not</strong> for NO or CH (verified empty).</li>
+<li><strong>The repo's Eurostat 10Y source (<code>irt_lt_mcby_m</code>, Maastricht) does NOT cover NO/IS/CH/TR</strong> (verified empty) — a yield fallback for those must come from OECD/FRED or national sources.</li>
+<li>Coverage-manifest windows read "2015Q4→2025Q4" for everything because the manifest reports the 41-quarter estimation panel, not raw source span; YIELD10 lastObs is 2025Q3 with a nowcast flag to 2025Q4.</li>
+</ul>
+<hr />
+<h2 id="se-sweden">SE — Sweden<a class="headerlink" href="#se-sweden" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / code</th>
+<th>Freq</th>
+<th>First Q</th>
+<th>Last Q</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> S13/<code>TR</code>/<code>MIO_NAC</code> (also <code>PC_GDP</code>)</td>
+<td>Q</td>
+<td>1995Q1</td>
+<td>2025Q4</td>
+<td>GG (S13)</td>
+<td>NSA (+<code>SCA</code>)</td>
+<td>Verified via API</td>
+</tr>
+<tr>
+<td>Total exp. / interest</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> <code>TE</code> / <code>D41PAY</code></td>
+<td>Q</td>
+<td>1995Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA (+<code>SCA</code>)</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggdebt</code> S13/<code>GD</code>/<code>MIO_NAC</code>,<code>PC_GDP</code></td>
+<td>Q</td>
+<td>1996Q1</td>
+<td>2025Q4</td>
+<td>GG, Maastricht</td>
+<td>NSA</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>EFFI</td>
+<td>derived</td>
+<td><code>D41PAY</code> / lagged <code>GD</code> — no fallback needed</td>
+<td>Q</td>
+<td>1996Q2</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>—</td>
+<td>Verified inputs</td>
+</tr>
+<tr>
+<td>YIELD10_SE (spec)</td>
+<td>Eurostat</td>
+<td><code>irt_lt_mcby_m</code> — <strong>present in spec</strong>; manifest 2015Q4→2025Q4, lastObs 2025Q3 (nowcast)</td>
+<td>M→Q</td>
+<td>1987-01 (source)</td>
+<td>2026-05</td>
+<td>—</td>
+<td>—</td>
+<td>Verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL</strong> (longest span in group; debt recursion from 1996Q2).</p>
+<h2 id="pl-poland">PL — Poland<a class="headerlink" href="#pl-poland" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / code</th>
+<th>Freq</th>
+<th>First Q</th>
+<th>Last Q</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> <code>TR</code></td>
+<td>Q</td>
+<td>1999Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA (+<code>SCA</code>)</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Total exp. / interest</td>
+<td>Eurostat</td>
+<td><code>TE</code> / <code>D41PAY</code></td>
+<td>Q</td>
+<td>1999Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA (+<code>SCA</code>)</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggdebt</code> <code>GD</code></td>
+<td>Q</td>
+<td>2000Q1</td>
+<td>2025Q4</td>
+<td>GG, Maastricht</td>
+<td>NSA</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>EFFI</td>
+<td>derived</td>
+<td><code>D41PAY</code>/lagged <code>GD</code></td>
+<td>Q</td>
+<td>2000Q2</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>—</td>
+<td>Verified inputs</td>
+</tr>
+<tr>
+<td>YIELD10_PL (spec)</td>
+<td>Eurostat</td>
+<td><code>irt_lt_mcby_m</code> — <strong>present</strong>; source 2001-01→2026-05</td>
+<td>M→Q</td>
+<td>2001-01</td>
+<td>2026-05</td>
+<td>—</td>
+<td>—</td>
+<td>Verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL.</strong></p>
+<h2 id="dk-denmark">DK — Denmark<a class="headerlink" href="#dk-denmark" title="Permanent link">&para;</a></h2>
+<p>Identical structure to PL: <code>gov_10q_ggnfa</code> <code>TR</code>/<code>TE</code>/<code>D41PAY</code> <strong>1999Q1→2025Q4</strong> (NSA + SCA), <code>gov_10q_ggdebt</code> <code>GD</code> <strong>2000Q1→2025Q4</strong>, all GG/Maastricht, all verified. <code>YIELD10_DK</code> present in spec (Eurostat <code>irt_lt_mcby_m</code>). EFFI directly computable.
+<strong>Verdict: FEASIBLE-FULL.</strong></p>
+<h2 id="cz-czechia">CZ — Czechia<a class="headerlink" href="#cz-czechia" title="Permanent link">&para;</a></h2>
+<p>Identical: flows <strong>1999Q1→2025Q4</strong> (NSA+SCA), debt <strong>2000Q1→2025Q4</strong>, GG perimeter, verified. <code>YIELD10_CZ</code> present in spec.
+<strong>Verdict: FEASIBLE-FULL.</strong></p>
+<h2 id="hu-hungary">HU — Hungary<a class="headerlink" href="#hu-hungary" title="Permanent link">&para;</a></h2>
+<p>Flows <strong>1999Q1→2025Q4</strong> (NSA+SCA); debt <code>gov_10q_ggdebt</code> <code>GD</code>/<code>MIO_NAC</code> <strong>1995Q1→2025Q4</strong> (best debt back-history in group; <code>PC_GDP</code> from 1995Q4). GG perimeter, verified. <code>YIELD10_HU</code> present in spec.
+<strong>Verdict: FEASIBLE-FULL</strong> (debt back-cast to 1995).</p>
+<h2 id="no-norway">NO — Norway<a class="headerlink" href="#no-norway" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / code</th>
+<th>Freq</th>
+<th>First Q</th>
+<th>Last Q</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> <code>TR</code></td>
+<td>Q</td>
+<td>2002Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td><strong>NSA only</strong> (SCA empty)</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Total exp. / interest</td>
+<td>Eurostat</td>
+<td><code>TE</code> / <code>D41PAY</code></td>
+<td>Q</td>
+<td>2002Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA only</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggdebt</code> <code>GD</code></td>
+<td>Q</td>
+<td>2000Q1</td>
+<td>2025Q4</td>
+<td>GG, Maastricht</td>
+<td>NSA</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Debt back-cast (bonus)</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggfa</code> S13/<code>F</code>/LIAB/STK (total fin. liabilities)</td>
+<td>Q</td>
+<td>1996Q1</td>
+<td>2025Q4</td>
+<td>GG, ESA market value</td>
+<td>NSA</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Debt alt.</td>
+<td>BIS</td>
+<td><code>WS_TC</code> <code>Q.NO.G.A.M.770.A</code> (%GDP) / <code>...XDC.A</code> (levels)</td>
+<td>Q</td>
+<td>1995Q4</td>
+<td>2025Q4</td>
+<td>GG core debt</td>
+<td>NSA</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>EFFI</td>
+<td>derived</td>
+<td><code>D41PAY</code>/lagged <code>GD</code> — no fallback needed</td>
+<td>Q</td>
+<td>2002Q2</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>—</td>
+<td>Verified inputs</td>
+</tr>
+<tr>
+<td>YIELD10 (spec)</td>
+<td>—</td>
+<td><strong>NOT in spec</strong>; <code>irt_lt_mcby_m</code> does NOT cover NO. If wanted: FRED <code>IRLTLT01NOM156N</code>/<code>IRLTLT01NOQ156N</code> (OECD), 1985-01→2026-05</td>
+<td>M/Q</td>
+<td>1985-01</td>
+<td>2026-05</td>
+<td>—</td>
+<td>—</td>
+<td>Verified via FRED</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL</strong> (2002Q1 flows; EFFI direct; NSA-only is the one deviation — needs the same seasonal handling as the other NSA fiscal inputs; note NO's sovereign-wealth context makes gross Maastricht debt small relative to assets — economic caveat, not data caveat).</p>
+<h2 id="is-iceland">IS — Iceland<a class="headerlink" href="#is-iceland" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / code</th>
+<th>Freq</th>
+<th>First Q</th>
+<th>Last Q</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> <code>TR</code></td>
+<td>Q</td>
+<td>2002Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA (+<code>SCA</code>)</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Revenue/exp (national mirror, fresher)</td>
+<td>Statistics Iceland</td>
+<td>PX-Web <code>THJ05812.px</code> "Quarterly GG revenue and expenditure" (GFS lines incl. "24 Interest") + <code>THJ05811.px</code></td>
+<td>Q</td>
+<td>2002Q1</td>
+<td><strong>2026Q1</strong></td>
+<td>GG (also CG/LG/SSF splits)</td>
+<td>NSA</td>
+<td>Verified via PX API</td>
+</tr>
+<tr>
+<td>Total exp. / interest</td>
+<td>Eurostat</td>
+<td><code>TE</code> / <code>D41PAY</code></td>
+<td>Q</td>
+<td>2002Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td><strong>Gross debt</strong></td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggdebt</code> — <strong>IS ABSENT</strong> (verified empty); <code>gov_10q_ggfa</code> also absent; BIS <code>WS_TC</code> does not cover IS (verified); Statistics Iceland GG financial liabilities <code>THJ05181.px</code> is <strong>annual</strong> (1998–2025)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Gap verified from 4 sources</td>
+</tr>
+<tr>
+<td>Debt possible alt.</td>
+<td>Central Bank of Iceland</td>
+<td>databank.is Treasury/CG debt — <strong>UNVERIFIED</strong> (JS portal, could not enumerate); would be central-government perimeter, not GG</td>
+<td>Q/M?</td>
+<td>?</td>
+<td>?</td>
+<td>CG</td>
+<td>?</td>
+<td>UNVERIFIED</td>
+</tr>
+<tr>
+<td>EFFI fallback</td>
+<td>OECD via FRED</td>
+<td><code>IRLTLT01ISM156N</code>/<code>ISQ156N</code> 10Y govt bond yield — exists (start date UNVERIFIED, live as of 2026)</td>
+<td>M/Q</td>
+<td>UNVERIFIED</td>
+<td>current</td>
+<td>—</td>
+<td>—</td>
+<td>Existence verified</td>
+</tr>
+<tr>
+<td>YIELD10 (spec)</td>
+<td>—</td>
+<td><strong>NOT in spec</strong>; <code>irt_lt_mcby_m</code> does not cover IS</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: PARTIAL</strong> — revenue, total expenditure, and interest paid are excellent (2002Q1→2026Q1, GG), but <strong>no quarterly GG gross-debt stock exists anywhere I could verify</strong> (Eurostat ggdebt/ggfa, BIS, Statistics Iceland all lack it). d0 could be seeded from the annual <code>THJ05181</code> liability stock, but the quarterly SFA residual and debt back-cast are blocked unless (a) the CBI databank's CG/Treasury debt is verified and a GG-flows-vs-CG-debt perimeter seam is accepted, or (b) quarterly debt is interpolated — which the no-synthetic-data rule forbids.</p>
+<h2 id="ch-switzerland">CH — Switzerland<a class="headerlink" href="#ch-switzerland" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / code</th>
+<th>Freq</th>
+<th>First Q</th>
+<th>Last Q</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> <code>TR</code> — genuinely quarterly (checked within-year variation, not interpolated)</td>
+<td>Q</td>
+<td>1995Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td><strong>NSA only</strong></td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>Total expenditure</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggnfa</code> <code>TE</code></td>
+<td>Q</td>
+<td>1995Q1</td>
+<td>2025Q4</td>
+<td>GG</td>
+<td>NSA only</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td><strong>Interest paid</strong></td>
+<td>Eurostat</td>
+<td><code>D41PAY</code> — <strong>CH ABSENT</strong> (verified empty). FFA/SNB interest data are annual only</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Gap verified</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>BIS</td>
+<td><code>WS_TC</code> <code>Q.CH.G.A.N.770.A</code> (nominal value, %GDP, 1995Q1→), <code>Q.CH.G.A.M.770.A</code> (market, 1995Q4→), <code>Q.CH.G.A.M.XDC.A</code> (CHF levels, 1995Q4→2025Q4)</td>
+<td>Q</td>
+<td>1995Q1</td>
+<td>2025Q4</td>
+<td>GG "core debt" (loans+securities+deposits) — close to but <strong>not</strong> Maastricht</td>
+<td>NSA</td>
+<td>Verified via BIS API</td>
+</tr>
+<tr>
+<td>Debt (Eurostat)</td>
+<td>Eurostat</td>
+<td><code>gov_10q_ggdebt</code>, <code>gov_10q_ggfa</code> — both <strong>CH ABSENT</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Gap verified</td>
+</tr>
+<tr>
+<td>EFFI fallback</td>
+<td>OECD via FRED</td>
+<td><code>IRLTLT01CHM156N</code> (M, 1955-01→2026-05) / <code>IRLTLT01CHQ156N</code> (Q, 1955Q1→) 10Y Confederation yield</td>
+<td>M/Q</td>
+<td>1955-01</td>
+<td>2026-05</td>
+<td>—</td>
+<td>—</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>YIELD10 (spec)</td>
+<td>—</td>
+<td><strong>NOT in spec</strong>; would need to be added from FRED/OECD (or SNB portal)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: PARTIAL</strong> — revenue + total expenditure are outstanding (1995Q1→, GG), debt is available as the BIS core-debt proxy (concept caveat vs Maastricht), and the EFFI <em>fallback</em> yield is fully available (add <code>YIELD10_CH</code>). But <strong>interest paid is missing at quarterly frequency, which blocks primary expenditure = TE − interest</strong>, not just EFFI. Unless the block design tolerates using total expenditure (interest inside) for CH, or an approximation is explicitly approved (would violate the exact-construction convention), CH cannot match the shipped 4-variable fiscal block. Flag for user decision.</p>
+<h2 id="tr-turkiye">TR — Türkiye<a class="headerlink" href="#tr-turkiye" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / code</th>
+<th>Freq</th>
+<th>First Q</th>
+<th>Last Q</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>HMB (Treasury &amp; Finance Min.)</td>
+<td>"Central Government Budget Statistics" (en.hmb.gov.tr → Public Finance); monthly, aggregable to Q</td>
+<td>M→Q</td>
+<td>2006-01 (current classification; older 1994–2005 series has a break)</td>
+<td>current</td>
+<td><strong>Central government, cash basis</strong></td>
+<td>NSA</td>
+<td>Portal verified; exact table layout UNVERIFIED</td>
+</tr>
+<tr>
+<td>Total exp. / interest</td>
+<td>HMB</td>
+<td>same release — separate "Interest Expenditures" line</td>
+<td>M→Q</td>
+<td>2006-01</td>
+<td>current</td>
+<td>CG, cash</td>
+<td>NSA</td>
+<td>Portal verified</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>HMB</td>
+<td>"General Government Debt Stock Defined by the European Union" — quarterly announcements verified through 31-Dec-2025</td>
+<td>Q</td>
+<td>early-2000s (<strong>exact first quarter UNVERIFIED</strong>, commonly cited from ~2000/01)</td>
+<td>2025Q4</td>
+<td><strong>GG, ESA-defined</strong></td>
+<td>NSA</td>
+<td>Verified releases</td>
+</tr>
+<tr>
+<td>Gross debt (alt., verified span)</td>
+<td>BIS</td>
+<td><code>WS_TC</code> <code>Q.TR.G.A.M.770.A</code> / <code>...XDC.A</code></td>
+<td>Q</td>
+<td>2001Q1</td>
+<td>2025Q4</td>
+<td>GG core debt</td>
+<td>NSA</td>
+<td>Verified via BIS API</td>
+</tr>
+<tr>
+<td>EFFI</td>
+<td>derived</td>
+<td>CG interest / lagged GG debt — <strong>perimeter seam</strong> (CG numerator, GG denominator)</td>
+<td>Q</td>
+<td>2006Q2</td>
+<td>2025Q4</td>
+<td>mixed</td>
+<td>—</td>
+<td>Inputs verified</td>
+</tr>
+<tr>
+<td>EFFI fallback</td>
+<td>—</td>
+<td>No OECD <code>IRLTLT01</code> series for TR found; 10Y TRY benchmark only exists since first 10y issuance (~2010) — <strong>UNVERIFIED</strong></td>
+<td>—</td>
+<td>~2010</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Weak fallback</td>
+</tr>
+<tr>
+<td>YIELD10 (spec)</td>
+<td>—</td>
+<td><strong>NOT in spec</strong>; <code>irt_lt_mcby_m</code> does not cover TR</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Verified</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL with perimeter caveat</strong> — all four ingredients exist with genuine quarterly (or monthly) data from ~2006 (debt from 2001), but flows are central-government cash data, not ESA GG; EFFI is a CG-interest/GG-debt hybrid; and the high-inflation environment makes %-of-GDP construction sensitive to the nominal GDP denominator vintage. Shorter usable span (~2006Q1→) than the Eurostat six.</p>
+<h2 id="ru-russia-slated-for-removal-brief-audit">RU — Russia (slated for removal — brief audit)<a class="headerlink" href="#ru-russia-slated-for-removal-brief-audit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider</th>
+<th>Dataset / series</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/expenditure</td>
+<td>Minfin</td>
+<td>"Brief monthly information on federal budget execution" (minfin.gov.ru/en/statistics/fedbud) + consolidated-budget page</td>
+<td>M (cumulative YTD)</td>
+<td>~2006→current (en pages verified to exist)</td>
+<td><strong>Federal</strong> (consolidated budget lags, GG/ESA: none)</td>
+<td>Pages verified; series mechanics UNVERIFIED</td>
+</tr>
+<tr>
+<td>Interest paid</td>
+<td>Minfin</td>
+<td>debt-service line in federal budget execution</td>
+<td>M</td>
+<td>as above</td>
+<td>Federal</td>
+<td>UNVERIFIED detail</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>Minfin</td>
+<td>federal domestic (OFZ) + external state debt</td>
+<td>M</td>
+<td>1990s→current</td>
+<td>Federal, not GG</td>
+<td>UNVERIFIED detail</td>
+</tr>
+<tr>
+<td>Eurostat / BIS / QPSD</td>
+<td>—</td>
+<td><code>gov_10q_ggnfa</code>/<code>ggdebt</code>: absent (verified); BIS <code>WS_TC</code> <code>Q.RU.G...</code>: absent (verified)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Gaps verified</td>
+</tr>
+<tr>
+<td>YIELD10 / EFFI fallback</td>
+<td>—</td>
+<td>Not in spec; <code>IRLTLT01RUM156N</code> unverifiable (FRED blocked; OFZ series discontinued post-2022 in most mirrors)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>UNVERIFIED</td>
+</tr>
+</tbody>
+</table>
+<p>Existing RU series in the manifest already carry <code>source-review:tail-possibly-WEO-synthetic (genuine→2024Q1)</code> flags. <strong>Verdict: NOT-FEASIBLE at GG perimeter; PARTIAL at federal-only perimeter with access/provenance risk. Recommendation: consistent with the planned drop — do not build an RU fiscal block.</strong></p>
+<hr />
+<h2 id="summary-verdicts">Summary verdicts<a class="headerlink" href="#summary-verdicts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Economy</th>
+<th>Verdict</th>
+<th>EFFI route</th>
+<th>First usable Q (block)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SE</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>D41PAY/debt (direct)</td>
+<td>1996Q2</td>
+<td>Drop-in to existing Eurostat pipeline</td>
+</tr>
+<tr>
+<td>PL</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct</td>
+<td>2000Q2</td>
+<td>Drop-in</td>
+</tr>
+<tr>
+<td>DK</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct</td>
+<td>2000Q2</td>
+<td>Drop-in</td>
+</tr>
+<tr>
+<td>CZ</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct</td>
+<td>2000Q2</td>
+<td>Drop-in</td>
+</tr>
+<tr>
+<td>HU</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct</td>
+<td>1999Q1 (debt 1995)</td>
+<td>Drop-in; best debt history</td>
+</tr>
+<tr>
+<td>NO</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct</td>
+<td>2002Q2</td>
+<td>NSA only; ggfa liabilities 1996Q1 for back-cast; no YIELD10 needed</td>
+</tr>
+<tr>
+<td>IS</td>
+<td><strong>PARTIAL</strong></td>
+<td>blocked (debt, not interest)</td>
+<td>—</td>
+<td>Flows GG 2002Q1→2026Q1; <strong>no quarterly GG debt anywhere verified</strong> → SFA/back-cast blocked; CBI CG-debt route UNVERIFIED</td>
+</tr>
+<tr>
+<td>CH</td>
+<td><strong>PARTIAL</strong></td>
+<td>fallback available (FRED 10Y, 1955→)</td>
+<td>—</td>
+<td><strong>No quarterly interest paid → primary expenditure not constructible</strong>; debt only as BIS core-debt proxy 1995Q1→; needs a design decision</td>
+</tr>
+<tr>
+<td>TR</td>
+<td><strong>FEASIBLE-FULL (perimeter caveat)</strong></td>
+<td>CG-interest/GG-debt hybrid</td>
+<td>~2006Q2</td>
+<td>CG cash flows + HMB EU-defined GG debt (+ BIS 2001Q1→); no good yield fallback pre-2010</td>
+</tr>
+<tr>
+<td>RU</td>
+<td><strong>NOT-FEASIBLE (GG)</strong></td>
+<td>—</td>
+<td>—</td>
+<td>Federal-only monthly data; provenance/access risk; recommend the planned drop</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="quarterly-government-finance-data-audit-group-kr-au-nz-in-id-th-my-il-sa-tw">Quarterly Government-Finance Data Audit — Group: KR AU NZ IN ID TH MY IL SA TW<a class="headerlink" href="#quarterly-government-finance-data-audit-group-kr-au-nz-in-id-th-my-il-sa-tw" title="Permanent link">&para;</a></h1>
+<p>Audited 2026-07-09. Repo checked read-only: <code>app/public/data/bvar/&lt;CC&gt;/spec.json</code>, <code>app/public/data/coverage_manifest.json</code>, <code>pipeline/country_rawdata/DataRaw_&lt;CC&gt;_glob.json</code>. External sources verified by live fetch/search; anything not confirmed end-to-end is marked <strong>UNVERIFIED</strong>. Fiscal-year seams and cumulative-within-FY reporting (IN, NZ, TH, MY-history, TW) all imply NSA data — the tool's SFA/NSA-seam machinery will be needed everywhere below unless noted.</p>
+<h2 id="0-yield10_-in-the-shipped-specs-fallback-ingredient">0. YIELD10_<CC> in the shipped specs (fallback ingredient)<a class="headerlink" href="#0-yield10_-in-the-shipped-specs-fallback-ingredient" title="Permanent link">&para;</a></h2>
+<p>Genuine spans from <code>pipeline/country_rawdata/DataRaw_&lt;CC&gt;_glob.json</code>; the coverage manifest displays a uniform 2015Q4–2025Q4 41-quarter panel window with lastObs 2025Q3 + Q4 nowcast for all. (Spec presence re-verified locally against the post-dedup panels 2026-07-09.)</p>
+<table>
+<thead>
+<tr>
+<th>CC</th>
+<th>In spec?</th>
+<th>Genuine span (raw data)</th>
+<th>Manifest flags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KR</td>
+<td>YIELD10_KR yes</td>
+<td>2000Q1–2025Q4</td>
+<td>tail-possibly-WEO-synthetic (genuine→2024Q1), OECD-FRED mirror, nowcast</td>
+</tr>
+<tr>
+<td>AU</td>
+<td>YIELD10_AU yes</td>
+<td>1999Q1–2025Q4</td>
+<td>nowcast</td>
+</tr>
+<tr>
+<td>NZ</td>
+<td>YIELD10_NZ yes</td>
+<td>2000Q1–2025Q4</td>
+<td>nowcast</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>YIELD10_IN yes</td>
+<td>2011Q4–2025Q4</td>
+<td>WEO-backfill, nowcast</td>
+</tr>
+<tr>
+<td>ID</td>
+<td><strong>no</strong></td>
+<td>—</td>
+<td>LENDR_ID/POLRATE_ID only</td>
+</tr>
+<tr>
+<td>TH</td>
+<td>YIELD10_TH yes</td>
+<td>2003Q1–2025Q4</td>
+<td>tail-possibly-WEO-synthetic (genuine→2025Q1), nowcast</td>
+</tr>
+<tr>
+<td>MY</td>
+<td><strong>no</strong></td>
+<td>—</td>
+<td>LENDR_MY/POLRATE_MY only</td>
+</tr>
+<tr>
+<td>IL</td>
+<td><strong>no</strong></td>
+<td>—</td>
+<td>CORP_IL/RATE_IL (3M T-bill) only</td>
+</tr>
+<tr>
+<td>SA</td>
+<td><strong>no</strong></td>
+<td>—</td>
+<td>POLRATE_SA only</td>
+</tr>
+<tr>
+<td>TW</td>
+<td>YIELD10_TW yes</td>
+<td>1997Q1–2025Q4</td>
+<td>nowcast</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-cross-country-providers-verified-once-reused-below">1. Cross-country providers (verified once, reused below)<a class="headerlink" href="#1-cross-country-providers-verified-once-reused-below" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>IMF QGFS</strong> (<code>data.imf.org</code> dataflow <code>IMF.STA:QGFS</code>, SDMX dims COUNTRY.ACCOUNTS.SECTOR.INDICATOR.FREQUENCY; sectors S13/S1311B/S1321; accounts BS/SOO/SSUC; indicators G1_T_XDC, G2_T_XDC, <strong>G24_T_XDC = interest expense</strong>). Per-country availability verified via <code>api.imf.org/external/sdmx/2.1/availableconstraint/QGFS/&lt;ISO&gt;....Q</code>: <strong>AUS</strong> 1968Q3→2026 (live); <strong>IDN</strong> 1969Q2→2023Q3 (incl. S13); <strong>THA</strong> 1959→2017Q4 (stale); <strong>MYS</strong> 1967→2023Q1 (S1311B cash); <strong>IND</strong> 2007Q1→2016Q2 only (stale); <strong>ISR</strong> financial-accounts F-codes only (G-codes: a single series 2016–2017Q3); <strong>KOR, NZL, SAU, TWN absent</strong>.</li>
+<li><strong>BIS credit to general government</strong> (<code>WS_TC</code>, sector G, key <code>Q.&lt;CC&gt;.G.A.N.770.A</code> nominal / <code>...M.770.A</code> market, % of GDP; also XDC levels). Verified spans (all end 2025Q4): AU 1988Q2, NZ 1989Q4, IN 1981Q1, ID 2001Q4, TH 1997Q1, MY 1967Q1, IL 1992Q3, SA 1999Q4, KR 1990Q4 (market-val panel only). <strong>TW not covered.</strong> Core-debt concept (loans+securities), not full GFS gross debt — perimeter/valuation flag.</li>
+<li><strong>OECD Quarterly Public Sector Debt</strong> (<code>OECD.SDD.NAD:DSD_NASEC10_IDC@DF_PSD_IDC</code>, sectors incl. S13/S1311): availability includes <strong>AU, IL, KR, NZ</strong>; dataset range 1952→2026Q1 (per-country span UNVERIFIED).</li>
+<li><strong>World Bank QPSD</strong> (databank source id <strong>20</strong>, code PSD; indicators <code>DP.DOD.DECT.CR.GG(.Z1)</code> general gov, <code>DP.DOD.DECT.CR.CG(.Z1)</code> central gov). Country-level coverage query not completed (<strong>UNVERIFIED per-country</strong>) — secondary to BIS here.</li>
+<li>OECD publishes quarterly government <strong>financial</strong> accounts/debt only; <strong>no</strong> OECD quarterly non-financial GG revenue/expenditure for this group — national sources or QGFS required.</li>
+</ul>
+<h2 id="2-per-economy-findings">2. Per-economy findings<a class="headerlink" href="#2-per-economy-findings" title="Permanent link">&para;</a></h2>
+<h3 id="kr-korea">KR — Korea<a class="headerlink" href="#kr-korea" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>MOEF "Monthly Fiscal Trends" / 열린재정 open fiscal data (total revenue, consolidated)</td>
+<td>M (cum.)</td>
+<td>~2011→current; pre-2011 backfill via BOK ECOS <strong>UNVERIFIED</strong></td>
+<td>Consolidated central gov (incl. SSF)</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Expenditure</td>
+<td>same bulletin (total spending)</td>
+<td>M (cum.)</td>
+<td>as above</td>
+<td>same</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Interest paid</td>
+<td><strong>not published sub-annually</strong> (annual IMF GFS only)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>High (that it's absent)</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>MOEF central-gov debt (monthly, e.g. 1,240.5tn KRW Jul); OECD QPSD (KR listed); BIS <code>Q.KR.G.A.M.770.A</code></td>
+<td>M/Q</td>
+<td>BIS 1990Q4–2025Q4</td>
+<td>Central (MOEF) / GG (BIS, market val)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Eff.-rate fallback</td>
+<td>YIELD10_KR in spec</td>
+<td>Q</td>
+<td>2000Q1–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>IMF QGFS: absent (Q and M both return 0 series). <strong>Verdict: FEASIBLE-FALLBACK</strong> — revenue/expenditure quarterly-izable but history likely short (~2011→, flag); interest via yield fallback; debt solid.</p>
+<h3 id="au-australia">AU — Australia<a class="headerlink" href="#au-australia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>ABS <em>Government Finance Statistics, Australia</em> (quarterly, ex-cat 5519.0.55.001; latest release = Mar-qtr 2026, GG total revenue $265.0bn)</td>
+<td>Q</td>
+<td>accrual GFS from <strong>1999Q3</strong> (Sep-1999; corroborated by 1999 accrual transition, exact start UNVERIFIED on current site); IMF QGFS mirror 1968Q3→2026</td>
+<td>GG consolidated + Cwlth/state splits</td>
+<td>Original (NSA); some SA aggregates</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>same release (total expenses; interest expense line; QGFS AUS carries G2x incl. G24-family)</td>
+<td>Q</td>
+<td>same</td>
+<td>GG</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>OECD QPSD (AU listed); BIS <code>Q.AU.G.A.N.770.A</code> 1988Q2–2025Q4; ABS 5232 fin. accounts</td>
+<td>Q</td>
+<td>1988Q2→</td>
+<td>GG</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_AU</td>
+<td>Q</td>
+<td>1999Q1–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL</strong> (best-in-group; effectively a GG mirror of the tool's existing fiscal economies).</p>
+<h3 id="nz-new-zealand">NZ — New Zealand<a class="headerlink" href="#nz-new-zealand" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>NZ Treasury <em>Interim Financial Statements of the Government</em> (core Crown tax revenue), treasury.govt.nz month-end series; latest = 11 months to 31-May-2026</td>
+<td>M (cum., Jun FY)</td>
+<td>online archive depth <strong>UNVERIFIED</strong> (confirmed ≥2022; publication long predates; likely late-1990s)</td>
+<td><strong>Core Crown (central gov)</strong> — not GG</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>same statements: core Crown expenses; <strong>finance costs</strong> line = interest</td>
+<td>M (cum.)</td>
+<td>as above</td>
+<td>core Crown</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>same statements (gross debt / net core Crown debt, e.g. $191.4bn = 43.5% GDP Dec-2025); BIS <code>Q.NZ.G.A.N.770.A</code> 1989Q4–2025Q4; OECD QPSD (NZ listed)</td>
+<td>M/Q</td>
+<td>BIS 1989Q4→</td>
+<td>core Crown / GG (BIS)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_NZ</td>
+<td>Q</td>
+<td>2000Q1–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>Also StatsNZ experimental quarterly sector accounts (GG income/outlay) exist but short/experimental (UNVERIFIED span). <strong>Verdict: FEASIBLE-FULL</strong> (all four ingredients incl. interest, but perimeter = core Crown — flag; quarterly = differenced cumulative monthly).</p>
+<h3 id="in-india">IN — India<a class="headerlink" href="#in-india" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>CGA Monthly Accounts, cga.nic.in (revenue receipts; CEIC mirrors from <strong>Apr-1997</strong>)</td>
+<td>M (cum., Apr FY)</td>
+<td>1997M4→current</td>
+<td><strong>Union (central) gov only</strong>; GG (centre+states) is annual only</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>CGA monthly accounts: total expenditure and <strong>interest payments</strong> line</td>
+<td>M (cum.)</td>
+<td>1997M4→</td>
+<td>Union gov</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>DEA/MoF <em>Quarterly Report on Public Debt Management</em> (total liabilities incl. public account; first report Apr–Jun 2010, latest Apr–Jun 2025 verified); RBI public-debt statistics; BIS <code>Q.IN.G.A.N.770.A</code> 1981Q1–2025Q4</td>
+<td>Q</td>
+<td>QPDM 2010Q2→; BIS 1981Q1→</td>
+<td>Central gov (QPDM) / GG (BIS)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_IN</td>
+<td>Q</td>
+<td>2011Q4–2025Q4 (WEO-backfill flag on tail)</td>
+<td>—</td>
+<td>—</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p>IMF QGFS: S1311B cash 2007Q1–2016Q2 only (stale — do not rely). <strong>Verdict: FEASIBLE-FULL at central-government perimeter</strong> (rev/exp/interest 1997→, debt 2010→ or BIS 1981→); GG perimeter NOT feasible quarterly — flag prominently.</p>
+<h3 id="id-indonesia">ID — Indonesia<a class="headerlink" href="#id-indonesia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>IMF QGFS <code>IDN.SOO/SSUC.S13+S1311B.G1_T_XDC.Q</code> 1969Q2–2023Q3; tail: Kemenkeu APBN KiTa / data-apbn.kemenkeu.go.id portal (monthly realization, 2018→current)</td>
+<td>Q + M</td>
+<td>1969Q2→2023Q3 + splice→current</td>
+<td>S13 available in QGFS (recent vintages); portal = central gov</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>QGFS G2_T_XDC and <strong>G24_T_XDC</strong> (verified present); APBN "pembayaran bunga utang" line for the tail</td>
+<td>Q</td>
+<td>same</td>
+<td>S13/BCG seam at splice</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>BIS <code>Q.ID.G.A.N.770.A</code> 2001Q4–2025Q4; DJPPR central-gov debt position monthly (<strong>exact series/start UNVERIFIED</strong>)</td>
+<td>Q/M</td>
+<td>2001Q4→</td>
+<td>GG (BIS) / central (DJPPR)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td><strong>No YIELD10_ID in spec.</strong> 10Y IDR yield exists from ~2003 via PHEI/IBPA, AsianBondsOnline, investing.com; <strong>no FRED mirror found</strong></td>
+<td>D/M</td>
+<td>~2003→</td>
+<td>—</td>
+<td>—</td>
+<td>Medium (source is non-official-mirror)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL</strong> — all four ingredients quarterly, but with a QGFS→national splice at 2023Q3 and an S13-vs-central perimeter seam to manage (SFA-style).</p>
+<h3 id="th-thailand">TH — Thailand<a class="headerlink" href="#th-thailand" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>IMF QGFS <code>THA...G1_T_XDC.Q</code> 1959–<strong>2017Q4 (stale)</strong>; current: MoF dataservices.mof.go.th (fiscal balance/cash flow, government revenue) + FPO monthly central-gov cash (BOT mirrors)</td>
+<td>Q + M</td>
+<td>history 1959→2017Q4; national monthly →current (CEIC shows monthly from at least 2005, fragments to 1988)</td>
+<td>S13 (QGFS) vs central gov cash (current)</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Total exp</td>
+<td>same pair (QGFS G2_T_XDC; MoF portal expenditure)</td>
+<td>Q + M</td>
+<td>same</td>
+<td>same</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Interest paid</td>
+<td>QGFS <strong>G24_T_XDC to 2017Q4 only</strong>; post-2017 quarterly interest line in MoF economic-classification tables <strong>UNVERIFIED</strong></td>
+<td>Q</td>
+<td>→2017Q4</td>
+<td>S13</td>
+<td>NSA</td>
+<td>Low post-2017</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>PDMO public-debt outstanding monthly (direct government debt; current reports verified; series start <strong>UNVERIFIED</strong>, ~2002); BIS <code>Q.TH.G.A.N.770.A</code> 1997Q1–2025Q4</td>
+<td>M/Q</td>
+<td>BIS 1997Q1→</td>
+<td>Public sector (PDMO) / GG (BIS)</td>
+<td>NSA</td>
+<td>High (debt)</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_TH</td>
+<td>Q</td>
+<td>2003Q1–2025Q4 (genuine→2025Q1 flag)</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FALLBACK</strong> — rev/exp/debt quarterly OK, but the interest series goes stale at 2017Q4; effective rate must fall back to YIELD10_TH (or accept a 2017-frozen spread).</p>
+<h3 id="my-malaysia">MY — Malaysia<a class="headerlink" href="#my-malaysia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>BNM Monthly Statistical Bulletin Section 5 quarterly federal-government finance (online from Apr-1998 issue; CEIC central-gov revenue quarterly reaches back to ~1981); IMF QGFS <code>MYS.SSUC.S1311B.G1...Q</code> 1967→2023Q1</td>
+<td>Q</td>
+<td>1967→ (QGFS) spliced to BNM/MoF current</td>
+<td><strong>Federal (central) gov</strong></td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>QGFS G2/<strong>G24</strong> (verified) 1967→2023Q1; current: BNM MSB / MoF quarterly fiscal updates "debt service charges" (exact MSB table no. <strong>UNVERIFIED</strong>)</td>
+<td>Q</td>
+<td>1967→2023Q1 + tail</td>
+<td>Federal gov</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>BIS <code>Q.MY.G.A.N.770.A</code> <strong>1967Q1</strong>–2025Q4; BNM MSB federal debt quarterly</td>
+<td>Q</td>
+<td>1967Q1→</td>
+<td>GG (BIS) / federal</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td><strong>No YIELD10_MY in spec.</strong> MGS 10Y indicative yield: BNM (FMIP/FAST; gov-securities-yield page 2006–2018) + CEIC long-term rate monthly <strong>Feb-1992→Feb-2026</strong></td>
+<td>M</td>
+<td>1992M2→</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL</strong> at federal-government perimeter (longest fiscal history in the group; 2023Q1→current splice from BNM/MoF needed).</p>
+<h3 id="il-israel">IL — Israel<a class="headerlink" href="#il-israel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>MoF monthly budget performance (CEIC "General Government: Revenue", reported by MoF, monthly <strong>Jan-1999→Mar-2026</strong>, 327 obs); CBS quarterly GG accounts (SNA basis) exist per CBS/BoI documentation</td>
+<td>M + Q</td>
+<td>1999M1→current; CBS quarterly start <strong>UNVERIFIED</strong> (~1995)</td>
+<td>MoF = state budget (central); CBS = GG</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>CBS GG accounts: expenditure by economic type with <strong>interest payments shown separately</strong> (documented "available annually as well as quarterly, albeit with incomplete detail" — quarterly interest detail <strong>UNVERIFIED</strong>); MoF monthly expenditure</td>
+<td>Q/M</td>
+<td>as above</td>
+<td>GG (CBS)</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>BIS <code>Q.IL.G.A.N.770.A</code> <strong>1992Q3</strong>–2025Q4 (also market-val panel); OECD QPSD (IL listed)</td>
+<td>Q</td>
+<td>1992Q3→</td>
+<td>GG</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td>No YIELD10_IL in spec; <strong>FRED <code>IRLTLT01ILM156N</code></strong> (10Y, OECD-sourced) monthly <strong>Jan-1997→Jun-2025</strong> (tail may be frozen — OECD MEI vintage; flag)</td>
+<td>M</td>
+<td>1997M1→2025M6</td>
+<td>—</td>
+<td>—</td>
+<td>High (existence)</td>
+</tr>
+</tbody>
+</table>
+<p>IMF QGFS: financial accounts only — not usable for flows. <strong>Verdict: FEASIBLE-FULL (medium confidence)</strong> — downgrade to FEASIBLE-FALLBACK if the CBS quarterly interest line proves too coarse; the FRED fallback exists either way.</p>
+<h3 id="sa-saudi-arabia">SA — Saudi Arabia<a class="headerlink" href="#sa-saudi-arabia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>MoF <em>Quarterly Budget Performance Reports</em>, mof.gov.sa/en/financialreport (verified index 2017→2026; e.g. Q1-FY2026 PDF <code>.../2026/Documents/Q1 Eng 2026 V12 FINAL.pdf</code>); GFSM-2014 classification, cash basis</td>
+<td>Q</td>
+<td><strong>2017Q1–2026Q1</strong> (~37 obs); pre-2017 annual only</td>
+<td>Budgetary central gov</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Total exp + interest</td>
+<td>same reports: expenditure by economic classification incl. an explicit <strong>"Financing expenses"</strong> line (verified, e.g. SAR 64bn, +21.1%)</td>
+<td>Q</td>
+<td>2017Q1→</td>
+<td>central</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>same reports (public debt stock, e.g. SAR 1.67tn end-2026Q1, domestic/external split); NDMC; BIS <code>Q.SA.G.A.N.770.A</code> 1999Q4–2025Q4</td>
+<td>Q</td>
+<td>reports 2017Q1→; BIS 1999Q4→ (pre-2017 underlying likely interpolated annual — flag)</td>
+<td>central / GG (BIS)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td>No YIELD10_SA in spec; <strong>no long-history 10Y</strong> — domestic sukuk curve only from ~2017</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>High (that it's absent)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: PARTIAL</strong> — all four ingredients exist and are clean 2017Q1→, but ~37 quarterly observations is short for the fiscal-block BVAR treatment and there is no yield fallback to extend the effective rate backwards.</p>
+<h3 id="tw-taiwan">TW — Taiwan<a class="headerlink" href="#tw-taiwan" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>MoF R.O.C. Public Finance Statistics Database (<code>web02.mof.gov.tw/njswww/webMain.aspx?sys=100</code>), "Net Government Revenues/Expenditures of All Levels of Government"; monthly release since <strong>Sep-2005</strong> (earlier actuals in DB, depth <strong>UNVERIFIED</strong>); CEIC mirrors as "General Government Revenue and Expenditure: MoF"</td>
+<td>M</td>
+<td>2005M9→current (longer UNVERIFIED)</td>
+<td>All levels ≈ GG (net of transfers)</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Total exp</td>
+<td>same table (net expenditures, all levels)</td>
+<td>M</td>
+<td>same</td>
+<td>GG-ish</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Interest paid</td>
+<td><strong>No sub-annual interest series found</strong> — interest expenditure appears only in annual final accounts (DGBAS/MoF)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>Medium (absence)</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td>MoF/National Treasury central-government debt outstanding (monthly; verified "as of 31-Jan-2026": NT<span class="arithmatex">\(5,897.9bn 1yr+, NT\)</span>140bn short-term; SDDS page eng.stat.gov.tw); series start <strong>UNVERIFIED</strong></td>
+<td>M</td>
+<td>→current</td>
+<td>Central gov</td>
+<td>NSA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_TW</td>
+<td>Q</td>
+<td>1997Q1–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>Not in IMF/World Bank/BIS/OECD (non-member everywhere). <strong>Verdict: FEASIBLE-FALLBACK</strong> — rev/exp/debt buildable from national sources with some archaeology; interest must use the YIELD10_TW fallback.</p>
+<h2 id="3-verdict-summary">3. Verdict summary<a class="headerlink" href="#3-verdict-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>CC</th>
+<th>Verdict</th>
+<th>Binding constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AU</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>none material (NSA/original series; 1999Q3 accrual start)</td>
+</tr>
+<tr>
+<td>MY</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>federal-gov perimeter; 2023Q1 QGFS→BNM splice</td>
+</tr>
+<tr>
+<td>ID</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>2023Q3 QGFS→APBN splice; S13-vs-central seam; no shipped yield</td>
+</tr>
+<tr>
+<td>NZ</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>core-Crown perimeter; cumulative-monthly differencing; archive depth unverified</td>
+</tr>
+<tr>
+<td>IL</td>
+<td><strong>FEASIBLE-FULL</strong> (medium)</td>
+<td>CBS quarterly interest detail unverified → fallback exists (FRED IRLTLT01ILM156N)</td>
+</tr>
+<tr>
+<td>IN</td>
+<td><strong>FEASIBLE-FULL</strong> (central gov only)</td>
+<td>GG=centre+states impossible quarterly; debt quarterly from 2010 (BIS proxy 1981→)</td>
+</tr>
+<tr>
+<td>KR</td>
+<td><strong>FEASIBLE-FALLBACK</strong></td>
+<td>no quarterly interest paid anywhere; rev/exp history shallow (~2011→)</td>
+</tr>
+<tr>
+<td>TH</td>
+<td><strong>FEASIBLE-FALLBACK</strong></td>
+<td>interest series dies 2017Q4; rest OK</td>
+</tr>
+<tr>
+<td>TW</td>
+<td><strong>FEASIBLE-FALLBACK</strong></td>
+<td>no quarterly interest; everything national-source, no IFI mirror</td>
+</tr>
+<tr>
+<td>SA</td>
+<td><strong>PARTIAL</strong></td>
+<td>clean but only 2017Q1→ (~37 obs); no yield fallback</td>
+</tr>
+</tbody>
+</table>
+<p>Cross-cutting notes for the build: (1) every economy in this group except AU(/IL-CBS) is <strong>central/budgetary-government perimeter</strong> — the GG label only holds via BIS debt and QGFS-S13 for ID/TH; (2) all flow sources are <strong>NSA and mostly cumulative-within-fiscal-year</strong> (IN Apr-FY, NZ Jun-FY, TH Oct-FY, TW/MY/KR calendar) — differencing + the existing SFA seam treatment required; (3) the three stale QGFS tails (TH 2017Q4, MY 2023Q1, ID 2023Q3) each need a national-source splice, which is exactly the kind of perimeter seam the SFA absorbed for the existing fiscal blocs.</p>
+<hr />
+<h1 id="quarterly-government-finance-data-audit-group-mx-br-cl-co-cr-ar-za">Quarterly Government-Finance Data Audit — Group: MX BR CL CO CR AR ZA<a class="headerlink" href="#quarterly-government-finance-data-audit-group-mx-br-cl-co-cr-ar-za" title="Permanent link">&para;</a></h1>
+<p>Audited 2026-07-09 by four source-verification agents. <strong>Provenance caveat:</strong> the CR+AR agent completed its report; the MX+BR, CL+CO and ZA+multilateral agents were cut off mid-run by an account spend limit — everything below is what was verified by live fetch <em>before</em> the cutoff, assembled from their transcripts. <strong>Update 2026-07-10:</strong> a follow-up gap-closure pass verified the six residual items (see "gap-closure results" at the end of this group) — CO and ZA firmed up to high confidence, MX's pre-2008 debt caveat closed; no verdict downgrades.</p>
+<h2 id="0-yield10_-in-the-shipped-specs-panel-starts">0. YIELD10_<CC> in the shipped specs + panel starts<a class="headerlink" href="#0-yield10_-in-the-shipped-specs-panel-starts" title="Permanent link">&para;</a></h2>
+<p>Verified against <code>app/public/data/bvar/&lt;CC&gt;/spec.json</code> and <code>pipeline/country_rawdata/DataRaw_&lt;CC&gt;_glob.json</code> (genuine spans). The <strong>panel start</strong> column is the binding constraint: fiscal history earlier than the bloc's estimation panel is unusable anyway.</p>
+<table>
+<thead>
+<tr>
+<th>CC</th>
+<th>Panel span (T)</th>
+<th>YIELD10 in spec?</th>
+<th>YIELD10 genuine span</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MX</td>
+<td>2001Q4–2025Q4 (97)</td>
+<td>YIELD10_MX yes</td>
+<td>2001Q4–2025Q4</td>
+</tr>
+<tr>
+<td>BR</td>
+<td><strong>2012Q2</strong>–2025Q4 (55)</td>
+<td><strong>no</strong> (POLRATE/LENDR only)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CL</td>
+<td>2004Q3–2025Q4 (86)</td>
+<td>YIELD10_CL yes</td>
+<td>2004Q3–2025Q4</td>
+</tr>
+<tr>
+<td>CO</td>
+<td>2005Q1–2025Q4 (84)</td>
+<td>YIELD10_CO yes</td>
+<td>2005Q1–2025Q4</td>
+</tr>
+<tr>
+<td>CR</td>
+<td>2010Q3–2025Q4 (62)</td>
+<td><strong>no</strong> (POLRATE/LENDR only)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>AR</td>
+<td>2004Q1–2025Q4 (88)</td>
+<td><strong>no</strong> (BADLAR/POLRATE/LENDR only)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ZA</td>
+<td>2002Q1–2025Q4 (96)</td>
+<td>YIELD10_ZA yes</td>
+<td>2002Q1–2025Q4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-cross-country-providers-verified-by-live-fetch">1. Cross-country providers (verified by live fetch)<a class="headerlink" href="#1-cross-country-providers-verified-by-live-fetch" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>World Bank Quarterly Public Sector Debt</strong> (QPSD, databank source id 20; <code>DP.DOD.DECT.CR.GG</code>/<code>.CG</code> nominal LCU, also <code>.CD</code> USD / <code>.Z1</code> %GDP). Per-country verified spans: <strong>ZAF GG+CG 2010Q1→2025Q3; MEX GG+CG 2008Q1→2025Q4; BRA GG+CG 2009Q3→2025Q4; COL CG 2008Q1→2025Q4; CRI CG 2009Q3→2025Q4; ARG CG 2011Q1→2025Q4; CHL both all-NULL</strong> (no data — use DIPRES/BCCh instead). This is the workhorse gross-debt source for the group.</li>
+<li><strong>IMF QGFS</strong> (<code>IMF.STA:QGFS</code> v12, dims COUNTRY.ACCOUNTS.SECTOR.INDICATOR.FREQUENCY, sectors S13/S1311B/S1321, freq A/M/Q): actual-availability constraint carries <strong>124 countries incl. MEX and BRA</strong> (per-country spans UNVERIFIED); <strong>CRI absent</strong> (verified: …COK, COL, CPV…); <strong>ARG conflicting</strong> — one endpoint (<code>?mode=available</code>) lists ARG/CHL/COL/ZAF, the plain availability fetch does not; treat QGFS as unreliable for ARG and resolve only if national sources fail (they don't).</li>
+<li><strong>BIS credit to general government</strong> (<code>WS_TC</code>, <code>Q.&lt;CC&gt;.G.A.&lt;M|N&gt;.770.A</code> %GDP / <code>...XDC.A</code> LCU levels): verified <strong>CL market-val 1998Q1→2025Q4</strong>; <strong>CO nominal 1996Q4→2025Q4</strong> (%GDP + COP levels; no market-val key for CO). Remaining keys resolved 2026-07-10 (all nominal-only, <code>Q.&lt;CC&gt;.G.A.N.770.A</code>, all →2025Q4): <strong>MX 1990Q4→, BR 1998Q1→, AR 1992Q4→, ZA 1960Q4→</strong> (ZA and MX predate WB QPSD by decades — long %GDP debt fallbacks); <strong>CR absent</strong> (SDMX error 100 — BCCR 8033 remains the CR debt source). FRED mirrors exist (e.g. <code>QCOGANXDCA</code> = AR credit-to-GG quarterly). Core-debt concept — perimeter/valuation flag as elsewhere.</li>
+<li><strong>OECD quarterly government accounts</strong> (<code>DSD_NASEC20@DF_T610GOV_Q</code> financial-accounts flows): REF_AREA includes <strong>MEX</strong> only from this group (no BRA/CHL/COL/CRI/ZAF). No OECD quarterly non-financial GG rev/exp for any of the seven.</li>
+<li><strong>IMF QGFS covers neither CR nor AR</strong> (verified) — both rely on national sources, which are genuinely monthly.</li>
+</ul>
+<h2 id="2-per-economy-findings_1">2. Per-economy findings<a class="headerlink" href="#2-per-economy-findings_1" title="Permanent link">&para;</a></h2>
+<h3 id="mx-mexico">MX — Mexico<a class="headerlink" href="#mx-mexico" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp/interest</td>
+<td><strong>SHCP Estadísticas Oportunas open-data CSVs</strong> (<code>secciones.hacienda.gob.mx/work/models/estadisticas_oportunas/datos_abiertos_eopf/</code>: <code>ingreso_gasto_finan_hist.csv</code> 1990–2010 + <code>ingreso_gasto_finan.csv</code> 2011→, dictionaries alongside; incl. <code>Costo Financiero de la Deuda del Gobierno Federal</code> + interna/externa splits)</td>
+<td>M</td>
+<td><strong>1990M1→2026M5 (verified 2026-07-10)</strong></td>
+<td>Gobierno Federal / sector público presupuestario / SP federal</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Revenue/exp/interest (mirror)</td>
+<td><strong>Banxico SIE cuadro CG1</strong> "Ingresos y Gastos Presupuestales del Sector Público": ingreso total, gasto, <strong>costo financiero</strong>, balance público, <strong>balance primario</strong></td>
+<td>M</td>
+<td><strong>Jan-1977→May-2026 (verified on page)</strong></td>
+<td>Sector público presupuestario (budgetary PS); CG2 = Gobierno Federal</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td><strong>SHCP open-data CSVs <code>deuda_publica_hist.csv</code>+<code>deuda_publica.csv</code>: <code>Saldo de la Deuda Interna Bruta del Gobierno Federal</code> (miles de pesos) + <code>...Externa Bruta...</code> (miles de dólares — FX conversion) + sector-público bruta variants, monthly 1990M1→2026M5 (verified 2026-07-10)</strong>; <strong>WB QPSD <code>DP.DOD.DECT.CR.GG</code>/<code>.CG</code> MEX 2008Q1→2025Q4 (verified)</strong>; BIS <code>Q.MX.G.A.N.770.A</code> 1990Q4→2025Q4; Banxico CG7 is <strong>net</strong> debt only (1980→)</td>
+<td>M / Q</td>
+<td><strong>1990M1→</strong></td>
+<td>Federal gov + SP (SHCP); GG + CG (WB)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Effective rate</td>
+<td>costo financiero / lagged SHCP gross debt — direct from 1990Q2; or vs WB-QPSD GG debt (2008Q2→)</td>
+<td>Q</td>
+<td>1990Q2→</td>
+<td>budgetary-PS interest vs federal/GG debt seam</td>
+<td>—</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_MX in spec</td>
+<td>Q</td>
+<td>2001Q4–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>Also: INEGI CSIT quarterly institutional-sector accounts (GG, base-2018) run <strong>2008Q1→current</strong> (verified from the CSIT release note; ~150-day lag — corroboration only, cannot cover the 2001Q4 panel start); QGFS MEX present (span UNVERIFIED). <strong>Verdict: FEASIBLE-FULL (high)</strong> — every ingredient monthly from 1990M1, machine-readable, interest = costo financiero, EFFI direct; perimeter = budgetary public sector / federal government, flag.</p>
+<h3 id="br-brazil">BR — Brazil<a class="headerlink" href="#br-brazil" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp (above-the-line)</td>
+<td>Tesouro Nacional <strong>RTN série histórica</strong> (XLSX, monthly update + API <code>apiapex.tesouro.gov.br/aria/v1/series-temporais</code>)</td>
+<td>M</td>
+<td><strong>Jan-1997→current (verified)</strong></td>
+<td>Central gov (Tesouro+INSS+BCB)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Interest (below-the-line)</td>
+<td><strong>BCB SGS 4616</strong> "NFSP s/ desv. cambial — fluxo mensal — <strong>juros nominais</strong> — setor público consolidado" (API verified)</td>
+<td>M</td>
+<td><strong>Dec-2001→May-2026 (verified; 1996–2001 empty)</strong></td>
+<td><strong>Consolidated public sector</strong>; CG variants exist (4606/4607)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Primary balance</td>
+<td><strong>BCB SGS 4649</strong> resultado primário, fluxo mensal, SP consolidado (verified)</td>
+<td>M</td>
+<td>Dec-2001→May-2026</td>
+<td>SP consolidado</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td><strong>BCB SGS 13762</strong> DBGG %PIB, methodology-2008 (verified <strong>Dec-2006→May-2026</strong>); SGS 4537 = pre-2008-methodology DBGG (≤2007, start UNVERIFIED); SGS 13761 returns DBGG-like R$ mn levels Dec-2006→May-2026 (data verified via API, title not in CKAN — <strong>UNVERIFIED title</strong>); <strong>WB QPSD BRA GG 2009Q3→2025Q4 (verified)</strong></td>
+<td>M / Q</td>
+<td>2006M12→</td>
+<td><strong>General government</strong> (DBGG)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Net debt</td>
+<td>SGS 4513 DLSP %PIB Dec-2001→ (verified)</td>
+<td>M</td>
+<td>2001M12→</td>
+<td>SP consolidado</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td><strong>No YIELD10_BR in spec</strong> (NTN-B/pré curves exist from ~2003 via ANBIMA — not needed if juros nominais used)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL</strong> — the BR panel starts 2012Q2, so every ingredient comfortably covers it; caveats: <code>juros nominais</code> is the NFSP nominal-interest concept (includes monetary correction — Selic-indexed debt makes it high and volatile), and the natural pairing is consolidated-PS interest with GG DBGG (perimeter seam for the SFA, as in existing blocs).</p>
+<h3 id="cl-chile">CL — Chile<a class="headerlink" href="#cl-chile" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp/interest</td>
+<td><strong>DIPRES</strong> Anuario EFP "Gobierno Central" XLSX (sheets <code>GCT_Trim</code> quarterly / <code>GCT_Mes</code> monthly, explicit <strong>"Intereses"</strong> row — file downloaded and inspected); Operación Trimestral archive 1989→2026Q1; <strong>BCCh BDE mirror</strong>: cuadros <code>GOB_TOT_1</code> (GC Total, quarterly, year selector <strong>1990→2026</strong>, series <code>F051.A023.FLU.G.C.CLP.T</code> = Intereses), <code>HIS_CAJA_*T</code> historical cash</td>
+<td>Q + M</td>
+<td>1989/1990→2026Q1 (verified)</td>
+<td><strong>Gobierno Central</strong> (Total = presupuestario+extra)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td><strong>DIPRES "Deuda Bruta Trimestral" GG XLSX (downloaded: 2008Q1→2025Q4, CG + municipalities + GG, MM$ and %PIB)</strong>; CG quarterly debt PDF reports 2002/2003→2026Q1 (PDF-only); BCCh <code>FP_DEUDA_BRUTA</code> (F051.F2.STO, 2008→2025); <strong>BIS CL 1998Q1→2025Q4 %GDP (verified)</strong></td>
+<td>Q</td>
+<td>2008Q1→ (XLSX); 1998Q1→ (BIS)</td>
+<td>GG/CG (DIPRES); GG core debt (BIS)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Effective rate</td>
+<td>DIPRES Intereses / lagged gross debt — direct</td>
+<td>Q</td>
+<td>2008Q2→ (or 1998Q2→ w/ BIS)</td>
+<td>CG interest vs GG debt seam</td>
+<td>—</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_CL in spec</td>
+<td>Q</td>
+<td>2004Q3–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>BCCh REST API (<code>SieteRestWS</code>) needs free registration (verified auth-error response); the DIPRES XLSX links are unauthenticated. WB QPSD CHL is empty (verified). <strong>Verdict: FEASIBLE-FULL</strong> (cleanest in group after the Eurostat six: official Excel with an interest line, GG debt series, EFFI direct).</p>
+<h3 id="co-colombia">CO — Colombia<a class="headerlink" href="#co-colombia" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp</td>
+<td><strong>MinHacienda "Balance Fiscal GNC (mensual y trimestral) 2004 – Abril 2026" XLSX</strong> — <strong>downloaded and opened 2026-07-10</strong> (via Wayback; live URL <code>minhacienda.gov.co/documents/d/portal/balance-fiscal-gnc-mensual-y-trimestral?download=true</code> is Radware bot-shielded to curl/plain fetch). Sheets: Mensual/Trimestral/Anual × ($MM, % del PIB). Lines: INGRESOS TOTALES (full tax detail), GASTOS TOTALES, Funcionamiento, Inversión, PRÉSTAMO NETO, DÉFICIT</td>
+<td>M+Q</td>
+<td><strong>Mensual Jan-2004→ / Trimestral 2004Q1→ (verified from cell serials)</strong>; live file to 2026M4</td>
+<td><strong>Gobierno Nacional Central</strong></td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Interest</td>
+<td><strong>Same XLSX: explicit <code>Intereses</code> line with <code>Intereses deuda externa</code> / <code>Intereses deuda interna</code> sub-lines + <code>Indexación TES B (UVR)</code> (verified 2026-07-10)</strong></td>
+<td>M+Q</td>
+<td>2004M1→</td>
+<td>GNC</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td><strong>WB QPSD COL CG 2008Q1→2025Q4 (verified)</strong>; IRC/MinHacienda "Perfil Deuda Bruta GNC" monthly XLS (latest May-2026 verified; archive ~93 entries, depth UNVERIFIED); <strong>BIS CO nominal %GDP + COP levels 1996Q4→2025Q4 (verified)</strong></td>
+<td>Q / M</td>
+<td>1996Q4→ (BIS), 2008Q1→ (WB)</td>
+<td>GG (BIS) / GNC (IRC, WB-CG)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Effective rate</td>
+<td>GNC intereses / lagged debt; or YIELD10_CO</td>
+<td>Q</td>
+<td>~2005Q2→</td>
+<td>GNC</td>
+<td>—</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_CO in spec</td>
+<td>Q</td>
+<td>2005Q1–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>Also: DANE CNTSI quarterly institutional-sector GG accounts exist (recent; span UNVERIFIED); BanRep SUAMECA portal JS-blocked to non-browser fetch. <strong>Verdict: FEASIBLE-FULL (high)</strong> — the interest line is verified monthly+quarterly from 2004 with an external/internal split; EFFI direct. Build caveat: automate the XLSX pull via Wayback or a browser session (plain curl is bot-blocked).</p>
+<h3 id="cr-costa-rica-agent-completed-full-detail-preserved">CR — Costa Rica (agent completed — full detail preserved)<a class="headerlink" href="#cr-costa-rica-agent-completed-full-detail-preserved" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp/<strong>interest</strong></td>
+<td><strong>BCCR cuadro 1179</strong> "Gobierno Central: ingresos, gastos y financiamiento, base devengado" — scriptable unauthenticated URL (<code>gee.bccr.fi.cr/...frmVerCatCuadro.aspx?CodCuadro=1179&amp;FecInicial=...&amp;FecFinal=...</code>); line items incl. "Servicio de intereses de deuda interna/externa" (fetched 2007 + 2025 windows)</td>
+<td>M, <strong>YTD-cumulative</strong></td>
+<td><strong>Jan-2006→Aug-2025</strong> (portal lag; Hacienda bulletins to Jan-2026)</td>
+<td>Central gov (budgetary)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td><strong>BCCR cuadro 8033</strong> debt total/internal/external, mn CRC + %GDP (fetched multiple windows)</td>
+<td>M</td>
+<td><strong>monthly Jan-2003→Aug-2025</strong> (Dec-only 2001–02)</td>
+<td>Central gov</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Debt corroboration</td>
+<td>WB QPSD CRI CG <strong>2009Q3→2025Q4 (verified)</strong></td>
+<td>Q</td>
+<td>2009Q3→</td>
+<td>CG</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Flow bulletins</td>
+<td>Hacienda "Cifras fiscales" PDFs (monthly; annual figures since 1987); GG/NFPS statements from 2019</td>
+<td>M</td>
+<td>→Jan-2026</td>
+<td>CG + GG/NFPS</td>
+<td>NSA</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Denominator</td>
+<td>Quarterly nominal GDP: <strong>BCCR cuadro 70 is DEAD on the gee portal</strong> (every window returns <code>frmGenError</code> while sibling cuadros respond — moved to the new <code>sdd.bccr.fi.cr</code> SPA); use <strong>OECD QNA CRI <code>B1GQ</code> current-prices XDC, 1991Q1→current (verified 2026-07-10, NSA + SA variants)</strong></td>
+<td>Q</td>
+<td><strong>1991Q1→</strong></td>
+<td>—</td>
+<td>NSA+SA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td>none in spec; <strong>no long 10Y exists</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>High (absence)</td>
+</tr>
+</tbody>
+</table>
+<p>Gotchas: cuadro 1179 is cumulative-from-January (difference then sum to quarters; January reset); the legacy <code>gee</code> portal lags (Aug-2025 at fetch) vs the newer <code>sdd.bccr.fi.cr</code> portal (existence seen, content UNVERIFIED) and Hacienda bulletins (Jan-2026) — check before relying on the tail; SECMCA regional DB is a possible pre-2006 flow fallback (span UNVERIFIED). <strong>Verdict: FEASIBLE-FULL at CG perimeter from 2006Q1</strong> (~80 quarterly obs, comfortably covering the 2010Q3 panel start); EFFI directly constructible from BCCR alone.</p>
+<h3 id="ar-argentina-agent-completed-full-detail-preserved">AR — Argentina (agent completed — full detail preserved)<a class="headerlink" href="#ar-argentina-agent-completed-full-detail-preserved" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp/<strong>interest</strong></td>
+<td><strong>AIF cash-basis CSVs</strong> (datos.gob.ar dataset 379): monthly 1993-01→2014-12 verified incl. interest split local/foreign currency (<code>..._int_mon_loc/extra</code>), <code>superavit_primario</code>, <code>resultado_fin</code>; gap 2015–18 = IMIG dataset; 2017→Jan-2026 = "Sector Público Base Caja" monthly XLSX (URLs verified)</td>
+<td>M</td>
+<td><strong>1993M1→2026M1</strong> (3-splice chain, overlaps allow seam checks)</td>
+<td><strong>SPN no financiero</strong> (national public sector, cash)</td>
+<td>NSA</td>
+<td>High (history) / Medium-High (tail)</td>
+</tr>
+<tr>
+<td>Gross debt (machine-readable)</td>
+<td>Sec. Finanzas quarterly debt DB (ZIP+XLSX+PDF) <strong>2019Q1→2026Q1</strong>; monthly bulletin XLSX <strong>Jan-2019→May-2026</strong>; <strong>WB QPSD ARG CG 2011Q1→2025Q4 (verified)</strong> — extends machine-readable debt back to 2011</td>
+<td>Q / M</td>
+<td>2011Q1→ (WB), 2019Q1→ (national)</td>
+<td><strong>Administración Central</strong>, headline in <strong>USD</strong></td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Debt pre-2011</td>
+<td>graficos-deuda visualizations 2004–2023, PDF-only; older informes not located</td>
+<td>Q</td>
+<td>2004→</td>
+<td>AC</td>
+<td>—</td>
+<td>Low (not machine-readable)</td>
+</tr>
+<tr>
+<td>Denominator</td>
+<td>INDEC quarterly GDP base-2004, current+constant prices (SA variant for real)</td>
+<td>Q</td>
+<td><strong>2004Q1→2025Q4</strong></td>
+<td>—</td>
+<td>NSA+SA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Fallback yield</td>
+<td>none in spec; FRED <code>QCOGANXDCA</code> (BIS credit-to-GG mirror, quarterly ~1996Q4→2025Q1) is a debt not a yield; no usable long 10Y (2001/2005/2020 defaults)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>High (absence)</td>
+</tr>
+</tbody>
+</table>
+<p>Critical gotchas (from the completed report): <strong>perimeter mismatch</strong> (SPN interest vs Adm-Central debt — overstates the effective rate; document or restrict to Treasury debt service from the quarterly DB); <strong>currency mismatch</strong> (debt USD headline vs ARS flows — convert at end-period official FX or use the by-currency ZIP DB); <strong>high inflation</strong> makes nominal ARS levels unusable — enter flows as % of INDEC quarterly nominal GDP (2004Q1→, matching the panel start); pre-2016 INDEC officially unreliable (2007–2015 intervention); <strong>debt-level breaks</strong> at 2001/2005/2010/2019/2020 restructurings. <strong>Verdict: PARTIAL</strong> — every ingredient exists (AR is the only bloc here with verified interest paid back to 1993), but the perimeter/currency/break seams are the worst in the group and machine-readable debt only reaches 2011Q1 (panel starts 2004Q1 → the first ~7 years of the debt column would be missing or PDF-archaeology).</p>
+<h3 id="za-south-africa">ZA — South Africa<a class="headerlink" href="#za-south-africa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th>Provider / dataset</th>
+<th>Freq</th>
+<th>Span</th>
+<th>Perimeter</th>
+<th>SA</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue/exp/interest</td>
+<td>National Treasury <strong>Section 32</strong> monthly statements (archive <strong>2004→2026</strong> verified) — <strong>line-level verified 2026-07-10</strong> on the May-2026 release (<code>treasury.gov.za/comm_media/press/monthly/2607/summary.pdf</code> + <code>Table 2.pdf</code>): <code>Debt-service costs</code> own line, with an explicit <code>Interest</code> sub-line, alongside Revenue and Expenditure; per-month summary + Tables 1–5 PDFs</td>
+<td>M</td>
+<td>2004→current</td>
+<td><strong>National government</strong> (central)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Rev/exp mirror</td>
+<td>SARB Quarterly Bulletin public-finance KBP tables — <strong>codes resolved 2026-07-10</strong> from the QB PDF: KB402 monthly <strong>KBP4597M total revenue, KBP4599M Interest, KBP4601M total expenditure</strong> (KBP4598M voted amounts); KB403 cash-flow KBP4045M/4610M</td>
+<td>M/Q</td>
+<td>QB series long history (Online Statistical Query UI / QB tables; <strong>the SARB Web API is NOT a bulk source</strong> — internal mnemonics e.g. <code>NGFC020M</code>, only 14 cash-flow series, rolling ~5-year window)</td>
+<td>National gov + consolidated</td>
+<td>NSA + some SA</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Gross debt</td>
+<td><strong>WB QPSD ZAF GG+CG 2010Q1→2025Q3 (verified)</strong>; SARB KB405/406 monthly <strong>KBP4114M total gross loan debt</strong> (4113M net, 4105M domestic, 4108M foreign) + <strong>KBP4116K gross loan debt %GDP quarterly</strong>; <strong>BIS <code>Q.ZA.G.A.N.770.A</code> 1960Q4→2025Q4 (verified 2026-07-10)</strong></td>
+<td>Q / M</td>
+<td><strong>1960Q4→</strong> (BIS %GDP), 2010Q1→ (WB levels)</td>
+<td>GG + CG (WB); national gov (KBP)</td>
+<td>NSA</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Effective rate</td>
+<td>Section-32 debt-service costs (Interest line) / lagged debt — direct; or YIELD10_ZA</td>
+<td>Q</td>
+<td>2004Q2→ (BIS-debt-based)</td>
+<td>national gov</td>
+<td>—</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td>Fallback</td>
+<td>YIELD10_ZA in spec</td>
+<td>Q</td>
+<td>2002Q1–2025Q4</td>
+<td>—</td>
+<td>—</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict: FEASIBLE-FULL (high)</strong> — the Section-32 interest line and the KBP codes are now verified; flows monthly from 2004 (vs 2002Q1 panel start), debt via BIS %GDP 1960Q4→ / WB levels 2010→ / KBP4114M monthly; EFFI direct. Route note: bulk history comes from Section-32 PDFs or the SARB Online Statistical Query UI, not the SARB Web API.</p>
+<h2 id="3-verdict-summary_1">3. Verdict summary<a class="headerlink" href="#3-verdict-summary_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>CC</th>
+<th>Verdict</th>
+<th>EFFI route</th>
+<th>Binding constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CL</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct (DIPRES Intereses / GG debt)</td>
+<td>GG-debt XLSX from 2008Q1 (CG PDFs to 2002)</td>
+</tr>
+<tr>
+<td>BR</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct (SGS 4616 juros / DBGG)</td>
+<td>juros-nominais concept; CG-vs-consolidated seam; panel only needs 2012Q2→</td>
+</tr>
+<tr>
+<td>MX</td>
+<td><strong>FEASIBLE-FULL</strong> (high)</td>
+<td>direct (costo financiero / SHCP gross debt, 1990→)</td>
+<td>budgetary-PS/federal perimeter; external debt in USD (FX conversion)</td>
+</tr>
+<tr>
+<td>CR</td>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>direct (BCCR 1179 / 8033)</td>
+<td>flows from 2006 (panel 2010Q3 — fine); YTD-cumulative differencing; gee-portal tail lag; denominator via OECD QNA (cuadro 70 dead)</td>
+</tr>
+<tr>
+<td>CO</td>
+<td><strong>FEASIBLE-FULL</strong> (high)</td>
+<td>direct (verified <code>Intereses</code> line / WB-QPSD debt)</td>
+<td>Radware bot-shield on the XLSX (Wayback/browser pull); GNC perimeter</td>
+</tr>
+<tr>
+<td>ZA</td>
+<td><strong>FEASIBLE-FULL</strong> (high)</td>
+<td>direct (Section-32 <code>Interest</code> line / BIS-WB debt), YIELD10_ZA spare</td>
+<td>SARB Web API not a bulk source (use Section-32 PDFs / OSQ UI); WB debt levels only 2010Q1→</td>
+</tr>
+<tr>
+<td>AR</td>
+<td><strong>PARTIAL</strong></td>
+<td>SPN interest / AC debt (perimeter-mismatched)</td>
+<td>machine-readable debt only 2011Q1→ (panel 2004Q1); FX/inflation/default seams</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gap-closure results (2026-07-10, all six items from the spend-limit cutoff verified):</strong> (1) MX SHCP open-data CSVs: monthly 1990M1→2026M5 incl. costo financiero AND gross debt stocks (interna in pesos, externa in USD) — pre-2008-debt caveat closed; (2) CO: <code>Intereses</code> (+externa/interna split) verified inside the Balance-Fiscal-GNC XLSX, monthly+quarterly 2004→ — upgraded to high confidence; (3) ZA: Section-32 <code>Debt-service costs</code>/<code>Interest</code> lines verified (May-2026 statement) + KBP codes resolved (4597M/4599M/4601M revenue/interest/expenditure; 4114M gross loan debt; 4116K %GDP quarterly) — upgraded to high confidence; (4) BIS keys: MX 1990Q4→, BR 1998Q1→, AR 1992Q4→, ZA 1960Q4→ (nominal only); CR absent; (5) INEGI CSIT 2008Q1→ (corroboration only); DANE CNTSI span still unverified (immaterial); (6) CR denominator: cuadro 70 dead → OECD QNA <code>B1GQ</code> current-prices 1991Q1→. Downloaded evidence retained in /tmp during the session (<code>co_balance.xlsx</code>, <code>za_summary.pdf</code>, <code>za_table2.pdf</code>, SHCP + BIS CSV headers).</p>
+<hr />
+<h1 id="consolidated-verdict-all-27-candidates">Consolidated verdict — all 27 candidates<a class="headerlink" href="#consolidated-verdict-all-27-candidates" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Verdict</th>
+<th>Blocs (n)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FEASIBLE-FULL</strong></td>
+<td>SE PL DK CZ HU NO · TR · AU MY ID NZ IL IN · CL BR MX CR CO ZA (<strong>19</strong>)</td>
+</tr>
+<tr>
+<td><strong>FEASIBLE-FALLBACK</strong> (EFFI via yield)</td>
+<td>KR TH TW (<strong>3</strong>)</td>
+</tr>
+<tr>
+<td><strong>PARTIAL</strong> (one ingredient blocked/short)</td>
+<td>IS (no quarterly GG debt) · CH (no quarterly interest) · SA (2017→ only, no yield) · AR (debt 2011→, perimeter/FX/break seams) (<strong>4</strong>)</td>
+</tr>
+<tr>
+<td><strong>NOT-FEASIBLE</strong></td>
+<td>RU (federal-only, provenance risk; slated for drop) (<strong>1</strong>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-build-roster-pending-user-decisions">Recommended build roster (pending user decisions)<a class="headerlink" href="#recommended-build-roster-pending-user-decisions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Wave 1 — Eurostat drop-ins (6):</strong> SE PL DK CZ HU NO. Same two datasets (<code>gov_10q_ggnfa</code> TR/TE/D41PAY + <code>gov_10q_ggdebt</code> GD) and the same builder as the existing 22 Eurostat fiscal blocs; EFFI direct, no new provider. NO is NSA-only (no SCA variant) — same seasonal handling as other NSA inputs.</li>
+<li><strong>Wave 2 — clean quarterly-native (5):</strong> AU (ABS GFS, GG, best non-European), CL (DIPRES XLSX + GG debt), MX (Banxico CG1 + WB QPSD), BR (RTN/SGS + DBGG), TR (CG cash flows + HMB GG debt, perimeter caveat).</li>
+<li><strong>Wave 3 — splice/differencing work (8):</strong> NZ IL IN ID MY CO ZA CR. Each needs one of: cumulative-monthly differencing (NZ IN CR), a stale-QGFS→national splice (ID MY, TH-style), or a residual verification item (IL CBS quarterly interest detail — the only one left; CO and ZA were verified 2026-07-10 and could equally sit in Wave 2). All central-government-perimeter except IL — document; the SFA absorbs the seams.</li>
+<li><strong>Fallback-EFFI trio (3):</strong> KR TH TW — revenue/expenditure/debt buildable, interest missing/stale, EFFI = YIELD10_<CC> (all three already in the specs). This is exactly the user-sanctioned yield approximation.</li>
+<li><strong>Denominator note:</strong> the fiscal builders need quarterly <strong>nominal</strong> GDP per bloc (<code>fiscal_raw</code> schema: revenue, total_expenditure, interest, gross_debt, nominal_gdp). Eurostat <code>namq_10_gdp</code> covers the six; OECD QNA current-prices covers AU NZ KR IL MX CL CO CR; INDEC (AR), INEGI (MX alt), BCCR cuadro 70 (CR), national sources for ID MY TH TW IN SA TR ZA BR — availability is not in doubt for any of these, but exact series should be pinned during the build.</li>
+</ul>
+<h3 id="open-decisions-user">Open decisions (user)<a class="headerlink" href="#open-decisions-user" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>CH</strong> — no quarterly interest-paid series exists; primary expenditure is therefore not constructible without approximating interest ≈ yield × lagged debt (a modelling choice, not a data splice). Options: (a) skip CH fiscal; (b) 3-variable block without EFFI/interest split; (c) yield-approximated interest, clearly documented. Recommend (a) or (c).</li>
+<li><strong>IS</strong> — no quarterly GG debt verified anywhere (flows are fine, 2002→2026Q1). Options: skip; or CG-perimeter debt from the central bank (unverified, needs a session with databank.is). Recommend skip for now.</li>
+<li><strong>SA</strong> — clean but only ~37 quarterly obs (2017Q1→) and no yield to extend backwards. Recommend skip (revisit in 2–3 years) unless a short-sample fiscal block is acceptable.</li>
+<li><strong>AR</strong> — buildable from 2011 (debt-limited) with the group's worst seams (SPN-vs-AC perimeter, USD debt vs ARS flows, default-era breaks). Recommend: defer to a second pass, or accept 2011→ with heavy documentation.</li>
+<li><strong>RU</strong> — no fiscal block; consistent with the planned bloc drop.</li>
+<li><strong>Perimeter policy</strong> — accept central/budgetary-government perimeter for the non-European blocs (IN MY ID TH TW KR NZ CR CO MX CL AR SA TR ZA), labelled per-bloc in the manual's data appendix, with the SFA carrying the seam (as it already does for existing blocs)?</li>
+</ol>
+<h3 id="build-sequence-once-decisions-are-in">Build sequence (once decisions are in)<a class="headerlink" href="#build-sequence-once-decisions-are-in" title="Permanent link">&para;</a></h3>
+<p>Source panels → per-bloc <code>fiscal_raw/fiscal_&lt;CC&gt;.json</code> → 4-var builder (FREV_GDP/FPEXP_GDP/EFFI/SFA, COVID window NaN, WN stationary prior on ratios per the 2026-06-14 re-estimation) → append to <code>DataRaw_&lt;CC&gt;_glob.json</code> (canonical key order!) → <strong>full 33-bloc re-estimation with <code>US_ENDOGENOUS=1</code></strong> → port/metas/manifest/2026Q1-shift/coupling/manual-tables chain (see project-dedup-reestimation notes) → green gate → deploy on explicit go-ahead. Combine with any changes coming out of the user's local test of the dedup build so the estimation runs once.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

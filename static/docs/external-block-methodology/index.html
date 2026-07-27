@@ -23,7 +23,7 @@
     
     
       
-        <title>External Block Methodology - Monetary-Financial Model — Documentation</title>
+        <title>External Block Methodology - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -340,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -348,6 +348,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -1045,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1375,7 +1403,7 @@ per-draw band loop, and synthetic chart traces — and is fully <strong>gated</s
 <tr>
 <td>Primary income on NFA</td>
 <td>investment income on the net IIP</td>
-<td><strong>derived</strong> <code>income = iNFA·NFA₋₁</code> (imputed return)</td>
+<td><strong>derived</strong> <code>income = iNFA·NFA₋₁/100</code> (imputed return)</td>
 </tr>
 <tr>
 <td>Current account</td>
@@ -1389,8 +1417,8 @@ per-draw band loop, and synthetic chart traces — and is fully <strong>gated</s
 </tr>
 <tr>
 <td>NFA / net IIP path</td>
-<td><code>NFAₜ = NFA₋₁ + CAₜ + valuationₜ</code></td>
-<td><strong>derived</strong> recursion (the BoP stock identity)</td>
+<td><code>NFAₜ = NFA₋₁/(1+gₜ) + CAₜ/4 + valuationₜ</code></td>
+<td><strong>derived</strong> ratio recursion (BoP identity + GDP-growth dilution)</td>
 </tr>
 <tr>
 <td>NFA seed</td>
@@ -1399,7 +1427,8 @@ per-draw band loop, and synthetic chart traces — and is fully <strong>gated</s
 </tr>
 </tbody>
 </table>
-<p>The <strong>NFA recursion is the standard BoP stock-flow identity</strong> — the net international investment
+<p>The <strong>NFA recursion is the BoP stock-flow identity in percent-of-GDP form</strong> — the inherited ratio is
+diluted by nominal GDP growth (<code>/(1+g)</code>), then the net international investment
 position changes by the current-account flow plus valuation (revaluation) effects, the same
 decomposition the IMF/ECB external statistics and the Lane–Milesi-Ferretti External Wealth of Nations
 dataset use.</p>
@@ -1436,9 +1465,13 @@ quarter <code>t = 0 … H−1</code>, read off the level-space forecast path (10
    <code>valₜ = −fxShare · NFA₋₁ · dFXₜ / 100</code> (<code>externalAccounting.ts:109–110</code>). A home appreciation
    (<code>dFX&gt;0</code>) cuts the home value of FX-denominated net assets, so for a net creditor it reduces NFA and
    for a net debtor (<code>nfa0&lt;0</code>) it <strong>raises</strong> NFA (FX-denominated net liabilities shrink).</li>
-<li><strong>Roll the stock forward</strong> (the BoP stock identity), quarterly:
-   <code>NFAₜ = NFA₋₁ + CAₜ/4 + valₜ</code> (<code>externalAccounting.ts:112</code>). The current account is an <strong>annual
-   ratio</strong> so it enters as a quarter-share (<code>/4</code>); the valuation effect is already this quarter's.</li>
+<li><strong>Roll the stock forward</strong> (the ratio-form BoP identity), quarterly:
+   <code>NFAₜ = NFA₋₁/(1+gₜ) + CAₜ/4 + valₜ</code> (<code>externalAccounting.ts</code>), where <code>gₜ</code> is quarterly nominal
+   GDP growth (decimal, the same construction as the fiscal block) — the division is the automatic
+   denominator effect on a %-of-GDP stock. The current account is an <strong>annual ratio</strong> so it enters as
+   a quarter-share (<code>/4</code>); the valuation effect is already this quarter's. The return on the stock
+   enters through the income leg of <code>CAₜ</code>, computed on the undiluted <code>NFA₋₁</code> (the dropped
+   cross-terms are second-order).</li>
 <li><strong>Derived reporting variable</strong>: <code>Δ(NFA/GDP)ₜ = NFAₜ − NFA₋₁</code> (<code>externalAccounting.ts:119</code>).</li>
 </ol>
 <p>The recursion returns <code>{ tb, income, ca, valuation, nfa, dNfa }</code>, all length <code>H</code>.</p>
@@ -1505,7 +1538,7 @@ is <strong>not</strong> the nominal customs/BoP current account to the decimal. 
 and import prices are not captured because the BVAR carries real volumes, not separate export/import
 deflators. Treat the levels as economically faithful, the high-frequency wiggles as volume-driven.</p>
 <h3 id="2-primary-income-is-imputed-not-estimated-infa">2. Primary income is IMPUTED, not estimated (<code>iNFA</code>)<a class="headerlink" href="#2-primary-income-is-imputed-not-estimated-infa" title="Permanent link">&para;</a></h3>
-<p>The primary-income leg of the current account is <code>income = iNFA·NFA₋₁</code> with a <strong>modeling-default</strong>
+<p>The primary-income leg of the current account is <code>income = iNFA·NFA₋₁/100</code> with a <strong>modeling-default</strong>
 imputed return <code>iNFA ≈ 3%</code> p.a. — it is <strong>not</strong> an estimated BVAR variable and <strong>not</strong> sourced. It is
 flagged in <code>external_meta.json</code> (<code>_flags</code>), like the structural SFA. Because income compounds on the
 <strong>lagged</strong> NFA stock, a more-negative NFA path mechanically produces a more-negative income drag (and

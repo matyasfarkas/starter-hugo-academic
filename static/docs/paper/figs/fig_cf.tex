@@ -1,0 +1,29 @@
+% Figure: the SW07 policy counterfactual sized to offset the GDP trough.
+% Data: figs/data/us_cf.csv (app/scripts/paper_figs/us_spread_cf.mjs).
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 1, horizontal sep=1.6cm},
+  paperpanel, width=0.46\textwidth, height=0.32\textwidth,
+]
+\nextgroupplot[title={Real GDP (\% deviation from baseline)},
+  legend style={font=\scriptsize, draw=none, fill=none, at={(0.95,0.05)}, anchor=south east}]
+\addplot[zeroline] coordinates {(1,0)(20,0)};
+\addplot[trueline] table[x=q, y=gdp_scen_lvl, col sep=comma] {figs/data/us_cf.csv};
+\addplot[cfline]   table[x=q, y=gdp_cf_lvl,   col sep=comma] {figs/data/us_cf.csv};
+\legend{spread scenario, with policy response}
+\nextgroupplot[title={Policy rate (pp deviation from baseline)}]
+\addplot[zeroline] coordinates {(1,0)(20,0)};
+\addplot[trueline] table[x=q, y=pol_scen, col sep=comma] {figs/data/us_cf.csv};
+\addplot[cfline]   table[x=q, y=pol_cf,   col sep=comma] {figs/data/us_cf.csv};
+\end{groupplot}
+\end{tikzpicture}
+\caption{What should policy do? The credit-spread scenario (solid) and the same scenario with
+an unanticipated monetary-policy shock from the Smets--Wouters model layered on top (dashed),
+sized so that the easing offsets the output trough. Left: the level of real GDP relative to
+baseline; the counterfactual closes the gap the shock opened. Right: the policy-rate paths. The
+scenario's own rate falls because the model expects policy to respond; the counterfactual adds
+the deliberate surprise easing on impact, which then decays along the model's policy rule.}
+\label{fig:cf}
+\end{figure}

@@ -23,7 +23,7 @@
     
     
       
-        <title>Modules & API - Monetary-Financial Model — Documentation</title>
+        <title>Modules & API - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -338,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -346,6 +346,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -776,6 +804,17 @@
     <span class="md-ellipsis">
       
         affineBlocKernels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasonal-dummies-seasonalrows-qoynext-c2atstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seasonal dummies (seasonalRows / qoyNext / c2AtStep)
       
     </span>
   </a>
@@ -1469,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1664,6 +1703,17 @@
     <span class="md-ellipsis">
       
         affineBlocKernels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasonal-dummies-seasonalrows-qoynext-c2atstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seasonal dummies (seasonalRows / qoyNext / c2AtStep)
       
     </span>
   </a>
@@ -2187,7 +2237,7 @@ module reference:</p>
   the MATLAB estimator (<code>bvarGLPmf.m</code>, §<a href="#fiscal-stationary-prior">Fiscal stationary prior</a>), not
   the TS engine, but it changes the <strong>shape of the baselines</strong> the engine loads — the fiscal
   GDP-ratios (<code>FREV_GDP</code>, <code>FPEXP_GDP</code>, <code>SFA</code>) now revert to their in-sample mean instead of
-  drifting at the long horizon. See <a href="../DATA_SCHEMA/#3-specjson--the-variable-manifest">DATA_SCHEMA §3</a>
+  drifting at the long horizon. See <a href="../DATA_SCHEMA/#3-specjson-the-variable-manifest">DATA_SCHEMA §3</a>
   for the field and <a href="../PIPELINE/#5-the-gvar-em-loop-export_bvar_gvar24_loopm">PIPELINE §5</a> for how
   it is set.</li>
 <li><strong><code>isFinancial</code> and COVID masking.</strong> A variable with <code>isFinancial:true</code> is kept <strong>observed</strong>
@@ -2237,7 +2287,7 @@ annualized growth rate is <code>4·Δ(level)</code> for a <code>log</code> varia
 </tr>
 <tr>
 <td><code>barnichon-mesters.ts</code></td>
-<td>Optimal-policy QP (B&amp;M 2023 sufficient statistics)</td>
+<td>Optimal-policy QP (quadratic program; B&amp;M 2023 sufficient statistics)</td>
 <td><code>ControlPanel.tsx</code></td>
 </tr>
 <tr>
@@ -2262,7 +2312,7 @@ annualized growth rate is <code>4·Δ(level)</code> for a <code>log</code> varia
 </tr>
 <tr>
 <td><code>data/loader.ts</code></td>
-<td>Per-country single-bloc JSON fetch + LRU draws cache + <code>fiscal_meta</code></td>
+<td>Per-country single-bloc JSON fetch + LRU (least-recently-used) draws cache + <code>fiscal_meta</code></td>
 <td>single-country views, <code>ChartGrid.tsx</code></td>
 </tr>
 <tr>
@@ -2385,7 +2435,7 @@ loaded JSON, not the engine:</p>
   user manual; all <strong>1048</strong> variables across the <strong>50</strong> shipped specs were audited coherent.</li>
 </ul>
 <blockquote>
-<p>⚠️ The illustrative <code>spec.json</code> example in <a href="../DATA_SCHEMA/#3-specjson--the-variable-manifest">DATA_SCHEMA §3</a>
+<p>⚠️ The illustrative <code>spec.json</code> example in <a href="../DATA_SCHEMA/#3-specjson-the-variable-manifest">DATA_SCHEMA §3</a>
 predates this refit (it shows <code>FREV_GDP</code>/<code>SFA</code> as <code>RW</code> and <code>GLB_OIL</code> as <code>isFinancial:false</code>). The
 <strong>shipped</strong> <code>US/spec.json</code> is the authority: <code>FREV_GDP</code>/<code>FPEXP_GDP</code>/<code>SFA</code> are <code>WN</code>, and
 <code>GLB_OIL</code>/<code>GLB_USEQ</code> are <code>isFinancial:true</code>.</p>
@@ -2487,8 +2537,13 @@ smoother for conditional forecasting of a single BVAR bloc. Ported from MATLAB
 y_t = Z·a_t + c1 + e_t,        e_t ~ N(0, R)
 </code></pre></div>
 <h3 id="core-types">Core types<a class="headerlink" href="#core-types" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">BVARParams</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">betahat</span><span class="o">:</span><span class="w"> </span><span class="kt">Matrix</span><span class="p">;</span><span class="w"> </span><span class="nx">sigmahat</span><span class="o">:</span><span class="w"> </span><span class="kt">Matrix</span><span class="p">;</span><span class="w"> </span><span class="nx">n</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">lags</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">}</span>
-<span class="c1">// betahat is (1 + n·lags, n): row 0 = constant, rows 1..n·lags = lag coefficients</span>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">BVARParams</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">betahat</span><span class="o">:</span><span class="w"> </span><span class="kt">Matrix</span><span class="p">;</span><span class="w"> </span><span class="nx">sigmahat</span><span class="o">:</span><span class="w"> </span><span class="kt">Matrix</span><span class="p">;</span><span class="w"> </span><span class="nx">n</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">lags</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span>
+<span class="w">  </span><span class="nx">seasonalRows?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w">   </span><span class="c1">// 0 (default/legacy) or 3 — quarterly seasonal-dummy rows in betahat</span>
+<span class="w">  </span><span class="nx">qoyNext?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w">        </span><span class="c1">// quarter-of-year (1..4) of the FIRST forecast row (required if seasonalRows&gt;0)</span>
+<span class="p">}</span>
+<span class="c1">// betahat is (1 + nsr + n·lags, n) where nsr = seasonalRows (0 legacy): row 0 = constant,</span>
+<span class="c1">//   rows 1..nsr = seasonal-dummy coefficients (γ_Q2/γ_Q3/γ_Q4 vs the Q1 base), the rest = lag coefficients</span>
 <span class="c1">// sigmahat is (n, n) innovation covariance</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">LinObs</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">h</span><span class="o">:</span><span class="w"> </span><span class="kt">Float64Array</span><span class="p">;</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// linear-combination pin: h&#39;·y_t = value</span>
@@ -2506,7 +2561,12 @@ y_t = Z·a_t + c1 + e_t,        e_t ~ N(0, R)
 <tr>
 <td><code>buildStateSpace</code></td>
 <td><code>(params: BVARParams) =&gt; StateSpace</code></td>
-<td>companion <code>T, Z, Q, R, c1, c2</code>; <strong><code>R = 1e-12·I</code></strong> (tiny measurement noise)</td>
+<td>companion <code>T, Z, Q, R, c1, c2</code>; <strong><code>R = 1e-12·I</code></strong> (tiny measurement noise). Reads lag coefficients at row <code>1+nsr</code>; for a seasonal bloc (<code>nsr=3</code>) also precomputes <code>c2ByQ</code> (4 quarter-specific transition constants) + stores <code>qoyNext</code></td>
+</tr>
+<tr>
+<td><code>c2AtStep</code></td>
+<td><code>(ss: StateSpace, t: number) =&gt; Float64Array</code></td>
+<td>transition constant at forecast step <code>t</code> (seasonal-aware): picks <code>c2ByQ[((qoyNext−1+t) mod 4)]</code>; falls back to the static <code>c2</code> when <code>nsr=0</code></td>
 </tr>
 <tr>
 <td><code>initState</code></td>
@@ -2531,7 +2591,7 @@ y_t = Z·a_t + c1 + e_t,        e_t ~ N(0, R)
 <tr>
 <td><code>affineBlocKernels</code></td>
 <td>see below</td>
-<td>the 18× GVAR perf path</td>
+<td>the ~10–20× GVAR perf path</td>
 </tr>
 <tr>
 <td><code>dkSimulationDraw</code></td>
@@ -2585,6 +2645,35 @@ full filter+smoother pass on <code>condPaths</code>), then evaluates each unit-b
 forward/backward recursion (pure matvecs). The arithmetic is <strong>byte-equal</strong> to running
 <code>conditionalForecast</code> once per <code>(cell, tp)</code> probe, at a large constant-factor win
 (~10–20× on the <code>n=41</code>, <code>lags=3</code>, <code>H=20</code> endogenous US bloc). Used inside <code>gvarSolve.ts</code>'s <code>blocKernels</code>.</p>
+<h3 id="seasonal-dummies-seasonalrows-qoynext-c2atstep">Seasonal dummies (<code>seasonalRows</code> / <code>qoyNext</code> / <code>c2AtStep</code>)<a class="headerlink" href="#seasonal-dummies-seasonalrows-qoynext-c2atstep" title="Permanent link">&para;</a></h3>
+<p>NSA-seasonal blocs (16 coupled + 6 euro members — see <code>ARCHITECTURE_FOR_AI.md</code> §5·EM.s) are estimated
+with three <strong>quarterly seasonal dummies</strong> <code>D = [q==2, q==3, q==4]</code> (Q1 base). The estimator therefore ships
+<code>betahat</code> with the layout <strong><code>[constant; γ_Q2; γ_Q3; γ_Q4; B_1; …; B_p]</code></strong> (<code>k = 1 + nsr + n·lags</code>,
+<code>nsr = seasonalRows</code>), plus <code>seasonalRows</code> in <code>companion_mean.json</code> and <code>seasonalRows</code>/<code>qoyNext</code> in
+<code>spec.json</code>. The engine handles this without a new code path:</p>
+<ul>
+<li><strong><code>buildStateSpace</code></strong> reads the lag coefficients at row <strong><code>1 + nsr</code></strong> (skipping the deterministic dummy
+  rows), and for <code>nsr &gt; 0</code> precomputes <strong><code>c2ByQ</code></strong> — the 4 quarter-specific transition constants (the
+  Q1-base <code>c2 = betahat[0]</code> plus <code>γ_Q2/γ_Q3/γ_Q4</code> on the top <code>n</code> rows) — and stores <code>qoyNext</code> on the
+  <code>StateSpace</code>.</li>
+<li><strong><code>c2AtStep(ss, t)</code></strong> returns the constant for forecast step <code>t</code> via <code>q = ((qoyNext−1+t) mod 4)</code>, so the
+  filter/smoother prediction step and the forecast-draw recursion (<code>bvarForecastDraw</code>, which also applies
+  the per-step dummy directly) get the right quarter's intercept. <code>nsr = 0</code> ⇒ <code>c2AtStep</code> returns the
+  static <code>c2</code> and every path is <strong>byte-identical</strong> to the pre-seasonal engine.</li>
+</ul>
+<p>The <strong>seasonal-aware conditional forecast</strong> is thus the same <code>conditionalForecast</code> / <code>affineBlocKernels</code>
+call — only the transition constant varies by quarter. Consumers that build <code>BVARParams</code> and must thread
+<code>{ seasonalRows, qoyNext }</code>: <code>gvarSolve.buildParams</code> / <code>makeCountryModel</code>, <code>useConditionalForecast</code>,
+<code>runGvarBandSolve</code> (per-draw), <code>driftSetter</code>, <code>longRunTilt</code> (which infers <code>nsr</code> from <code>beta_shape[0]</code> on the
+draws), the <code>ChartGrid</code> band paths, and the pipeline <code>.mjs</code> scripts (<code>member_extend</code>, <code>nowcast_complete</code>,
+<code>regen_gvar_bands</code>, <code>precompute_gvar_coupling</code>, <code>verify_gvar24</code>, <code>refresh-quarter</code>).</p>
+<blockquote>
+<p>🔴 <strong>PHASE RULE.</strong> <code>qoyNext</code> is <strong>always</strong> recomputed from the app's own date grid via
+<code>dates.qoyNextOf(country)</code> (quarter after <code>lastHistOf</code>, wrapped <code>1..4</code>); the shipped <code>spec.json.qoyNext</code>
+is on the estimation grid, which the production shift moves <strong>+1 quarter</strong> — trusting it would mis-phase
+every seasonal constant. <code>makeCountryModel</code> sets <code>params.qoyNext = qoyNextOverride ?? qoyNextOf(code)</code>
+(the override is for the node pipeline scripts only). See <code>DATA_SCHEMA.md</code> §3.3.</p>
+</blockquote>
 <h3 id="numerical-thresholds-kalmants">Numerical thresholds (kalman.ts)<a class="headerlink" href="#numerical-thresholds-kalmants" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -2803,8 +2892,8 @@ pin to <code>own-base + US-global-delta</code>. The compact state is therefore a
 <p>⚠️ <strong>No <code>ρ(M) &lt; 1</code> divergence guard on the live solve (known issue #3).</strong> The Neumann iteration
 (<code>gvarSolve.ts:1296</code>) stops at <code>maxIt</code>/tolerance but never checks <code>ρ(M) &lt; 1</code>. A refit producing
 <code>ρ ≥ 1</code> would diverge silently and return a confident-wrong forecast. <code>ρ</code> is shipped in the artifact
-(currently 0.924) but not read as a guard. See
-<a href="#known-issues--limitations-flagged-for-fix-not-yet-fixed">Known issues #3</a>.</p>
+(currently 0.922) but not read as a guard. See
+<a href="#known-issues-limitations-flagged-for-fix-not-yet-fixed">Known issues #3</a>.</p>
 </blockquote>
 <h3 id="spectral-radius-by-panel-size">Spectral radius by panel size<a class="headerlink" href="#spectral-radius-by-panel-size" title="Permanent link">&para;</a></h3>
 <p><code>spectralRadius(M)</code> power-iterates <code>M²</code> (deterministic seed, 400 iters) and takes the sqrt
@@ -2827,7 +2916,7 @@ pin to <code>own-base + US-global-delta</code>. The compact state is therefore a
 </tr>
 <tr>
 <td>33-bloc, US endogenous (<code>dim≈2060</code>)</td>
-<td><strong>0.924041</strong> (live <code>coupling_default.json.gz</code>; moves with each refit, stays <code>&lt; 1</code>)</td>
+<td><strong>0.945494</strong> (live <code>coupling_default.json.gz</code>, eigendecomposition-exact — the field read 0.935044 before 2026-07-17 from an under-converged power iteration; moves with each refit and stays <code>&lt; 1</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -2969,7 +3058,7 @@ accounting identity</strong>, never a BVAR variable. <code>sfa_t</code> in the d
 anchors). There is <strong>no</strong> debt→primary-balance reaction and <strong>no</strong> debt→yield risk premium in anything the
 user sees.</p>
 <blockquote>
-<p>⚠️ <strong>The <code>γ</code>/<code>β</code> (Bohn FRF + risk-premium) levers are DORMANT / test-only.</strong> A <em>separate</em> function
+<p>⚠️ <strong>The <code>γ</code>/<code>β</code> (Bohn fiscal reaction function [FRF] + risk-premium) levers are DORMANT / test-only.</strong> A <em>separate</em> function
 <code>runFiscalRecursion</code> (<code>fiscalAccounting.ts:66</code>) adds the optional terms
 <code>pb_t += γ·(d₋₁ − d*)</code> (Bohn, default <code>0.03</code>) and <code>i_eff_t += β·max(0, d₋₁ − d*)</code> (risk premium,
 default <code>0</code>), gated by <code>feedbackOn</code>. <strong><code>runFiscalRecursion</code> has ZERO production callers</strong> — it is
@@ -3196,7 +3285,7 @@ std-scales each anchor by its own sample standard deviation for conditioning.</p
 <code>solveEntropicTilt</code> builds <code>Gc</code> straight from <code>gByDraw</code> and the softmax <code>exp(Σ Gc·γ)</code> will <code>NaN</code> if
 any draw's moment is non-finite (an unstable draw whose long-horizon forecast diverged), silently
 emptying the anchor band. The scaling pre-pass skips non-finite values, but the matrix fed to the dual
-does not. See <a href="#known-issues--limitations-flagged-for-fix-not-yet-fixed">Known issues #2</a>.</p>
+does not. See <a href="#known-issues-limitations-flagged-for-fix-not-yet-fixed">Known issues #2</a>.</p>
 </blockquote>
 <hr />
 <h2 id="dataloaderts"><code>data/loader.ts</code><a class="headerlink" href="#dataloaderts" title="Permanent link">&para;</a></h2>
@@ -3483,7 +3572,10 @@ the empirical core of the paper. The full design is final in
 </tr>
 </tbody>
 </table>
-<p>Nesting map (stated in the paper): <code>sbvar ⊂ cgvar_b ⊂ emgvar_*</code>; RW/AR nested in every VAR.</p>
+<p>Nesting map (stated in the paper): <code>sbvar ⊂ cgvar_b ⊂ emgvar_*</code>; RW/AR nested in every VAR.
+Count reconciliation: the table lists <strong>8 registry codes</strong>, but the <code>rw</code> code emits both <code>rw</code> and its
+sample-mean climatology sibling <code>clim</code> as separately scored labels, so the scored suite is <strong>9 models</strong>
+(2 proposed + 6 benchmarks + the climatology sibling; <code>arp</code> is a single label).</p>
 <p><strong>Design (final).</strong> Recursive <strong>expanding window</strong>, origins <strong>2010Q1–2024Q4</strong> (drop the 2020
 COVID origins from the headline); <strong>rolling as-of-<code>t0</code></strong> trade weights (leak-free — built from IMTS
 bilateral trade with <code>endPeriod ≤ year(t0)</code>; the shipped 2021–2023 <code>weights_full.json</code> is
@@ -3551,7 +3643,7 @@ affected output.</p>
    tolerance <code>1e-10·(1+‖x‖)</code> — but there is <strong>no check that <code>ρ(M) &lt; 1</code></strong>. If a refit produced a <code>M</code> with
    <code>ρ ≥ 1</code> (a non-stationary coupling), the iteration would diverge (or stop at <code>maxIt</code> far from a fixed
    point) and the solver would return a <strong>confident-wrong</strong> forecast with no warning. <code>ρ</code> <em>is</em> computed
-   at export time and shipped in the artifact (and is currently 0.924), but the live solve does not read
+   at export time and shipped in the artifact (and is currently 0.947), but the live solve does not read
    it as a guard. Fix: assert <code>coupling.rhoSpectral &lt; 1</code> (or estimate <code>ρ</code> and bail/flag) before trusting
    the iterate.</p>
 </li>

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../MFM_User_Manual.pdf">
+        <link rel="prev" href="../MFFM_US_bloc_model.pdf">
       
       
         <link rel="next" href="../euro-cross-border/">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Scenario Cookbook - Monetary-Financial Model — Documentation</title>
+        <title>Scenario Cookbook - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -340,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -348,6 +348,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -989,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1219,7 +1247,7 @@ bloc-specific variable IDs and restriction counts, and embodies a deliberate two
 </ul>
 <blockquote>
 <p><strong>Every recipe is grounded in a real, citable source.</strong> Magnitudes and signs are calibrated to a
-published IMF/FSAP adverse stress scenario or a well-documented historical episode (cited in each
+published IMF/FSAP (Financial Sector Assessment Program) adverse stress scenario or a well-documented historical episode (cited in each
 section). The numbers are economically defensible, not illustrative placeholders — but they remain
 <em>authored</em> (a designer's reading of the cited path into this model's deviation space), surfaced here
 for the user (an IMF economist) to review and retune. The <em>structure</em> (which variables, naive vs
@@ -1339,7 +1367,7 @@ restricted) is the fixed design.</p>
 <p><strong>Source.</strong> Federal Reserve, <em>2020 Severely Adverse</em> supervisory scenario (Feb 2020) — the
 macro-financial backbone of US bank stress testing and of the <strong>IMF United States FSAP 2020</strong>
 (Country Report 20/242), which documents a wave of corporate-sector defaults amplified by record
-NFC debt/GDP.</p>
+non-financial-corporate (NFC) debt/GDP.</p>
 <p><strong>Transmission.</strong> A corporate-credit-<strong>supply</strong> contraction. Default risk on highly-levered firms is
 repriced, so the IG corporate-to-Treasury spread blows out (<strong>to 5.5 pp by 2020Q3, +400 bp</strong> vs
 2019Q4), and external finance becomes scarce and dear. Simultaneously a <strong>flight to safety</strong> bids up
@@ -1347,7 +1375,7 @@ Treasuries so the <strong>risk-FREE 10y FALLS</strong> (to 0.75 % on impact) and
 the entire move is in the <em>spread</em> (risk premium), not the safe curve. The higher cost of risk-bearing
 chokes investment and hiring; output collapses (<strong>−8.5 %</strong> peak-to-trough), unemployment rises to 10 %,
 and the shortfall is <strong>disinflationary</strong> (CPI to ~1.25 %). Equity falls −50 % (VIX 70); house/CRE
-−28 %/−35 %; the USD appreciates ex-JPY and EA/UK/JP enter severe recessions.</p>
+(Commercial Real Estate) −28 %/−35 %; the USD appreciates ex-JPY and EA/UK/JP enter severe recessions.</p>
 <ul>
 <li><strong>Naive</strong> — corporate yield up to the documented <strong>+400 bp</strong> peak (<code>FAAA</code>, front-loaded to
   2020Q1–Q3, fading ~2 yr), nothing else pinned. The model's estimated comovement drags the <em>whole
@@ -1418,11 +1446,11 @@ omitted.</p>
 <p><strong>Source.</strong> IMF <strong>2018 Article IV Consultation</strong> (Country Report No. 18/207, July 2018) and the <strong>2018
 External Sector Report</strong>, assessing the 2018 US Tax Cuts and Jobs Act + Bipartisan Budget Act.</p>
 <p><strong>Transmission.</strong> A procyclical fiscal expansion onto an economy already at <strong>full employment</strong>. The
-loosening widened the GG <strong>structural primary deficit by ~1 pp</strong> of potential GDP (−2.7 % → −3.8 %,
+loosening widened the GG (General Government) <strong>structural primary deficit by ~1 pp</strong> of potential GDP (−2.7 % → −3.8 %,
 2017→2019) and lifted GG gross debt ~106 % → ~113 % of GDP. With demand outrunning supply, the Fed
 must "raise policy rates at a faster pace", which together with the demand pull puts <strong>upward pressure
 on the dollar</strong> (judged 8–16 % overvalued), so imports rise and the <strong>current-account deficit widens to
-~3½ % of GDP</strong> by 2019–20, the NIIP falling ~8 pp / 5 yr — the saving-investment identity
+~3½ % of GDP</strong> by 2019–20, the NIIP (Net International Investment Position) falling ~8 pp / 5 yr — the saving-investment identity
 <em>CA = Sprivate + Sgov − I</em> made concrete (twin deficits). Near-term growth boost ~<strong>+0.9 pp</strong> (real GDP
 2.3 % → 2.9 %), deflator 1.8 % → 2.8 %.</p>
 <ul>
@@ -1529,7 +1557,7 @@ instead of identical.</p>
 bottleneck</strong>.</p>
 <p><strong>Transmission.</strong> A goods-demand surge meets constrained supply — port congestion, intermediate-input/
 semiconductor shortages, upstream Asian production stoppages (2021–22 China port closures, 2022 Shanghai
-lockdown). Scarce inputs propagate downstream, lifting input/import prices (Liu-Nguyen: a 1-SD GSCPI
+lockdown). Scarce inputs propagate downstream, lifting input/import prices (Liu-Nguyen: a 1-SD Global Supply Chain Pressure Index (GSCPI)
 shock raises US headline PCE ~+0.5 pp, goods inflation up to ~+1.5 pp; GSCPI shocks added <strong>~+2.5 pp</strong> to
 headline inflation at the 2021–22 peak, ~60 % of the above-trend run-up) while curtailing output
 (Kemp-Portillo-Santoro: 2021 disruptions subtracted <strong>0.5–1.2 %</strong> from global value added; WEO Jan-2022
@@ -1564,7 +1592,7 @@ Multilateralism"</strong> (Aiyar et al., Jan 2023); FDI channel from <strong>IMF
 pass-through from <strong>Amiti, Redding &amp; Weinstein (JEP 2019)</strong> on the 2018-19 US-China trade war.</p>
 <p><strong>Transmission.</strong> A structural retreat from trade integration. Higher cross-bloc barriers curtail both
 export demand and import supply (trade volumes compress <strong>permanently</strong>); the SDN estimates trade
-fragmentation alone lowers global GDP <strong>0.2 % → ~7 %</strong> (baseline ~1.2 %; technological decoupling raises
+fragmentation alone lowers global GDP <strong>0.2 % to ~7 %</strong> (baseline ~1.2 %; technological decoupling raises
 EM losses to 8–12 %), with cross-bloc FDI curtailment adding ~2 % (WEO Ch.4). Re-shoring raises the
 <strong>price LEVEL</strong> of tradables (Amiti-Redding-Weinstein: <strong>complete pass-through</strong> of 2018 tariffs into US
 prices — a one-off level step), and commodity-market segmentation is inflationary specifically for the
@@ -1596,7 +1624,7 @@ finding. Trade magnitudes are anchored to the SDN severe two-bloc tail.</p>
 <h2 id="8-inflation-de-anchoring">8 · Inflation de-anchoring<a class="headerlink" href="#8-inflation-de-anchoring" title="Permanent link">&para;</a></h2>
 <p><strong>Source.</strong> <strong>EBA/ECB 2023 EU-wide banking-sector stress-test ADVERSE scenario</strong> (ECB-PUBLIC, Jan
 2023) — a documented wage-price-spiral / de-anchoring path; cross-checked against the <strong>IMF GFSR Oct
-2023</strong> global stress test and the <strong>China 2024 FSSA</strong> stagflation case.</p>
+2023</strong> global stress test and the <strong>China 2024 FSSA</strong> (Financial System Stability Assessment) stagflation case.</p>
 <p><strong>Transmission.</strong> A <strong>cost-push</strong> energy/commodity supply shock (oil +54 %, gas to 180 EUR/MWh; 53 % of
 the HICP impact) collides with a <strong>wage-price spiral</strong>: real-income losses drive higher wage claims,
 firms pass costs into prices (second-round effects ~60 % of the HICP-level rise), expectations and wage
