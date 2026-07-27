@@ -1,0 +1,502 @@
+% =====================================================================================
+% §2 METHODOLOGY — the full econometric treatment (classical GVAR and MFFM in parallel).
+% Every constant here is verified against the code: cgl_bvarV5.m (hyperpriors, MH bounds),
+% export_bvar_gvar24_loop.m (MAXIT/TOL/draws/WN columns/star construction), the shipped
+% coupling artifact (dim, rho). Do not edit numbers by hand.
+% =====================================================================================
+
+Two models organize this section, and they are meant to be read against each other. The
+classical GVAR comes first, in the form the literature developed it, because the MFFM keeps
+its skeleton and the comparison is sharpest with both on the page. The MFFM follows: what a
+bloc is, how its foreign variables are built, how the system is estimated and then solved.
+The section closes with the question any design must answer --- what this way of working
+buys, and what it costs --- and with the US bloc, which runs through everything as the
+concrete example. Readers who want the tour first can jump to Section~\ref{sec:example} and
+return.
+
+\subsection{The classical GVAR}\label{sec:classical}
+
+The global VAR grew out of a practical need: to extend a national model with the foreign
+variables that national outcomes depend on, without attempting an intractable world system.
+Proposed by \citet{PesaranSchuermannWeiner2004} and developed fully in
+\citet{DeesDiMauroPesaranSmith2007}, it models each economy as a VARX$^{*}$, a VAR augmented
+with weakly exogenous foreign variables, and ties the country models into one global system
+through trade weights; \citet{ChudikPesaran2016} survey the approach and
+\citet{diMauroPesaran2013} collect its applications.
+
+Formally, country $i=1,\dots,N$ is described by a VARX$^{*}(p_i,q_i)$ model,
+\begin{equation}\label{eq:varx}
+  y_{it} \;=\; a_{i0} \;+\; \sum_{s=1}^{p_i} \Phi_{is}\, y_{i,t-s}
+  \;+\; \sum_{s=0}^{q_i} \Lambda_{is}\, y^{*}_{i,t-s}
+  \;+\; \sum_{s=0}^{q_i} \Upsilon_{is}\, d_{t-s} \;+\; u_{it},
+\end{equation}
+where $y_{it}$ is the $k_i\times1$ vector of domestic variables, $y^{*}_{it}$ the
+country-specific foreign variables, $d_t$ a small set of global variables (the oil price is
+the canonical member), and $u_{it}$ the reduced-form innovation. The foreign variables are
+trade-weighted cross sections of the partners' variables,
+\begin{equation}\label{eq:starsclassical}
+  y^{*}_{it} \;=\; \sum_{j=1}^{N} w_{ij}\, y_{jt}, \qquad w_{ii}=0,
+\end{equation}
+with fixed weights $w_{ij}$, usually bilateral trade shares.\footnote{The weighting scheme
+matters less than one might expect; see \citet[p.~169]{diMauroPesaran2013}.}
+
+Two assumptions make this system estimable country by country. The first is \emph{weak
+exogeneity} of $y^{*}_{it}$ and $d_t$ with respect to the parameters of bloc
+$i$:\footnote{Foreign variables may affect the domestic economy contemporaneously, but they
+are not affected by domestic disequilibria --- the lagged domestic error-correction terms do
+not enter the marginal model of the foreign variables
+\citep[pp.~56--57]{GarrattLeePesaranShin2012}. Careful applications test this restriction
+bloc by bloc rather than assume it.} each economy takes the world as given. That is
+plausible for a small open economy and fails, by construction, for the largest one, so the
+United States is treated asymmetrically: it is the source of the global variables $d_t$,
+and its own foreign-variable set is restricted. The second assumption is a common
+estimation window. The blocs are estimated on a shared balanced sample, so ragged country
+coverage is resolved by truncating everyone to the quarters all blocs share.
+
+In its full form the classical model is a \emph{cointegrating} system. Each country model
+is cast as a VECMX$^{*}$, the number of cointegrating relations is determined by
+Johansen-type rank tests, estimation is by reduced-rank regression conditional on the
+weakly exogenous variables, and over-identifying long-run restrictions can be imposed so
+that the estimated equilibria match theory \citep{GarrattLeePesaranShin2012}. The short-run
+coefficients are then estimated by least squares conditional on the long-run relations.
+This long-run structure is one of the GVAR's real strengths: it disciplines the medium run
+exactly where an unrestricted VAR is weakest.
+
+The global solution comes from stacking. Collect $z_{it}=(y_{it}',\,y^{*\prime}_{it})'$ and
+define the link matrices $W_i$, built from the weights, that extract bloc $i$'s own and
+foreign variables from the global vector $y_t=(y_{1t}',\dots,y_{Nt}')'$, so that
+$z_{it}=W_i\,y_t$. Writing \eqref{eq:varx} at first order for exposition and substituting,
+\begin{equation}
+  A_i W_i\, y_t \;=\; a_{i0} + B_i W_i\, y_{t-1} + u_{it},
+  \qquad A_i=(I_{k_i},\,-\Lambda_{i0}), \quad B_i=(\Phi_{i1},\,\Lambda_{i1}),
+\end{equation}
+and stacking the $N$ blocs,
+\begin{equation}\label{eq:stack}
+  G\,y_t \;=\; a_0 + H\,y_{t-1} + u_t
+  \qquad\Longrightarrow\qquad
+  y_t \;=\; G^{-1}a_0 + G^{-1}H\,y_{t-1} + G^{-1}u_t,
+\end{equation}
+where $G$ stacks the $A_iW_i$ and $H$ the $B_iW_i$. The contemporaneous matrix $G$ is
+invertible in applications, and inverting it \emph{once} delivers the world reduced form,
+from which forecasts and generalized impulse responses \citep{PesaranShin1998} follow.
+Stability requires the eigenvalues of $G^{-1}H$ to lie in the unit disc, a property that is
+checked rather than guaranteed; applications routinely track how many eigenvalue moduli
+approach one, since near-unit roots signal the over-parametrization risks inherent in
+systems this large. Estimation in practice is supported by a mature toolchain
+\citep{SmithGalesi2014}.
+
+Figure~\ref{fig:pesaran} draws the pipeline: separate country estimations, stars from
+observed data, one stack, one inversion. That is the machine the MFFM descends from.
+Everything that follows keeps its two central ideas --- sparse trade-weighted linkage and a
+stacked linear solution --- and changes how the blocs are specified, estimated, and solved.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figs/tikz/fig_pesaran.pdf}
+\caption{The classical GVAR pipeline. Country models are estimated one at a time on their own
+samples, linked by weakly exogenous trade-weighted stars built from observed data, then
+stacked through the link matrices and inverted once to give the world reduced form
+\eqref{eq:stack}. The two red tags mark the assumptions the MFFM replaces: weak exogeneity
+and the common balanced estimation window.}
+\label{fig:pesaran}
+\end{figure}
+
+\subsection{The MFFM country model}\label{sec:gbvar}
+
+The MFFM strips the classical bloc down to a closed VAR and moves the difficulty elsewhere
+--- out of the specification and into the estimation. Each of the $N=\NBlocs{}$ coupled
+blocs is a closed, constant-coefficient VAR($p$),
+\begin{equation}\label{eq:mffmbloc}
+  y_{it} \;=\; c_i \;+\; \Gamma_i\, D_t \;+\; \sum_{\ell=1}^{p} B_{i\ell}\, y_{i,t-\ell}
+  \;+\; u_{it},
+  \qquad u_{it}\sim\mathcal N(0,\Sigma_i), \qquad p=\NLags,
+\end{equation}
+where $D_t=\bigl(\mathbf 1\{q(t){=}2\},\,\mathbf 1\{q(t){=}3\},\,\mathbf 1\{q(t){=}4\}\bigr)'$
+holds quarterly seasonal dummies, with $\Gamma_i\neq0$ for the \NSeasonal{} blocs whose
+source series are published without seasonal adjustment and $\Gamma_i=0$ elsewhere. The
+bloc vector carries the partition
+\begin{equation}\label{eq:partition}
+  y_{it} \;=\; \bigl(\, x_{it}',\;\; g_t',\;\; x^{*\prime}_{it} \,\bigr)',
+\end{equation}
+with $x_{it}$ the domestic block (activity, prices, interest rates, credit, housing and,
+for \NFiscal{} blocs, four fiscal drivers), $g_t$ the \NGlobals{} global financial prices
+(the WTI oil price, the US ten-year Treasury yield, the US Baa corporate yield, and a US
+equity index), and $x^{*}_{it}=(\mathrm{ROWDEM}_{it},\mathrm{ROWINF}_{it},\mathrm{ROWFIN}_{it})'$
+the three foreign variables. Variables tagged as logarithmic enter as $100\ln$ levels, so
+the displayed quarter-on-quarter annualized growth is $4\Delta$; rates and GDP ratios enter
+untransformed. In the US bloc the four global prices are ordinary domestic columns --- the
+United States is their source; every other bloc carries the same four series and receives
+their paths from the US solution.
+
+The exogenous side is deliberately leaner than the Bayesian GVAR it is closest to.
+\citet{CrespoFeldkircherHuber2016} give each country a near-full foreign mirror,
+$x^{*}_{it}=(y^{*},\allowbreak\Delta p^{*},\allowbreak eq^{*},\allowbreak i_s^{*},\allowbreak i_l^{*},\allowbreak tc^{*})'$ --- trade-weighted counterparts of
+six of their seven domestic variables, all but the real exchange rate --- together with the oil
+price as a global control determined inside the US model. The MFFM keeps only the three stars for
+partner demand, inflation and the short rate, and carries the financial linkage instead in the
+\NGlobals{} \emph{global} prices $g_t$: oil and three US-originated series (the ten-year yield, the
+Baa corporate yield and an equity index) that enter every bloc directly rather than as
+trade-weighted aggregates. That is the substantive difference between the two spillover mechanisms.
+Where \citeauthor{CrespoFeldkircherHuber2016} transmit foreign equity, long rates and credit through
+the weight matrix, the MFFM transmits US financial conditions as common prices, so a repricing at
+the source reaches every bloc's own equations at once --- the mechanism behind the ``US credit event
+as world credit event'' reading of Section~\ref{sec:example}. The leaner star block trades the
+country-pair richness of a full foreign mirror for a sparser, more identifiable linkage and that
+common-price channel.
+
+The defining difference from \eqref{eq:varx} lies in what is \emph{absent}: there is no
+contemporaneous term $\Lambda_{i0}x^{*}_{it}$ and no weak-exogeneity restriction. The
+foreign variables are full endogenous columns with equations of their own, so each bloc is
+a closed VAR that can forecast its foreign environment unaided. Contemporaneous
+co-movement between foreign and domestic variables is carried by the covariance $\Sigma_i$
+rather than by a structural loading, and the cross-country consistency that weak
+exogeneity buys the classical model is imposed twice elsewhere: on the star \emph{data} at
+estimation time (Section~\ref{sec:estimation}) and on the star \emph{paths} at solve time
+(Section~\ref{sec:solve}). One consequence deserves emphasis. Nothing in this design stops
+the United States from carrying foreign variables of its own, and it does: the classical
+asymmetry disappears, and the world feeds back into the US bloc as into any other.
+
+The star data are built as in \eqref{eq:starsclassical}, with one refinement forced by the
+unbalanced panel. Let $\ell^{g}_{jt}$ and $\ell^{\pi}_{jt}$ denote partner $j$'s $100\ln$
+real GDP and consumer-price levels and $r_{jt}$ its short rate (the policy rate where one
+exists, the ten-year yield as fallback), all read from $j$'s \emph{completed} panel in the
+sense of Section~\ref{sec:estimation}. The three foreign variables of bloc $i$ are
+\begin{align}
+  \mathrm{ROWDEM}_{it} &= 4\sum_{j\neq i}\tilde w^{\mathrm{DEM}}_{ij,t}
+      \bigl(\ell^{g}_{j,t}-\ell^{g}_{j,t-1}\bigr), \label{eq:rowdem}\\
+  \mathrm{ROWINF}_{it} &= 4\sum_{j\neq i}\tilde w^{\mathrm{INF}}_{ij,t}
+      \bigl(\ell^{\pi}_{j,t}-\ell^{\pi}_{j,t-1}\bigr), \label{eq:rowinf}\\
+  \mathrm{ROWFIN}_{it} &= \phantom{4}\sum_{j\neq i}\tilde w^{\mathrm{FIN}}_{ij,t}\; r_{j,t},
+      \label{eq:rowfin}
+\end{align}
+the first two trade-weighted annualized growth rates, the third a level. The applied
+weights renormalize the fixed bilateral goods-trade shares $w_{ij}$ (IMF merchandise-trade
+statistics, 2021--23 average) over the partners available and eligible at each date, per
+component:
+\begin{equation}\label{eq:wtilde}
+  \tilde w^{\,k}_{ij,t} \;=\;
+  \frac{w_{ij}\,\mathbf 1\{j\ \text{eligible for}\ k\ \text{at}\ t\}}
+       {\sum_{j'} w_{ij'}\,\mathbf 1\{j'\ \text{eligible for}\ k\ \text{at}\ t\}},
+  \qquad k\in\{\mathrm{DEM},\mathrm{INF},\mathrm{FIN}\},
+\end{equation}
+so a partner whose sample has not yet started lends its weight to the others instead of
+truncating everyone to a common window.\footnote{Eligibility differs by component: a bloc
+with no usable short-rate series drops out of $\mathrm{FIN}$ only, and Argentina's 2023--24
+inflation episode, which would dominate the price and rate averages, excludes it from
+$\mathrm{INF}$ and $\mathrm{FIN}$ while it remains in $\mathrm{DEM}$.}
+
+One modeling choice remains, and it is the deepest difference between the two designs: the
+long run. The classical GVAR disciplines it with cointegrating restrictions; we discipline
+it with shrinkage. The MFFM works in levels under a Minnesota-type prior
+centered on univariate random walks, the Bayesian tradition for possibly integrated data
+that avoids pre-testing for ranks \citep{DoanLittermanSims1984,Litterman1986,simszha1998}.
+This shrinkage-in-levels route to the GVAR is itself established:
+\citet{CrespoFeldkircherHuber2016} first replaced the classical cointegration step with
+Bayesian shrinkage on the country-model coefficients, and showed that hierarchical
+Minnesota-type and stochastic-search priors forecast an international macro-financial panel
+more accurately than a random walk with drift, an unshrunk global model, or isolated country
+VARs. The MFFM shares that estimation philosophy --- exogenous trade-weight links, a
+VARX$^{*}$ per bloc, shrinkage in place of rank tests --- and differs in what the estimated
+system is then put to: an interactive conditional solve (Section~\ref{sec:solve}), a joint EM
+completion of the pandemic-holed panel, an endogenous anchor economy, and the fiscal and
+external accounting satellites, rather than density forecasting alone.
+The deliberate exceptions are the fiscal ratios --- revenue, primary expenditure, the
+effective interest rate, the stock-flow term --- whose prior is centered on white noise
+(own-lag coefficient zero): a GDP share is not a random walk, and a fiscal drift the data
+do not insist on should not be allowed to compound over a five-year projection. What is
+given up relative to the VECMX$^{*}$ is the explicit long-run structure; what is gained is
+that no rank and restriction decisions have to be made, and hold, for
+\NBlocs{} blocs simultaneously. For blocs with $\Gamma_i\neq0$ one further convention
+matters in daily use: the deterministic term is quarter-specific in history but averaged in
+projection --- forecasts replace $c_i+\Gamma_iD_t$ by
+$\bar c_i = c_i + \tfrac{1}{4}(\gamma_{i,Q2}+\gamma_{i,Q3}+\gamma_{i,Q4})$ --- so projected
+paths are seasonally adjusted while the model fits the unadjusted data it was given. A
+related accrual convention spreads coupon-lumpy government interest payments evenly within
+each calendar year for \NEvenEffi{} fiscal blocs; the online manual documents both.
+
+\subsection{Estimation}\label{sec:estimation}
+
+What makes estimation nonstandard here is not the prior but the data. The panel is
+ragged: bloc samples differ in length by more than a decade, and at any moment
+the latest quarter is published for some blocs and not others. The pandemic quarters
+2020Q2--Q4 are treated as missing by choice, for the macroeconomic block only, so that
+three observations of unprecedented size do not dominate the estimated dynamics of thirty
+normal years \citep{LenzaPrimiceri2022}; the financial columns stay observed, and of the
+foreign variables $\mathrm{ROWDEM}$ and $\mathrm{ROWINF}$ are masked with the macro block
+while $\mathrm{ROWFIN}$ remains observed. And the regressors $x^{*}_{it}$ are not data at
+all: they are functions of the partners' incomplete panels. Estimation therefore solves
+three problems jointly within each bloc --- missing cells, hyperparameters, coefficients
+--- and a fourth across blocs, because the stars each bloc needs are outputs of the other
+blocs' completions.
+
+Within a bloc, everything runs through the state-space form. For given coefficients, stack
+$\alpha_t=(y_{it}',\dots,y_{i,t-p+1}')'$ and write
+\begin{equation}\label{eq:ss}
+  \alpha_t = \mathbf T_i\,\alpha_{t-1} + c_\alpha + \eta_t, \qquad
+  y^{\mathrm{obs}}_{it} = Z_{it}\,\alpha_t + \varepsilon_{it}, \qquad
+  \varepsilon_{it}\sim\mathcal N(0,\,10^{-12}I),
+\end{equation}
+where $\mathbf T_i$ is the companion matrix of \eqref{eq:mffmbloc} and the selection
+$Z_{it}$ keeps exactly the cells observed at date $t$, so missing cells simply drop out of
+the measurement equation. The simulation smoother of \citet{DurbinKoopman2002} then draws
+the missing cells exactly, conditional on everything observed --- data augmentation in the
+sense of \citet{TannerWong1987}.
+
+The prior on $(\beta_i,\Sigma_i)$, where $\beta_i$ stacks
+$(c_i,\Gamma_i,B_{i1},\dots,B_{ip})$, is the natural-conjugate normal--inverse-Wishart
+family with the hierarchical Minnesota structure of \citet{Giannone2015}. Conditional on
+$\Sigma_i$, the prior mean of each equation is the univariate random walk --- own first-lag
+coefficient one --- except on the fiscal-ratio columns, where it is white noise; the prior
+variance of the coefficient on lag $\ell$ of variable $j$ is proportional to
+$\lambda_i^{2}/(\ell^{2}\psi_j)$, with the scales $\psi_j$ fixed at univariate
+autoregressive residual-variance estimates. The sum-of-coefficients dummy observations of
+\citet{DoanLittermanSims1984} discipline long-run drift with tightness $\mu_i$; on seasonal
+blocs the dummy-observation entries for the $D_t$ columns are zeroed and the corresponding
+prior rows left diffuse, so the seasonal pattern is estimated essentially from the data.
+The two tightnesses are estimated, not calibrated: $\lambda_i$ carries a Gamma hyperprior
+with mode $0.2$ and standard deviation $0.4$, $\mu_i$ mode $1$ and standard deviation $1$
+--- the settings of \citet{Giannone2015} --- and both are updated by random-walk
+Metropolis--Hastings on the marginal likelihood of the completed data, with proposals
+reflected into $[10^{-4},5]^2$. The single-unit-root dummy is not used.
+
+The full system is estimated by the following iteration.
+\begin{enumerate}\setlength\itemsep{2pt}
+  \item \emph{Initialize.} Build starting stars from the raw partner panels (leading gaps
+    back-filled with first valid values); set $(\lambda_i,\mu_i)$ at their
+    marginal-likelihood modes.
+  \item \emph{Bloc pass (data augmentation).} For each bloc $i$, holding its stars fixed:
+    alternate (a) drawing the missing cells with the simulation smoother given
+    $(\beta_i,\Sigma_i)$; (b) drawing $(\beta_i,\Sigma_i)$ from the normal--inverse-Wishart
+    posterior given the completed data; (c) updating $(\lambda_i,\mu_i)$ by
+    Metropolis--Hastings. Retain the posterior-mean completed panel.\footnote{Within the
+    outer loop the smoother's companion matrix is held fixed at the previous pass's
+    posterior mean and common random numbers are used across passes, which makes the outer
+    iteration contract in practice. An exact data-augmentation pass, with the companion
+    rebuilt at every sweep, is available as an optional final polish.}
+  \item \emph{Star rebuild (Jacobi).} Recompute every bloc's foreign variables
+    \eqref{eq:rowdem}--\eqref{eq:rowfin} from the partners' just-completed panels.
+  \item \emph{Iterate} steps 2--3 until the largest change in any bloc's star history falls
+    below $0.03$ (excluding the pandemic-imputation window), with a cap of 12 outer
+    iterations.
+\end{enumerate}
+Each bloc's sampler runs 1{,}000 draws with the first 500 discarded; the shipped model is
+the posterior mean $(\hat\beta_i,\hat\Sigma_i)$ together with the 500 retained draws, from
+which the tool simulates its uncertainty bands. The scheme is an EM-type algorithm in the
+tradition of \citet{DempsterLairdRubin1977} with a Jacobi outer loop across blocs. When it
+stops, every completed history, every filled gap, and every foreign variable is a fixed
+point of the whole system --- the estimation-time counterpart of the classical model's weak
+exogeneity.
+
+\subsection{The solved system}\label{sec:solve}
+
+At solve time the question changes from ``what are the parameters'' to ``what does the
+world look like under my conditions.'' A scenario is a set of pinned future cells ---
+values a user imposes on particular variables in particular quarters --- and the answer is
+the conditional forecast: the smoother of \eqref{eq:ss} run over the future, treating pins
+as observations \citep{WaggonerZha1999,BanburaGiannoneLenza2015}. The near-degenerate
+measurement variance makes a pin hard; giving a cell a finite variance instead makes it
+soft, which is how outside forecasts enter at a chosen level of trust. For a single bloc,
+that is the whole story.
+
+Coupled, one more requirement appears: bloc $i$'s foreign variables must equal the
+trade-weighted average of what its partners actually do, and the partners' outcomes depend
+on their own foreign variables in turn. Because the smoother's conditional mean is $\emph{affine}$
+in the imposed values, this consistency requirement is a linear fixed point. Stack into $x$
+the deviations from baseline of every bloc's three star paths over the $H=\HorizonQ$-quarter
+horizon, augmented by the four global-price paths that the US bloc originates, so that
+$\dim x = N\cdot3\cdot H + 4H = 2{,}360$. Let $d$ collect the direct impact of the user's
+pins on those objects, and let $M$ be the cross-response operator: entry by entry, how one
+bloc's star deviation moves when a partner's solved paths move, built from the partners'
+conditional-forecast operators and the weights \eqref{eq:wtilde}. Consistency is
+\begin{equation}\label{eq:fixedpoint}
+  x \;=\; M x + d
+  \qquad\Longrightarrow\qquad
+  x \;=\; (I-M)^{-1} d,
+\end{equation}
+with a unique solution if and only if $\rho(M)<1$. The shipped system has
+$\rho(M)=\RhoM$, comfortably inside the unit circle: the margin $1-\rho(M)$ is \RhoMargin{}
+percentage points, and it would take a uniform \RhoBreakPct{} percent strengthening of the
+entire coupling to reach $\rho=1$. Nearness to one still warrants care, because the worst-case
+geometric amplification $1/(1-\rho)$ is \WorldAmpBound{} and steepens sharply toward the
+boundary --- a re-estimation lifting $\rho$ to $0.995$ would more than double it --- so
+$\rho(M)$ is recomputed and checked at every vintage, and a non-contracting one would not be
+shipped; the amplification actually realized in Section~\ref{sec:example} is far smaller, the
+pinned shock decaying and the world aggregation reweighting it. The inverse is computed once per
+estimation vintage and shipped with the
+tool, so at run time a scenario costs one matrix--vector product plus one conditional
+forecast per bloc --- which is why the browser answers in about a second. Iterating
+\eqref{eq:fixedpoint} bloc by bloc (Gauss--Seidel) converges to the same point and serves
+as the verification path.\footnote{Slowly, at this $\rho$: the residual shrinks like
+$\rho^{k}$, so hundreds of sweeps are needed --- which is exactly why the inverse is
+precomputed rather than iterated live.}
+
+The comparison with Section~\ref{sec:classical} now takes one sentence per object
+(Table~\ref{tab:gvar-vs}, Figure~\ref{fig:gbvar}). The classical GVAR stacks the blocs
+\emph{contemporaneously} and inverts $G$ once to obtain the world reduced form; the MFFM
+stacks the blocs \emph{across the forecast} and inverts $I-M$ once to obtain the world
+scenario operator, which is the object a scenario tool needs. Weak exogeneity is replaced
+twice over, by the estimation-time fixed point in the star data and the solve-time pinning
+of the star paths. The common balanced window is replaced by model-based completion inside
+the estimation. Country-by-country reduced-rank regression under rank restrictions is
+replaced by hierarchical Bayesian shrinkage in levels. And the US asymmetry is removed: the
+United States carries foreign variables like every other bloc, and its four financial
+prices are broadcast to all blocs from its solved paths. The \NMembers{} euro-area member
+models sit outside this fixed point as satellites: each is a standalone BVAR whose
+euro-area columns (the common policy rate, area-wide demand and prices) are pinned to the
+EA bloc's solved paths, so members inherit the area outcome without enlarging the coupled
+system.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{figs/tikz/fig_gbvar.pdf}
+\caption{The MFFM pipeline. The left box is the estimation loop of
+Section~\ref{sec:estimation}: complete the ragged panels with the simulation smoother,
+re-estimate under the hierarchical prior, rebuild the stars from the completed panels, and
+iterate to a fixed point. The United States sits inside the loop as an ordinary coupled
+bloc: it originates the global prices and receives the world through its own stars. The
+converged companions then feed the affine solve of \eqref{eq:fixedpoint}, whose inverse is
+computed once and shipped with the tool.}
+\label{fig:gbvar}
+\end{figure}
+
+\subsection{What the design buys, and what it costs}\label{sec:tradeoffs}
+
+Why must the system be solved this way? Part of the answer is forced by the data, part is
+chosen for the tool, and part is a price paid knowingly. All three deserve to be on the
+table.
+
+The data force the estimation design. At \NBlocs{} blocs there is no common window worth
+estimating on: samples differ by more than a decade, so truncating every bloc to the shared
+span would discard most of the information in the long samples to accommodate the short
+ones --- and the pandemic sits in the middle of whatever window remains. A classical
+VARX$^{*}$ asks for more observations than a large bloc has in the overlap. Completing the
+panel inside the estimation, under shrinkage strong enough to make fifteen-year samples
+usable, is what makes a \NBlocs{}-bloc system estimable at all. The EM iteration is then a
+requirement rather than a refinement: the stars each bloc needs are functions of the other
+blocs' completed panels, so there is nothing to plug in --- consistency between completion
+and estimation can only be reached by iterating to it.
+
+The tool chooses the solution design. A scenario instrument must answer \emph{conditional}
+questions in seconds, and the classical reduced form answers unconditional ones: $G^{-1}$
+delivers dynamics, not the response of a fifty-economy system to ``hold this yield fixed
+while that one rises.'' The conditional-forecast operator is the object the tool needs, it
+is affine in what the user imposes, and affinity is what turns the coupled solve into
+$(I-M)^{-1}d$, computable once. The stars are pinned by deviation at solve time for the
+same reason: pinning preserves the linear structure on which interactivity stands.
+
+The gains follow directly. Every economy is estimated on its full sample; the pandemic
+enters as missingness rather than distortion; posterior draws deliver bands, not just point
+paths; the United States sits inside the system, so the world feeds back; and between
+estimations the tool is updated by data operations --- append a quarter, re-anchor the
+forecast --- with the model untouched.
+
+The costs deserve equal daylight. The long-run discipline of cointegrating restrictions is
+gone, replaced by priors and by user-set long-run anchors; the model will not discover a
+theory-consistent equilibrium on its own. Weak exogeneity is not tested but replaced by
+construction, so cross-country consistency is imposed rather than examined. The coupled
+multiplier stands on $\rho(M)=\RhoM$, close to one, which makes the global amplification
+the solve produces powerful and places weight on the star equations that generate it;
+Appendix~B confronts the resulting responses with the impulse responses of a classical GVAR
+estimated on the same data. And the reduced-form layer identifies nothing by itself:
+without the structural overlay of Section~\ref{sec:counterfactual}, a scenario is a
+most-likely world, not a statement about cause and effect. The tool is built so that each
+of these costs is visible where it bites --- anchors are set by the user, provenance is
+flagged on every chart, and the structural layer is drawn as its own line.
+
+\begin{table}[t]
+\centering
+\caption{The classical GVAR and the MFFM, side by side.}
+\label{tab:gvar-vs}
+\small
+\begin{tabular}{p{0.16\textwidth}p{0.38\textwidth}p{0.38\textwidth}}
+\toprule
+ & \textbf{Classical GVAR} & \textbf{MFFM} \\
+\midrule
+Country model &
+VARX$^{*}$/VECMX$^{*}$ \eqref{eq:varx}: contemporaneous foreign terms $\Lambda_{i0}$,
+cointegrating ranks, long-run restrictions. &
+Closed VAR \eqref{eq:mffmbloc} in levels: stars endogenous, co-movement through
+$\Sigma_i$, shrinkage instead of rank restrictions. \\
+\addlinespace
+Estimation &
+Each country separately: reduced-rank regression conditional on weakly exogenous stars;
+least squares for the short run. &
+Hierarchical Bayesian per bloc \citep{Giannone2015}; $(\lambda_i,\mu_i)$ estimated by MH
+on the completed-data marginal likelihood. \\
+\addlinespace
+Foreign variables &
+Built once from observed data; fixed weights; weak exogeneity assumed and tested. &
+Endogenous columns; rebuilt from partners' completed panels inside the estimation loop;
+per-quarter renormalized weights \eqref{eq:wtilde}. \\
+\addlinespace
+Missing data &
+Common balanced window; ragged edges truncated; pandemic handled with dummies. &
+Completed inside estimation (EM + simulation smoother); pandemic quarters treated as
+missing, financials kept observed. \\
+\addlinespace
+United States &
+Source of $d_t$; restricted foreign-variable set; weak exogeneity fails for the dominant
+economy. &
+Fully endogenous: carries its own stars; the four global prices broadcast from its solved
+paths. \\
+\addlinespace
+Global solution &
+Stack contemporaneously, invert $G$ once \eqref{eq:stack}: the world reduced form. &
+Stack across the forecast, invert $I-M$ once \eqref{eq:fixedpoint}: the world scenario
+operator; $\rho(M)=\RhoM$. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The US bloc, concretely}\label{sec:usbloc}
+
+It helps to see all of this in one bloc, and the natural choice is the United States. The
+US model is \eqref{eq:mffmbloc} with $n=\NUSVars{}$ variables, $\Gamma_i=0$ (US data are
+seasonally adjusted at source), and an estimation sample from \USSampleStart{} to
+\USSampleEnd{} --- \USSampleT{} quarters. Its core follows the large US BVAR built at the
+Federal Reserve Bank of New York by \citet{CrumpEusepiGiannoneQianSbordone2025}: real
+activity and its expenditure components, the labor market, prices, a term structure of
+interest rates, corporate bond yields, equity prices and their volatility, housing, and
+sentiment; their paper documents each series in detail. To this core the MFFM adds what its
+global role requires: the four fiscal drivers, the four global prices (which for the United
+States are simply domestic columns), and the three foreign variables. The full roster
+appears in Appendix~C.
+
+Partitioning $B_{i\ell}$ and $\Sigma_i$ conformably with \eqref{eq:partition} makes the
+transmission channels explicit, and each does something different. The blocks
+$B^{x x^{*}}_{i\ell}$ put the three stars, at each of three lags, into every domestic
+equation, so a slowdown in partner demand works its way into next quarter's US output,
+investment, and employment the way any predictor would. The covariance block
+$\Sigma_{xx^{*}}$ correlates foreign and domestic innovations, so a foreign surprise moves
+US variables \emph{within} the quarter; when a scenario pins a star path, the conditioning
+machinery exploits exactly this. And the stars' own equations, the bottom rows of each
+$B_{i\ell}$, close the bloc, replacing the classical weak-exogeneity assumption and letting
+the same model run in two modes.
+
+Those two modes are the practical payoff of the design. Used alone, the way a desk
+economist uses a country model, the US bloc forecasts its own foreign variables; in effect
+it carries a reduced-form view of the world inside itself. In a global solve, its foreign
+variables are instead pinned through \eqref{eq:fixedpoint} to what the partner blocs
+actually produce, the partners' foreign variables see the United States in turn, and the
+fixed point reconciles everyone at once. The difference between the two modes is precisely
+the cross-border feedback, and it is measurable: Section~\ref{sec:globalsolve} runs the
+credit-spread scenario both ways.
+
+A last word on the fiscal side, because it works differently from the rest of the bloc and
+users notice. The VAR forecasts four fiscal \emph{drivers} --- revenue and primary
+expenditure as shares of GDP, the effective interest rate on the debt stock, and the
+stock-flow residual --- while the debt-to-GDP ratio is not estimated at all. It is computed
+quarter by quarter from the government budget identity,
+\begin{equation}\label{eq:debt}
+  d_t \;=\; d_{t-1}\,
+  \frac{1+i_t/400}{1+g_t/100}
+  \;-\; \frac{pb_t}{4} \;+\; \frac{s_t}{4},
+\end{equation}
+where $d_t$ is debt over annualized GDP, $i_t$ the effective interest rate (percent per
+annum), $g_t$ nominal GDP growth (percent, quarter-on-quarter, \emph{not} annualized), $pb_t$ the
+primary balance in percent of GDP, and $s_t$ the stock-flow adjustment. Every scenario
+therefore carries its fiscal arithmetic with it: in a recession scenario revenue falls,
+growth denominators shrink, and the debt path steepens because accounting says it must, not
+because a debt equation was fitted. Section~\ref{sec:example} shows this at work, and the
+same identity run backwards lets a user impose a debt target and read off the primary
+balance that would deliver it.

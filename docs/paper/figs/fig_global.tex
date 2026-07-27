@@ -1,0 +1,41 @@
+% Figure: the spread shock through the global solve — GDP growth deviations.
+% Data: figs/data/global_spread.csv, figs/data/world.csv (app/scripts/paper_figs/global_spread.mjs).
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={group size=2 by 2, horizontal sep=1.5cm, vertical sep=1.6cm},
+  paperpanel, width=0.46\textwidth, height=0.30\textwidth,
+]
+\nextgroupplot[title={United States},
+  legend style={font=\scriptsize, draw=none, fill=none, at={(0.95,0.05)}, anchor=south east}]
+\addplot[zeroline] coordinates {(1,0)(20,0)};
+\addplot[usoline]   table[x=q, y=us_uso,   col sep=comma] {figs/data/global_spread.csv};
+\addplot[globline]  table[x=q, y=us_glob,  col sep=comma] {figs/data/global_spread.csv};
+\addplot[jointline] table[x=q, y=us_joint, col sep=comma] {figs/data/global_spread.csv};
+\legend{US bloc alone, global solve, spreads in US+EA+JP}
+\nextgroupplot[title={Euro area}]
+\addplot[zeroline] coordinates {(1,0)(20,0)};
+\addplot[globline]  table[x=q, y=ea_glob,  col sep=comma] {figs/data/global_spread.csv};
+\addplot[jointline] table[x=q, y=ea_joint, col sep=comma] {figs/data/global_spread.csv};
+\nextgroupplot[title={Japan}]
+\addplot[zeroline] coordinates {(1,0)(20,0)};
+\addplot[globline]  table[x=q, y=jp_glob,  col sep=comma] {figs/data/global_spread.csv};
+\addplot[jointline] table[x=q, y=jp_joint, col sep=comma] {figs/data/global_spread.csv};
+\nextgroupplot[title={World}]
+\addplot[zeroline] coordinates {(1,0)(20,0)};
+\addplot[usoline]   table[x=q, y=w_uso,   col sep=comma] {figs/data/world.csv};
+\addplot[globline]  table[x=q, y=w_glob,  col sep=comma] {figs/data/world.csv};
+\addplot[jointline] table[x=q, y=w_joint, col sep=comma] {figs/data/world.csv};
+\end{groupplot}
+\end{tikzpicture}
+\caption{The same shock, three ways. Real GDP growth deviations (pp, q/q annualized) under the
+US credit-spread scenario of Figure~\ref{fig:naivetrue}. The dotted line solves the US bloc on
+its own, so the rest of the world stays at baseline by construction and world output moves only
+through the US share. The solid line runs the full coupled solve: the shock travels to the euro
+area and Japan through trade and financial prices, and their responses feed back. The dashed
+line imposes the same credit repricing in the United States, the euro area, and Japan at once.
+World output is the GDP-weighted aggregate over the coupled blocs, using the tool's world
+weights.}
+\label{fig:global}
+\end{figure}

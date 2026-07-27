@@ -23,7 +23,7 @@
     
     
       
-        <title>Build & CI - Monetary-Financial Model — Documentation</title>
+        <title>Build & CI - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -338,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -346,6 +346,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -999,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1320,46 +1348,46 @@ affine-kernel/coupling perf-parity gates:</p>
 <table>
 <thead>
 <tr>
-<th>Heavy suite (<code>npm run test:heavy</code>)</th>
-<th>Why it is heavy</th>
+<th><code>--exclude</code> glob (from <code>package.json</code>)</th>
+<th>currently-present files</th>
+<th>what it covers</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>--exclude</code> glob (from <code>package.json</code>)</td>
-<td>currently-present files</td>
-</tr>
-<tr>
-<td>-----------</td>
-<td>--------</td>
-</tr>
-<tr>
 <td><code>gvar-us-endogenous</code></td>
 <td><code>gvar-us-endogenous.test.ts</code></td>
+<td>augmented dim-2060 endogenous fixed point</td>
 </tr>
 <tr>
 <td><code>gvar-direct-channel</code></td>
 <td><code>gvar-direct-channel.test.ts</code></td>
+<td>the one-hop preview on the live US-endogenous panel</td>
 </tr>
 <tr>
 <td><code>gvar-band-solve</code></td>
 <td><code>gvar-band-solve.test.ts</code></td>
+<td>per-draw conditional GVAR re-solve (the experimental cloud)</td>
 </tr>
 <tr>
 <td><code>gvar-closed-form-*</code></td>
 <td><code>gvar-closed-form-routing.test.ts</code></td>
+<td><code>(I−M)⁻¹d</code> ≡ iterative + cache correctness on the endogenous fixture</td>
 </tr>
 <tr>
 <td><code>gvar-band-closedform-*</code></td>
 <td><em>(no file at present)</em></td>
+<td>reserved glob for the closed-form band path</td>
 </tr>
 <tr>
 <td><code>affine-blockernels-parity</code></td>
 <td><code>affine-blockernels-parity.test.ts</code></td>
+<td>one full filter+smoother probe-loop reference (slow by design)</td>
 </tr>
 <tr>
 <td><code>gvar-kernel-affine-independence</code></td>
 <td><code>gvar-kernel-affine-independence.test.ts</code></td>
+<td>the kernel-cache RANK-1 affine-independence gate</td>
 </tr>
 </tbody>
 </table>
@@ -1435,7 +1463,7 @@ conventions</strong> the UI renders on top of them.</p>
 </tr>
 <tr>
 <td><code>fiscalAccounting.test.ts</code></td>
-<td>The fiscal debt recursion and exact SFA residual (<code>fiscalAccounting.ts</code>).</td>
+<td>The fiscal debt recursion and exact stock-flow-adjustment (SFA) residual (<code>fiscalAccounting.ts</code>).</td>
 </tr>
 <tr>
 <td><code>fiscal-conditioning-integration.test.ts</code></td>
@@ -1510,7 +1538,7 @@ conventions</strong> the UI renders on top of them.</p>
 </tr>
 <tr>
 <td><code>counterfactual-irf.test.ts</code></td>
-<td>A counterfactual recovers the IRF when the rate adjustment equals the IRF.</td>
+<td>A counterfactual recovers the impulse response function (IRF) when the rate adjustment equals the IRF.</td>
 </tr>
 <tr>
 <td><code>counterfactual-recovers-scenario.test.ts</code></td>
@@ -1577,7 +1605,7 @@ repo, and the Hugo build downstream then rebuilds and serves it.</p>
    │  cp -r app/out/* website/static/bvar-scenario/
    │  commit + push to the website repo
    ▼
-Hugo rebuilds the academic (Hugo Academic) site from the website repo
+Hugo rebuilds the Hugo Academic site from the website repo
    ▼
 served at the /bvar-scenario path of the academic site (GitHub Pages)
 </code></pre></div>
@@ -1638,7 +1666,7 @@ website pipeline (<code>.github/workflows/updater-wip.yml</code>). <strong>Ratio
 removed the <code>getCSV</code> / <code>getCSS</code> data helpers that the wowchemy (academic) theme depends
 on; later versions break the site build. <strong>Do not bump the pin</strong> without first migrating
 the theme off those removed helpers. (Documented in
-<a href="../README.md">README.md</a> and <a href="../ARCHITECTURE_FOR_AI/">ARCHITECTURE_FOR_AI.md</a>.)</p>
+<a href="https://github.com/matyasfarkas/BVARScenarioTool/blob/main/README.md">README.md</a> and <a href="../ARCHITECTURE_FOR_AI/">ARCHITECTURE_FOR_AI.md</a>.)</p>
 <h3 id="what-to-commit-and-what-not-to">What to commit (and what not to)<a class="headerlink" href="#what-to-commit-and-what-not-to" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Commit only deploy-relevant files (<code>app/**</code>, docs, config).</li>

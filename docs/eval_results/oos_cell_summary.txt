@@ -1,0 +1,117 @@
+=== pilot done: PILOT_DONE 5350 s ===
+{Unrecognized function or variable 'bench_common'.
+
+Error in build_realizations (line 32)
+    HC = bench_common(); HC.addpaths();
+         ^^^^^^^^^^^^^^
+} 
+=== SCORE ===
+loaded 5184 scored cells; 9 models
+arp              GROWTH h=1  RMSE= 11.1370 relRMSE= 1.632 CRPS=  3.3600 LPS=  2.9974 cov90= 0.90 n=48
+cgvar_a          GROWTH h=1  RMSE=  8.7427 relRMSE= 1.281 CRPS=  5.8472 LPS=  5.7216 cov90= 0.33 n=48
+cgvar_b          GROWTH h=1  RMSE=  8.3728 relRMSE= 1.227 CRPS=  3.0428 LPS=  3.6665 cov90= 0.67 n=48
+dfm              GROWTH h=1  RMSE=  5.0653 relRMSE= 0.742 CRPS=  2.3238 LPS=  3.6874 cov90= 0.79 n=48
+emgvar_endo      GROWTH h=1  RMSE=  8.1221 relRMSE= 1.190 CRPS=  2.9508 LPS=  3.5466 cov90= 0.71 n=48
+emgvar_frozen    GROWTH h=1  RMSE=  8.0389 relRMSE= 1.178 CRPS=  2.9909 LPS=6947813133868724.0000 cov90= 0.69 n=48
+rw               GROWTH h=1  RMSE=  6.8243 relRMSE= 1.000 CRPS=  3.0448 LPS=  2.8520 cov90= 0.98 n=48
+rw_clim          GROWTH h=1  RMSE=  5.0830 relRMSE= 0.745 CRPS=  2.3334 LPS=  2.7162 cov90= 0.98 n=48
+sbvar            GROWTH h=1  RMSE=  7.1807 relRMSE= 1.052 CRPS=  2.7438 LPS=  3.7558 cov90= 0.73 n=48
+arp              GROWTH h=2  RMSE=  6.2149 relRMSE= 1.630 CRPS=  2.3449 LPS=  2.6078 cov90= 0.96 n=48
+cgvar_a          GROWTH h=2  RMSE=  3.1631 relRMSE= 0.830 CRPS=  1.9566 LPS=  2.7275 cov90= 0.98 n=48
+cgvar_b          GROWTH h=2  RMSE=  7.2678 relRMSE= 1.906 CRPS=  3.2778 LPS=  3.1080 cov90= 0.73 n=48
+dfm              GROWTH h=2  RMSE=  3.1120 relRMSE= 0.816 CRPS=  1.7864 LPS=  2.5298 cov90= 0.81 n=48
+emgvar_endo      GROWTH h=2  RMSE=  6.9374 relRMSE= 1.819 CRPS=  3.1888 LPS=  3.1023 cov90= 0.75 n=48
+emgvar_frozen    GROWTH h=2  RMSE=  6.7182 relRMSE= 1.762 CRPS=  3.2313 LPS=8927375970332124.0000 cov90= 0.73 n=48
+rw               GROWTH h=2  RMSE=  3.8128 relRMSE= 1.000 CRPS=  2.2067 LPS=  2.7776 cov90= 1.00 n=48
+rw_clim          GROWTH h=2  RMSE=  2.8245 relRMSE= 0.741 CRPS=  1.9378 LPS=  2.7107 cov90= 1.00 n=48
+sbvar            GROWTH h=2  RMSE=  5.8757 relRMSE= 1.541 CRPS=  2.7493 LPS=  3.0404 cov90= 0.77 n=48
+arp              GROWTH h=4  RMSE=  8.8545 relRMSE= 0.955 CRPS=  3.5565 LPS=  5.6855 cov90= 0.88 n=48
+cgvar_a          GROWTH h=4  RMSE=  8.4184 relRMSE= 0.908 CRPS=  3.7189 LPS=  3.3795 cov90= 0.92 n=48
+cgvar_b          GROWTH h=4  RMSE=  9.4873 relRMSE= 1.023 CRPS=  4.1662 LPS=  6.2600 cov90= 0.77 n=48
+dfm              GROWTH h=4  RMSE=  8.9785 relRMSE= 0.968 CRPS=  3.3066 LPS=  5.2637 cov90= 0.85 n=48
+emgvar_endo      GROWTH h=4  RMSE=  9.2953 relRMSE= 1.003 CRPS=  4.0183 LPS=  6.1850 cov90= 0.77 n=48
+emgvar_frozen    GROWTH h=4  RMSE=  9.2427 relRMSE= 0.997 CRPS=  4.0494 LPS=8635099589878155.0000 cov90= 0.77 n=48
+rw               GROWTH h=4  RMSE=  9.2706 relRMSE= 1.000 CRPS=  4.1182 LPS=  4.7794 cov90= 0.85 n=48
+rw_clim          GROWTH h=4  RMSE=  9.0371 relRMSE= 0.975 CRPS=  3.6585 LPS=  5.5405 cov90= 0.90 n=48
+sbvar            GROWTH h=4  RMSE=  9.8656 relRMSE= 1.064 CRPS=  4.0883 LPS=  5.9738 cov90= 0.77 n=48
+arp              GROWTH h=8  RMSE=  8.8667 relRMSE= 0.940 CRPS=  3.5908 LPS=  5.1393 cov90= 0.83 n=48
+cgvar_a          GROWTH h=8  RMSE=  8.7835 relRMSE= 0.931 CRPS=  4.2789 LPS=  3.4645 cov90= 0.96 n=48
+cgvar_b          GROWTH h=8  RMSE=  9.9578 relRMSE= 1.056 CRPS=  4.4333 LPS=  5.3273 cov90= 0.77 n=48
+dfm              GROWTH h=8  RMSE=  8.9477 relRMSE= 0.948 CRPS=  3.3026 LPS=  5.1365 cov90= 0.85 n=48
+emgvar_endo      GROWTH h=8  RMSE= 10.1845 relRMSE= 1.080 CRPS=  4.4854 LPS=  5.5084 cov90= 0.77 n=48
+emgvar_frozen    GROWTH h=8  RMSE=  9.9858 relRMSE= 1.059 CRPS=  4.5134 LPS=12759648898758030.0000 cov90= 0.75 n=48
+rw               GROWTH h=8  RMSE=  9.4336 relRMSE= 1.000 CRPS=  4.3742 LPS=  5.0128 cov90= 0.79 n=48
+rw_clim          GROWTH h=8  RMSE=  9.0796 relRMSE= 0.962 CRPS=  3.7133 LPS=  4.7776 cov90= 0.90 n=48
+sbvar            GROWTH h=8  RMSE=  9.7550 relRMSE= 1.034 CRPS=  4.0441 LPS=  5.3873 cov90= 0.79 n=48
+arp              INFL   h=1  RMSE=  3.1207 relRMSE= 0.637 CRPS=  1.6771 LPS=  2.9869 cov90= 0.73 n=48
+cgvar_a          INFL   h=1  RMSE=  9.0988 relRMSE= 1.857 CRPS=  5.6824 LPS= 14.0941 cov90= 0.35 n=48
+cgvar_b          INFL   h=1  RMSE=  3.4510 relRMSE= 0.704 CRPS=  2.0738 LPS=  3.9129 cov90= 0.54 n=48
+dfm              INFL   h=1  RMSE=  3.9627 relRMSE= 0.809 CRPS=  2.1120 LPS=  3.5131 cov90= 0.77 n=48
+emgvar_endo      INFL   h=1  RMSE=  3.4415 relRMSE= 0.702 CRPS=  2.0943 LPS=  4.0158 cov90= 0.56 n=48
+emgvar_frozen    INFL   h=1  RMSE=  3.4518 relRMSE= 0.704 CRPS=  2.1147 LPS=2347812675780683.5000 cov90= 0.56 n=48
+rw               INFL   h=1  RMSE=  4.8998 relRMSE= 1.000 CRPS=  2.8035 LPS=  3.1053 cov90= 0.81 n=48
+rw_clim          INFL   h=1  RMSE=  4.4132 relRMSE= 0.901 CRPS=  2.3631 LPS=  3.3053 cov90= 0.88 n=48
+sbvar            INFL   h=1  RMSE=  3.6452 relRMSE= 0.744 CRPS=  2.1190 LPS=  3.9914 cov90= 0.54 n=48
+arp              INFL   h=2  RMSE=  1.9446 relRMSE= 0.853 CRPS=  1.1037 LPS=  2.1109 cov90= 0.83 n=48
+cgvar_a          INFL   h=2  RMSE=  2.5113 relRMSE= 1.102 CRPS=  1.5315 LPS=  2.5323 cov90= 0.92 n=48
+cgvar_b          INFL   h=2  RMSE=  2.4712 relRMSE= 1.084 CRPS=  1.3884 LPS=  2.3869 cov90= 0.85 n=48
+dfm              INFL   h=2  RMSE=  1.8274 relRMSE= 0.802 CRPS=  1.0965 LPS=  2.2129 cov90= 0.88 n=48
+emgvar_endo      INFL   h=2  RMSE=  2.4876 relRMSE= 1.091 CRPS=  1.4132 LPS=  2.3808 cov90= 0.79 n=48
+emgvar_frozen    INFL   h=2  RMSE=  2.4343 relRMSE= 1.068 CRPS=  1.3477 LPS=1290354632782.0129 cov90= 0.81 n=48
+rw               INFL   h=2  RMSE=  2.2794 relRMSE= 1.000 CRPS=  1.3616 LPS=  2.3584 cov90= 0.98 n=48
+rw_clim          INFL   h=2  RMSE=  1.9890 relRMSE= 0.873 CRPS=  1.2887 LPS=  2.4043 cov90= 0.94 n=48
+sbvar            INFL   h=2  RMSE=  2.2877 relRMSE= 1.004 CRPS=  1.3130 LPS=  2.3353 cov90= 0.81 n=48
+arp              INFL   h=4  RMSE=  2.3423 relRMSE= 0.933 CRPS=  1.3155 LPS=  2.5369 cov90= 0.81 n=48
+cgvar_a          INFL   h=4  RMSE=  3.4226 relRMSE= 1.363 CRPS=  2.0194 LPS=  2.8147 cov90= 0.94 n=48
+cgvar_b          INFL   h=4  RMSE=  2.6346 relRMSE= 1.049 CRPS=  1.4237 LPS=  2.3134 cov90= 0.83 n=48
+dfm              INFL   h=4  RMSE=  2.5494 relRMSE= 1.015 CRPS=  1.4544 LPS=  2.7862 cov90= 0.88 n=48
+emgvar_endo      INFL   h=4  RMSE=  2.8234 relRMSE= 1.124 CRPS=  1.4768 LPS=  2.3407 cov90= 0.83 n=48
+emgvar_frozen    INFL   h=4  RMSE=  2.7585 relRMSE= 1.099 CRPS=  1.4835 LPS=639553067009645.3750 cov90= 0.79 n=48
+rw               INFL   h=4  RMSE=  2.5110 relRMSE= 1.000 CRPS=  1.4205 LPS=  2.4960 cov90= 0.81 n=48
+rw_clim          INFL   h=4  RMSE=  2.7439 relRMSE= 1.093 CRPS=  1.5671 LPS=  2.8230 cov90= 0.81 n=48
+sbvar            INFL   h=4  RMSE=  2.3054 relRMSE= 0.918 CRPS=  1.3016 LPS=  2.2522 cov90= 0.85 n=48
+arp              INFL   h=8  RMSE=  1.8411 relRMSE= 0.651 CRPS=  1.0758 LPS=  2.1052 cov90= 0.92 n=48
+cgvar_a          INFL   h=8  RMSE=  2.7621 relRMSE= 0.977 CRPS=  1.9001 LPS=  2.7527 cov90= 0.98 n=48
+cgvar_b          INFL   h=8  RMSE=  2.5669 relRMSE= 0.908 CRPS=  1.4416 LPS=  2.5150 cov90= 0.94 n=48
+dfm              INFL   h=8  RMSE=  1.8331 relRMSE= 0.649 CRPS=  1.0905 LPS=  2.1518 cov90= 0.92 n=48
+emgvar_endo      INFL   h=8  RMSE=  2.5126 relRMSE= 0.889 CRPS=  1.4027 LPS=  2.4218 cov90= 0.88 n=48
+emgvar_frozen    INFL   h=8  RMSE=  2.4668 relRMSE= 0.873 CRPS=  1.4447 LPS=463783091175913.6875 cov90= 0.90 n=48
+rw               INFL   h=8  RMSE=  2.8261 relRMSE= 1.000 CRPS=  1.6593 LPS=  2.6286 cov90= 0.79 n=48
+rw_clim          INFL   h=8  RMSE=  1.9118 relRMSE= 0.676 CRPS=  1.1146 LPS=  2.1591 cov90= 0.94 n=48
+sbvar            INFL   h=8  RMSE=  2.3569 relRMSE= 0.834 CRPS=  1.3191 LPS=  2.3908 cov90= 0.96 n=48
+arp              RATE   h=1  RMSE=  0.3040 relRMSE= 0.844 CRPS=  0.1341 LPS= -0.2307 cov90= 0.94 n=48
+cgvar_a          RATE   h=1  RMSE=  0.4671 relRMSE= 1.296 CRPS=  0.2323 LPS=  0.4916 cov90= 0.81 n=48
+cgvar_b          RATE   h=1  RMSE=  0.3800 relRMSE= 1.055 CRPS=  0.1721 LPS= -0.0058 cov90= 0.81 n=48
+dfm              RATE   h=1  RMSE=  0.7005 relRMSE= 1.944 CRPS=  0.3784 LPS=  0.8684 cov90= 0.90 n=48
+emgvar_endo      RATE   h=1  RMSE=  0.3908 relRMSE= 1.085 CRPS=  0.1796 LPS=  0.0186 cov90= 0.81 n=48
+emgvar_frozen    RATE   h=1  RMSE=  0.3997 relRMSE= 1.109 CRPS=  0.1786 LPS=11088868589348.6152 cov90= 0.81 n=48
+rw               RATE   h=1  RMSE=  0.3603 relRMSE= 1.000 CRPS=  0.1675 LPS=  0.0213 cov90= 0.92 n=48
+rw_clim          RATE   h=1  RMSE=  1.7547 relRMSE= 4.870 CRPS=  1.2685 LPS= 11.1688 cov90= 0.17 n=48
+sbvar            RATE   h=1  RMSE=  0.3556 relRMSE= 0.987 CRPS=  0.1457 LPS= -0.2297 cov90= 0.92 n=48
+arp              RATE   h=2  RMSE=  0.6056 relRMSE= 0.820 CRPS=  0.2827 LPS=  0.6456 cov90= 0.92 n=48
+cgvar_a          RATE   h=2  RMSE=  0.7716 relRMSE= 1.045 CRPS=  0.3819 LPS=  1.6414 cov90= 0.83 n=48
+cgvar_b          RATE   h=2  RMSE=  0.8900 relRMSE= 1.205 CRPS=  0.4335 LPS=  1.2480 cov90= 0.69 n=48
+dfm              RATE   h=2  RMSE=  0.8798 relRMSE= 1.191 CRPS=  0.4811 LPS=  1.2423 cov90= 0.81 n=48
+emgvar_endo      RATE   h=2  RMSE=  0.9198 relRMSE= 1.246 CRPS=  0.4512 LPS=  1.2359 cov90= 0.67 n=48
+emgvar_frozen    RATE   h=2  RMSE=  0.9226 relRMSE= 1.249 CRPS=  0.4493 LPS=136727477739009.1250 cov90= 0.69 n=48
+rw               RATE   h=2  RMSE=  0.7385 relRMSE= 1.000 CRPS=  0.3534 LPS=  0.8035 cov90= 0.88 n=48
+rw_clim          RATE   h=2  RMSE=  1.7714 relRMSE= 2.399 CRPS=  1.1421 LPS=  3.8180 cov90= 0.35 n=48
+sbvar            RATE   h=2  RMSE=  0.7643 relRMSE= 1.035 CRPS=  0.3578 LPS=  0.7808 cov90= 0.81 n=48
+arp              RATE   h=4  RMSE=  1.1015 relRMSE= 0.870 CRPS=  0.5128 LPS=  1.2616 cov90= 0.92 n=48
+cgvar_a          RATE   h=4  RMSE=  1.2621 relRMSE= 0.997 CRPS=  0.6053 LPS=  2.9933 cov90= 0.77 n=48
+cgvar_b          RATE   h=4  RMSE=  1.7917 relRMSE= 1.415 CRPS=  0.8593 LPS=  2.1256 cov90= 0.67 n=48
+dfm              RATE   h=4  RMSE=  1.4213 relRMSE= 1.123 CRPS=  0.7031 LPS=  1.8091 cov90= 0.83 n=48
+emgvar_endo      RATE   h=4  RMSE=  1.8954 relRMSE= 1.497 CRPS=  0.9058 LPS=  2.0673 cov90= 0.65 n=48
+emgvar_frozen    RATE   h=4  RMSE=  1.8150 relRMSE= 1.434 CRPS=  0.8627 LPS=6174462796312.5771 cov90= 0.69 n=48
+rw               RATE   h=4  RMSE=  1.2659 relRMSE= 1.000 CRPS=  0.5990 LPS=  1.3807 cov90= 0.92 n=48
+rw_clim          RATE   h=4  RMSE=  1.8211 relRMSE= 1.438 CRPS=  1.0921 LPS=  2.0995 cov90= 0.52 n=48
+sbvar            RATE   h=4  RMSE=  1.4957 relRMSE= 1.182 CRPS=  0.7099 LPS=  1.6339 cov90= 0.85 n=48
+arp              RATE   h=8  RMSE=  1.6557 relRMSE= 0.857 CRPS=  0.8567 LPS=  1.8283 cov90= 0.81 n=48
+cgvar_a          RATE   h=8  RMSE=  1.8580 relRMSE= 0.962 CRPS=  1.0127 LPS=  5.0893 cov90= 0.67 n=48
+cgvar_b          RATE   h=8  RMSE=  2.7776 relRMSE= 1.438 CRPS=  1.4148 LPS=  2.4636 cov90= 0.73 n=48
+dfm              RATE   h=8  RMSE=  1.9619 relRMSE= 1.016 CRPS=  1.0400 LPS=  2.2270 cov90= 0.73 n=48
+emgvar_endo      RATE   h=8  RMSE=  2.5172 relRMSE= 1.304 CRPS=  1.3417 LPS=  2.3718 cov90= 0.79 n=48
+emgvar_frozen    RATE   h=8  RMSE=  2.5135 relRMSE= 1.302 CRPS=  1.3494 LPS=18610437304760.6875 cov90= 0.69 n=48
+rw               RATE   h=8  RMSE=  1.9309 relRMSE= 1.000 CRPS=  0.9826 LPS=  1.9880 cov90= 0.81 n=48
+rw_clim          RATE   h=8  RMSE=  1.8129 relRMSE= 0.939 CRPS=  1.0193 LPS=  1.8506 cov90= 0.83 n=48
+sbvar            RATE   h=8  RMSE=  2.7138 relRMSE= 1.405 CRPS=  1.2509 LPS=  2.2135 cov90= 0.81 n=48

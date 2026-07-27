@@ -3,47 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: MFM_User_Manual.aux
 The style file: plainnat.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "TannerWong1987"
-Warning--I didn't find a database entry for "DempsterLairdRubin1977"
-You've used 38 entries,
+You've used 32 entries,
             2773 wiz_defined-function locations,
-            862 strings with 11688 characters,
-and the built_in function-call counts, 18007 in all, are:
-= -- 1650
-> -- 1017
-< -- 26
-+ -- 343
-- -- 305
-* -- 1541
-:= -- 2777
-add.period$ -- 115
-call.type$ -- 38
-change.case$ -- 216
-chr.to.int$ -- 38
-cite$ -- 76
-duplicate$ -- 768
-empty$ -- 1472
-format.name$ -- 377
-if$ -- 3716
+            823 strings with 10517 characters,
+and the built_in function-call counts, 14761 in all, are:
+= -- 1369
+> -- 778
+< -- 21
++ -- 262
+- -- 230
+* -- 1256
+:= -- 2263
+add.period$ -- 97
+call.type$ -- 32
+change.case$ -- 173
+chr.to.int$ -- 32
+cite$ -- 64
+duplicate$ -- 647
+empty$ -- 1242
+format.name$ -- 290
+if$ -- 3057
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 37
-newline$ -- 198
-num.names$ -- 154
-pop$ -- 369
+missing$ -- 30
+newline$ -- 168
+num.names$ -- 130
+pop$ -- 290
 preamble$ -- 1
-purify$ -- 177
+purify$ -- 140
 quote$ -- 0
-skip$ -- 587
+skip$ -- 485
 stack$ -- 0
-substring$ -- 871
-swap$ -- 38
+substring$ -- 740
+swap$ -- 32
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 413
+type$ -- 352
 warning$ -- 0
-while$ -- 181
+while$ -- 153
 width$ -- 0
-write$ -- 502
-(There were 2 warnings)
+write$ -- 423

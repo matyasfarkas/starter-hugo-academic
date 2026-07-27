@@ -21,7 +21,7 @@
     
     
       
-        <title>Monetary-Financial Model — Documentation</title>
+        <title>Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#monetary-financial-model-documentation" class="md-skip">
+        <a href="#monetary-financial-fiscal-macromodel-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href="." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -212,13 +212,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href="." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -427,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -435,6 +435,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -908,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="paper_outline.pdf" class="md-nav__link">
+      <a href="paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1042,8 +1070,8 @@
 
 
 
-<h1 id="monetary-financial-model-documentation">Monetary-Financial Model — Documentation<a class="headerlink" href="#monetary-financial-model-documentation" title="Permanent link">&para;</a></h1>
-<p>The <strong>Monetary-Financial Model</strong> is an interactive forecasting tool that runs entirely in your
+<h1 id="monetary-financial-fiscal-macromodel-documentation">Monetary-Financial-Fiscal Macromodel — Documentation<a class="headerlink" href="#monetary-financial-fiscal-macromodel-documentation" title="Permanent link">&para;</a></h1>
+<p>The <strong>Monetary-Financial-Fiscal Macromodel</strong> is an interactive forecasting tool that runs entirely in your
 browser. It shows quarterly forecasts for about <strong>fifty economies</strong> — growth, inflation, interest
 rates, public finances, and more — and lets you bend them: click on a chart where you think
 inflation will be, and every other chart updates so the whole forecast stays consistent with the
@@ -1063,27 +1091,31 @@ channels, so pushing the United States moves the euro area, Japan, and China too
    long-run target, a policy counterfactual — the chart says so.</li>
 </ol>
 <p>Under the hood it is a Bayesian Vector Autoregression (BVAR) per economy, coupled into a Global VAR
-(GVAR) with a fully endogenous United States, plus DSGE impulse responses for policy
+(GVAR) with a fully endogenous United States, plus Dynamic Stochastic General Equilibrium (DSGE) impulse responses for policy
 counterfactuals. The deployed tool is served at the <code>/bvar-scenario</code> path of the academic website,
 hosted on <strong>GitHub Pages</strong> (the <code>matyasfarkas/starter-hugo-academic</code> Hugo Academic site). The
 build/deploy chain is documented in <a href="BUILD_AND_CI/">Build &amp; CI</a>.</p>
 <h2 id="start-here">Start here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong><a href="MFM_User_Manual.pdf">User Manual (PDF)</a></strong> — the manual is in two parts.
-  <strong>Part I, "Using the tool"</strong>, is written for someone with no econometrics background: each
-  section says <em>what you can do</em>, <em>how to do it</em> (step by step, naming the exact buttons), and
-  <em>what you will find</em> on the screen. If you have five minutes, read the quick-start section and
-  skip the rest until you need it. <strong>Part II, "How the machinery works"</strong>, has the full
-  methodology — BVAR estimation, COVID-as-missing data augmentation, the GVAR coupling and
-  closed-form solve, the fiscal accounting, long-run targets, vintages, and reproducibility.</li>
+<li><strong><a href="MFFM_User_Manual.pdf">User Manual (PDF)</a></strong> — methodology and usage in one document: each
+  section states a method with its exact implemented conventions — BVAR estimation,
+  COVID-as-missing data augmentation, conditioning, the GVAR coupling and closed-form solve, the
+  fiscal and external accounting, long-run anchors, counterfactuals, vintages, evaluation, and
+  reproducibility — and then shows how to operate it from the interface, with worked Examples
+  naming the exact buttons. If you have five minutes, read §2 (Getting started).</li>
+<li><strong><a href="MFFM_US_bloc_model.pdf">The US Bloc Model (PDF)</a></strong> — the estimated United States model
+  written down the way the VAR literature does it: the 40-variable VAR(3) with its
+  domestic/foreign partition, the exact construction of the trade-weighted foreign variables, the
+  GLP prior, the estimated foreign-block loadings, and the solve-time linkage through the
+  <span class="arithmatex">\(x = Mx + d\)</span> fixed point.</li>
 <li><strong><a href="USER_GUIDE/">User Guide</a></strong> — a short web quick-start: your first scenario in five minutes,
-  and where to go next. Defers to Part I of the manual for everything else.</li>
+  and where to go next. Defers to the manual for everything else.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Empirical results are in</p>
-<p>An out-of-sample horse-race (56 origins, 2010Q1–2024Q4, × 9 models, CRPS-primary scoring + 90%
-Model Confidence Set) and the endogenous-US Tier-A spillover analysis have run. The headline:
-AR(p)/DFM lead the <strong>point</strong> race, but the EM-Bayesian GVAR is <strong>inside the Model Confidence Set
+<p>An out-of-sample horse-race — 56 origins, 2010 Q1 – 2024 Q4, across 9 models, Continuous Ranked Probability Score (CRPS)-primary scoring + 90%
+Model Confidence Set — and the endogenous-US Tier-A spillover analysis have run. The headline:
+AR(p)/Dynamic Factor Model (DFM) lead the <strong>point</strong> race, but the EM-Bayesian GVAR is <strong>inside the Model Confidence Set
 on the nominal block</strong> (inflation at every horizon, the short rate at <code>h ≤ 4</code>), decisively beats
 the textbook OLS classical GVAR, and the endogenous-US variant weakly dominates the frozen anchor.
 Read the numbers and the honest caveats (over-confident draw densities; provisional spillover
@@ -1092,13 +1124,13 @@ magnitudes) in <strong><a href="EMPIRICAL_EVALUATION/">Empirical Evaluation</a><
 <h2 id="methodology-and-data">Methodology and data<a class="headerlink" href="#methodology-and-data" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong><a href="fiscal-block-methodology/">Fiscal Block Methodology</a></strong> — how the estimated fiscal drivers relate
-  to the CBO and IMF fiscal-policy frameworks, the exact debt-dynamics recursion (snowball + SFA
+  to the Congressional Budget Office (CBO) and IMF fiscal-policy frameworks, the exact debt-dynamics recursion (snowball + SFA
   closure + primary balance), and the known limitations (including the China nominal-GDP inflation
   double-count).</li>
 <li><strong>Data &amp; sources</strong> — per-source-family documentation (FRED / Eurostat / OECD-QNA / IMF-WEO), the
   2025 estimation vintage versus the frozen-model quarterly refresh, and the full
-  <strong>country × variable coverage matrix</strong> are in the <strong><a href="MFM_User_Manual.pdf">User Manual (PDF)</a></strong>
-  (Part II, §Data Sources), generated from <code>app/public/data/coverage_manifest.json</code>. Where a series
+  <strong>country × variable coverage matrix</strong> are in the <strong><a href="MFFM_User_Manual.pdf">User Manual (PDF)</a></strong>
+  (§10 and Appendix B, generated from <code>app/public/data/coverage_manifest.json</code>. Where a series
   lags its country's release calendar, the gap to the common 2026 Q1 origin is filled by the
   cross-country model and flagged as a nowcast in the manifest (<code>imputedThrough</code>) — the same cells
   the app draws in amber.</li>

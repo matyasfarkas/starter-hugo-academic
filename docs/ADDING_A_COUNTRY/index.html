@@ -23,7 +23,7 @@
     
     
       
-        <title>Adding a Country - Monetary-Financial Model — Documentation</title>
+        <title>Adding a Country - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -338,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -346,6 +346,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -989,6 +1017,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#b7-new-bloc-build-recipe-the-fsap-expansion-path-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B7. New-bloc build recipe (the FSAP-expansion path — current)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1117,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1362,6 +1401,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#b7-new-bloc-build-recipe-the-fsap-expansion-path-current" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B7. New-bloc build recipe (the FSAP-expansion path — current)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1486,22 +1536,32 @@ trade-weights row, so it both <strong>drives</strong> Rest-of-World <em>and</em>
 30 domestic + 4 global + 4 fiscal + 3 stars). The set is: the US + <strong>euro area as one aggregate
 bloc (<code>EA</code>)</strong> + 31 Rest-of-World blocs (JP UK CA CN CH KR MX AU TR SE PL NO DK IN BR RU ID SA AR ZA
 TH MY CL CO CR CZ HU IL IS NZ TW). With the US endogenous the coupling is the <strong>augmented
-(stars ++ US-global) closed-form operator</strong> of dimension <strong>2060</strong>, with spectral radius
-<code>rho(M) = 0.924 &lt; 1</code> (stable; verified off the shipped <code>coupling_default.json.gz</code> header —
-<code>rhoSpectral = 0.924041</code>). The engine detects endogeneity from the data:
+(stars + US-global) closed-form operator</strong> of dimension <strong>2060</strong>, with spectral radius
+<code>rho(M) = 0.947 &lt; 1</code> (stable; verified off the shipped <code>coupling_default.json.gz</code> header —
+<code>rhoSpectral = 0.945494</code>, eigendecomposition-exact since 2026-07-17; the earlier field read <code>0.935044</code> from an under-converged power iteration; prior builds read <code>0.945166</code> and <code>0.922404</code>). The engine detects endogeneity from the data:
 <code>US_ENDOGENOUS = !!usIdx.row &amp;&amp; !!WEIGHTS24.weights.US</code> in
-<a href="../app/src/lib/compute/gvarSolve.ts"><code>gvarSolve.ts</code></a>, so <code>COUPLED_COUNTRIES = ['US', ...rows]</code>.
+<a href="https://github.com/matyasfarkas/BVARScenarioTool/blob/main/app/src/lib/compute/gvarSolve.ts"><code>gvarSolve.ts</code></a>, so <code>COUPLED_COUNTRIES = ['US', ...rows]</code>.
 The <strong>17 euro members</strong> (DE FR IT ES NL AT BE FI GR IE LU PT SI SK EE LT LV) are <strong>standalone
 single-country models</strong> (domestic + 4 global commons + trade-weighted foreign stars, estimated in
 separation via <code>MAXIT=1</code>) — they are <strong>not</strong> in the coupled GVAR and have <strong>no weights row</strong>.
 Reason: the fully-disaggregated euro GVAR was non-convergent (<code>rho&gt;1</code>); aggregating the euro area
 restores stationarity, which is why <code>EA</code> is one bloc and the members are standalone. (50 country
 directories ship in all: 33 coupled GVAR blocs + 17 standalone euro members.)</p>
+<p><strong>Seasonal-v2 expansion (branch <code>effi-even-seasonal-dummies</code>, NOT yet on <code>main</code>).</strong> This branch grows
+the coupled set from 33 to <strong>38 blocs</strong> by adding five FSAP-coverage economies — <strong>HK, SG, RO, PE, PH</strong>
+— bringing the roster to <strong>~55 economies</strong> (38 coupled GVAR blocs + 17 standalone euro members). <strong>AE
+(United Arab Emirates) was assessed and rejected</strong>: it publishes only ANNUAL real GDP, and the
+no-interpolation rule forbids inventing quarters, so it fails the viability bar. On this branch the
+static weights come from <code>pipeline/fsap_expansion_staging/weights/weights_full_38.json</code> (the app's
+<code>weights_24bloc.json</code> is swapped to that 38-bloc content at deploy), and the augmented coupling
+dimension grows <code>33·60+80 = 2060</code> → <code>38·60+80 = 2360</code>. <strong>The LIVE production tool is still the 33-bloc
+set</strong> (<code>bvarscenario/main</code>) — the callout above describes prod; the numbers below default to prod and
+the §B7 recipe builds the 38-bloc set. The concrete "add a new bloc" sequence is <strong>§B7</strong>.</p>
 <p><strong>Registry / selector.</strong> The country dropdown is driven by <code>app/src/lib/data/countries.ts</code> (one
 entry per economy, <code>{ code, name, group }</code>). Adding a country = add an entry there + drop its data
 files; no dropdown edit is needed. The selector groups entries into <strong>"GVAR" / "Other countries"
 optgroups</strong> (driven by <code>isGvarCountry</code> from <code>gvarLoader</code> in
-<a href="../app/src/components/controls/TopBar.tsx"><code>controls/TopBar.tsx</code></a>; plain names, no "- GVAR" suffix).
+<a href="https://github.com/matyasfarkas/BVARScenarioTool/blob/main/app/src/components/controls/TopBar.tsx"><code>controls/TopBar.tsx</code></a>; plain names, no "- GVAR" suffix).
 <code>group</code> is only a coarse tag (<code>core</code>/<code>oecd</code>/<code>em</code>); GVAR membership is
 <strong>data-driven</strong> — a bloc is GVAR-linked iff its <code>spec.json</code> carries <code>block:'row'</code> vars AND it has a
 row in <code>app/public/data/bvar/gvar/weights_24bloc.json</code> (the filename is historical — the file now
@@ -1569,7 +1629,7 @@ for rates, ratios, unemployment. <strong><code>isFinancial</code></strong> just 
 estimated fiscal vars (<code>block:'fiscal'</code>, all <code>lin</code>):</p>
 <ol>
 <li><code>FREV_GDP</code>  — revenue / GDP × 100 (% of GDP, 4-quarter trailing ratio)</li>
-<li><code>FPEXP_GDP</code> — primary expenditure (= total exp − interest) / GDP × 100 (% of GDP)</li>
+<li><code>FPEXP_GDP</code> — primary expenditure (= total exp − interest) / GDP × 100 (% of GDP, 4-quarter trailing ratio)</li>
 <li><code>EFFI</code>      — <strong>effective interest rate</strong> = net interest / <strong>lagged</strong> gross debt × 100 × 4
                  (% per annum). This <strong>reverts</strong> the earlier debt-service swap (<code>DSVC</code>) <strong>back to the
                  rate</strong> — older builds estimated <code>DSVC</code>; the current builds estimate <code>EFFI</code>.</li>
@@ -1577,7 +1637,7 @@ estimated fiscal vars (<code>block:'fiscal'</code>, all <code>lin</code>):</p>
                  one-step residual that closes the app's debt recursion (see below).</li>
 </ol>
 <p><code>fiscal_meta.json</code> <code>idx</code> is <code>{gdp, deflator, revenue, primaryExp, effRate, sfa}</code> — there is <strong>no
-<code>debtService</code> key</strong> any more. In <a href="../app/src/lib/compute/fiscalAccounting.ts"><code>fiscalAccounting.ts</code></a>
+<code>debtService</code> key</strong> any more. In <a href="https://github.com/matyasfarkas/BVARScenarioTool/blob/main/app/src/lib/compute/fiscalAccounting.ts"><code>fiscalAccounting.ts</code></a>
 <code>computeFiscalBlock</code> reads <code>idx.effRate</code> as the rate driver, and — because <code>idx.sfa</code> is set — reads
 the <strong>per-quarter SFA forecast off the level path</strong> (<code>levelPaths[t][idx.sfa]</code>), so the debt/GDP
 projection now carries the deficit–debt discrepancy forward <strong>with its own dynamics and bands</strong>
@@ -1586,7 +1646,7 @@ branch for backward compat; the shipped metas leave it unset.)</p>
 <p><strong>The debt recursion</strong> (per quarter, <code>computeFiscalBlock</code>):
 <div class="highlight"><pre><span></span><code>pb_t  = FREV_GDP_t − FPEXP_GDP_t                                  (% of GDP, annual)
 gNomQ = 100·Δlog(realGDP) + 100·Δlog(deflator)                   (% per quarter, off the level path)
-d_t   = d_{t-1}·(1 + EFFI_t/400)/(1 + gNomQ_t/100) − pb_t/4 + sfa_t/4     (debt/GDP, %)
+d_t   = d_{t-1}·(1 + EFFI_t/400)/(1 + gNomQ_t/100) − pb_t/4 + SFA_t/4     (debt/GDP, %)
 </code></pre></div>
 Debt-to-GDP is DERIVED (never an estimated variable); <code>d0</code>/<code>sfaDefault</code> seed and fall-back it.</p>
 <p><strong>SFA = the EXACT app residual</strong> (data-build only — see §C). For every non-COVID quarter the build
@@ -1602,8 +1662,8 @@ rest of the block. SFA captures the deficit–debt-discrepancy / gross-debt-peri
 mean, % GDP): US 1.7518, EA 0.325, JP 2.233, UK 3.1487, CA 3.191, CN 4.017 (verified in each bloc's
 shipped <code>fiscal_meta.json</code>). The SFA estimation-sample length (number of non-COVID quarters with an
 SFA observation) is US 41, EA 21, JP 21, UK 23, CA 23, CN 18 — <strong>these are SFA-column sample lengths,
-not the bloc's spec variable count</strong> <code>n</code> (which is US 41, EA 24, JP 23, UK 25, CA 25, CN 20). Do not
-conflate the two.</p>
+not the bloc's spec variable count</strong> <code>n</code> (which is US 41, EA 24, JP 23, UK 25, CA 25, CN 20; the US 41 = 41 is a coincidence — the
+two counts differ for every other bloc). Do not conflate the two.</p>
 <p>A checkable walkthrough lives in <code>docs/fiscal_accounting_walkthrough_US_UK.xlsx</code> (built by
 <code>pipeline/build_fiscal_walkthrough_xlsx.py</code>) alongside the source <code>docs/Fiscal_Accounting_US_UK_NSA.xlsx</code>.</p>
 </blockquote>
@@ -1741,8 +1801,10 @@ contract</strong> (§"What a country needs"). For a standalone single-country bl
 <code>export_bvar_gvar24_loop.m</code> (§B6). The exporter produces <code>companion_mean</code>, <code>baseline</code> (growth) <strong>and</strong>
 <code>baseline_levels</code>, <code>historical</code> <strong>and</strong> <code>historical_levels</code>, <code>transformations</code>, and <code>companion_draws</code>.
 Standard config: the 2020 COVID quarters are NaN'd (window self-calibrated to the 2020Q2 GDP trough,
-searched within 2019Q4–2021Q1) and DK-imputed; <code>lambda</code>/<code>mu</code> are empirical-Bayes (MH on the
-completed-data marginal likelihood); <code>'sur',0,'noc',1,'Ndraws',1000,'Ndrawsdiscard',500</code>.</p>
+searched within 2019Q4–2021Q1) and DK (Durbin–Koopman)-imputed; <code>lambda</code>/<code>mu</code> are empirical-Bayes (MH (Metropolis–Hastings) on the
+completed-data marginal likelihood); <code>'sur',0,'noc',1,'Ndraws',1000,'Ndrawsdiscard',500</code>. The
+macro COVID window here is self-calibrated and may differ from the fixed 2020Q2–2021Q4 window the
+fiscal SFA builder NaNs (§A1); they serve different purposes.</p>
 <blockquote>
 <p>If the estimator returns a singular/<code>NaN</code> <code>SIGMA</code>, the data is the cause: a <code>NaN</code> in a discontinued
 series, or near-collinear national-accounts identities. Drop the offending leading-<code>NaN</code> rows and/or
@@ -1764,11 +1826,11 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 standalone single-country model). <strong>Caveat:</strong> keep the euro area aggregated — adding the euro
 <em>members</em> as their own coupled blocs makes the system non-stationary, which is why the 17 euro members
 ship as <strong>standalone</strong> models (no weights row) and <code>EA</code> is one bloc. Verify the spectral radius stays
-<code>&lt; 1</code> after re-estimation (it is <code>0.924</code> for the current 33-bloc / dim-2060 endogenous-US set).</p>
+<code>&lt; 1</code> after re-estimation (it is <code>0.922</code> for the current 33-bloc / dim-2060 endogenous-US set).</p>
 <ol>
 <li><strong>Add the bloc to the trade-weights file.</strong> Add <code>XX</code> (with its ISO-3 code) to the bloc list in
    <code>app/public/data/bvar/gvar/weights_24bloc.json</code> (regenerated by
-   <code>pipeline/build_trade_weights_full.py</code> / <code>pipeline/build_trade_weights.py</code> from IMF IMTS; the US
+   <code>pipeline/build_trade_weights_full.py</code> / <code>pipeline/build_trade_weights.py</code> from IMF IMTS (International Merchandise Trade Statistics); the US
    own-reporter row is built by <code>pipeline/build_us_weights_row.py</code>). Every bloc's row is renormalized
    over the active set, so adding a country changes everyone's trade weights.</li>
 <li><strong>Give the bloc its foreign + global variables.</strong> Its <code>spec.json</code> must carry the <strong>3 Rest-of-World
@@ -1783,14 +1845,14 @@ ship as <strong>standalone</strong> models (no weights row) and <code>EA</code> 
 <li><strong>No frontend code edits are needed for topology.</strong> The GVAR engine <strong>self-configures</strong> from the
    deployed <code>spec.json</code> files + <code>weights_24bloc.json</code>
    (<code>configureGVARTopology</code>/<code>deriveBlocIdx</code>/<code>US_ENDOGENOUS</code> in
-   <a href="../app/src/lib/compute/gvarSolve.ts"><code>gvarSolve.ts</code></a>): a bloc becomes active automatically once it
+   <a href="https://github.com/matyasfarkas/BVARScenarioTool/blob/main/app/src/lib/compute/gvarSolve.ts"><code>gvarSolve.ts</code></a>): a bloc becomes active automatically once it
    ships <code>block:'row'</code> vars and has a weights row. Do <strong>not</strong> hand-edit <code>IDX</code>/<code>W</code>/<code>COUPLED_COUNTRIES</code>.</li>
 <li><strong>Regenerate the precomputed coupling.</strong> After re-estimating + porting, rebuild the coupling
    artifact:
    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>app<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>npx<span class="w"> </span>vite-node<span class="w"> </span>scripts/precompute_gvar_coupling.mjs
 </code></pre></div>
    It builds the augmented-state coupling <code>M</code> in JS (DK-smoother probes), inverts <code>(I − M)</code> via a
-   MATLAB BLAS batch (<code>app/scripts/invert_coupling.m</code>), and writes the <strong>gzipped</strong> artifact
+   MATLAB BLAS (Basic Linear Algebra Subprograms) batch (<code>app/scripts/invert_coupling.m</code>), and writes the <strong>gzipped</strong> artifact
    <code>app/public/data/bvar/gvar/coupling_default.json.gz</code> directly (<code>{modelSig, pinStructure:'', dim,
    rhoSpectral, M, invImM}</code>, 6-sig-fig). The plain <code>.json</code> is removed/skipped because at this bloc
    count it would exceed GitHub's 100 MB per-file limit (gzip brings the current dim-2060 artifact to
@@ -1805,16 +1867,119 @@ ship as <strong>standalone</strong> models (no weights row) and <code>EA</code> 
    bloc.</li>
 </ol>
 <blockquote>
-<p><strong>Two-tier solve UX, drag off the heavy path (FYI, no per-country work).</strong> On the live ~50-bloc
+<p><strong>Two-tier solve UX, drag off the heavy path (FYI, no per-country work).</strong> On the live ~50-country
 US-endogenous panel every mean solve is multi-second (~4.5 s warm / ~13 s cold), so <strong>no GVAR solve
 fires during a drag</strong>: the drag path is a cheap conditioning preview (the conditioned dot snaps to the
 cursor instantly via <code>conditionedDotY.ts</code>), exactly one cheap <strong>DIRECT</strong> first-order solve
 (<code>solveGVARDirect</code>, affine per-probe kernels, numerically exact) fires on pointer-up, and the complete
 fixed point + uncertainty bands run only on the <strong>"Solve full GVAR"</strong> button / top-bar Compute. A
-"computing…" badge and a <code>direct</code>/<code>full</code> mode pill are shown; the ≈95 MB coupling artifact is stripped
+"computing…" badge and a <code>direct</code>/<code>full</code> mode pill are shown; the ≈95 MB (decompressed) coupling artifact is stripped
 from direct-mode worker posts; and per-chart React.memo means one conditioning edit repaints one panel,
 not all ~35. New blocs inherit this automatically.</p>
 </blockquote>
+<h3 id="b7-new-bloc-build-recipe-the-fsap-expansion-path-current">B7. New-bloc build recipe (the FSAP-expansion path — current)<a class="headerlink" href="#b7-new-bloc-build-recipe-the-fsap-expansion-path-current" title="Permanent link">&para;</a></h3>
+<p>§B1–B6 add a bloc "by hand" from FRED templates. The <strong>current</strong> path used for the FSAP expansion
+(HK/SG/RO/PE/PH) is a set of dedicated staging scripts under <code>pipeline/fsap_expansion_staging/</code>. Follow
+it verbatim to add another coupled bloc <code>&lt;CC&gt;</code>. The GVAR topology mechanics (stars, globals, the
+self-configuring engine, coupling regen) are exactly §B6 — this section is the concrete,
+copy-pasteable <strong>data build</strong> that feeds them, ending in the same port/verify gate.</p>
+<blockquote>
+<p><strong>Viability bar — check FIRST.</strong> A bloc is viable iff <strong>quarterly REAL GDP exists</strong> on a public source.
+<strong>AE (UAE) failed</strong>: it publishes only ANNUAL real GDP, and the no-interpolation rule forbids inventing
+quarters. Everything else (short rate, 10Y yield, house prices, credit, equity) may be ragged or
+entirely absent; quarterly real GDP is the one hard requirement.</p>
+</blockquote>
+<p><strong>1. Source the core series into the staging tree (genuine data only).</strong> Write one
+<code>{"id","source","dates","values"}</code> JSON per series into
+<code>pipeline/fsap_expansion_staging/newblocs/&lt;CC&gt;/</code>. Each series is a single live-API pull; monthly inputs
+are quarterly-averaged over <strong>complete quarters only</strong> (3 observed months); ragged tails are kept; <strong>no
+fabrication / backfill / interpolation</strong>. The three blocs with a committed builder script:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;&lt;repo root&gt;&quot;</span>
+python3<span class="w"> </span>pipeline/fsap_expansion_staging/newblocs/PE/build_PE.py<span class="w">   </span><span class="c1"># BCRP (real NA, IPC, 10Y yield, credit, equity) + BIS (policy rate, real RPPI)</span>
+python3<span class="w"> </span>pipeline/fsap_expansion_staging/newblocs/PH/build_PH.py<span class="w">   </span><span class="c1"># PSA OpenSTAT (SA real NA, CPI) + BIS (policy rate, real RPPI)</span>
+python3<span class="w"> </span>pipeline/fsap_expansion_staging/newblocs/RO/build_RO.py<span class="w">   </span><span class="c1"># Eurostat (real NA, HICP, 10Y, debt) + BIS (policy rate, RPPI)</span>
+<span class="c1"># HK / SG have NO builder script — their core series were pulled from HK C&amp;SD / SG SingStat and staged directly.</span>
+</code></pre></div>
+<p>The shared satellites write into the same tree:
+- <strong>NEER</strong> — <code>pipeline/fsap_expansion_staging/neer/build_neer.py</code> (BIS <code>WS_EER</code>, key <code>M.N.B.&lt;CC&gt;</code>,
+  nominal broad basket; monthly → quarterly mean, complete quarters only) → <code>neer/NEER_&lt;CC&gt;.json</code>.
+- <strong>Real trade X/M</strong> — <code>pipeline/fsap_expansion_staging/trade/build_trade.py</code> (Eurostat <code>namq_10_gdp</code>
+  <code>P6</code>/<code>P7</code>, CLV, SCA for EU blocs; national statistical offices / OECD-QNA-on-FRED otherwise) →
+  <code>trade/EXP_&lt;CC&gt;.json</code> / <code>IMP_&lt;CC&gt;.json</code>.
+- <strong>NFA / external</strong> (only if the bloc joins the external-balance satellite) —
+  <code>pipeline/fsap_expansion_staging/nfa/build_nfa_external.py</code> (IMF BOP current account + IMF IIP net-IIP
+  <code>nfa0</code> anchor + World Bank <code>NY.GDP.MKTP.CD</code> nominal-GDP denominator).</p>
+<p><strong>2. Assemble the raw panel.</strong> <code>pipeline/build_newbloc_panel.py</code> reads the staged series (resolving each
+role across <code>newblocs/</code>, <code>neer/</code>, <code>trade/</code>) and writes <code>pipeline/country_rawdata/DataRaw_&lt;CC&gt;_2025q4.json</code>:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>pipeline/build_newbloc_panel.py<span class="w"> </span>PE<span class="w"> </span>PH<span class="w"> </span>RO<span class="w"> </span>HK<span class="w"> </span>SG<span class="w">    </span><span class="c1"># no args = all five</span>
+</code></pre></div>
+<p>It uses a <strong>per-bloc <code>MANIFEST</code></strong> (the variable order, GDP anchor first — only genuinely-sourced roles
+are listed, so <strong>partial blocs are fine</strong>) and a <strong><code>ROLE</code></strong> dict that fixes <code>transformation</code> +
+<code>isFinancial</code> per role (<code>GDP/CONS/INV/GOV/EXP/IMP/CPI</code> = <code>log</code> macro; <code>HP/NEER/EQ/CREDIT/CREDIT_GDP</code> =
+<code>log</code> financial; <code>RATE/YIELD10</code> = <code>lin</code> financial). The grid runs from <code>max(GDP's first obs, 2000Q1)</code> — a
+<strong>2000Q1 EM-peer floor</strong> matching the deployed PL/HU/CZ blocs — to the <code>2025-Q4</code> vintage. A series absent
+at a date is stored as JSON <code>null</code> (the estimator back-fills the leading NaN; the DK smoother imputes
+interior holes), and <strong>ragged financial tails are kept as-is</strong>. Later 2026Q1/Q2 observations are
+deliberately excluded here — they feed the separate 2026Q1 rebase (step 8).</p>
+<p><strong>3. Inject the global commons.</strong> <code>pipeline/build_globals_new_blocs.py</code> takes a <strong>CLI subset</strong> (it
+defaults to the euro-member list, so <em>always pass your blocs</em>) and, per bloc, drops the legacy <code>_US</code>
+foreign block, appends the 4 US-determined globals (<code>GLB_OIL</code>/<code>GLB_USLR</code>/<code>GLB_USBAA</code>/<code>GLB_USEQ</code>,
+<code>block:'global'</code>, forced <code>isFinancial:1</code> so COVID masking keeps them observed), date-aligned by slicing
+the longest existing <code>_glob</code> file, and writes <code>DataRaw_&lt;CC&gt;_glob.json</code>:</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>pipeline/build_globals_new_blocs.py<span class="w"> </span>PE<span class="w"> </span>PH<span class="w"> </span>RO<span class="w"> </span>HK<span class="w"> </span>SG
+</code></pre></div>
+<p>This <code>DataRaw_&lt;CC&gt;_glob.json</code> (domestic + 4 globals; the 3 <code>ROW*_&lt;CC&gt;</code> stars are appended at export time,
+not stored here) is exactly the estimator input §B6.2 describes.</p>
+<p><strong>4. Add the bloc to the static weights.</strong> A new bloc needs its own <strong>row</strong> and must appear as a
+<strong>partner</strong> in every other bloc's row (renormalized over the enlarged set). The worked example is
+<code>pipeline/fsap_expansion_staging/weights/weights_full_38.json</code> — the <strong>2021–2023 average</strong> of the
+time-varying panel over the 38-bloc set (<code>pipeline/fsap_expansion_staging/weights/build_weights_timevarying.py</code>
+pulls the underlying annual bilateral X+M from IMF IMTS and writes <code>weights_timevarying.json</code>; the
+full-38 file is the window average: zero diagonal, <code>&lt;0.05%</code> links dropped, row-normalized). At deploy
+time the app's <code>app/public/data/bvar/gvar/weights_24bloc.json</code> is <strong>swapped to this 38-bloc content</strong> (the
+filename is historical — step 7).</p>
+<p><strong>5. Register the bloc.</strong> Add one line to <code>app/src/lib/data/countries.ts</code>
+(<code>{ code: '&lt;CC&gt;', name: '…', group: 'em' }</code> — the five FSAP entries are the <code>HK/SG/RO/PE/PH</code> lines). GVAR
+membership stays <strong>data-driven</strong> (a weights row + <code>block:'row'</code> vars), so nothing else in the frontend
+changes — §B6.3.</p>
+<blockquote>
+<p><strong>No-policy-rate bloc (SG).</strong> A bloc with no own short rate is fine. <strong>SG</strong> ships with no <code>RATE</code> (nor
+<code>YIELD10</code>) variable — its MP is exchange-rate-based, so its manifest omits the roles; the estimator
+then prints <code>has no own short rate -&gt; excluded from partners' ROWFIN</code> and drops it from the financial
+star exactly like <strong>CH / NO</strong>. SG still contributes to <code>ROWDEM</code>/<code>ROWINF</code>.</p>
+<p><strong>Seasonal-dummy decision (NSA blocs).</strong> If the bloc's headline series are <strong>calendar-seasonal</strong>
+(the panel scan's calendar-<code>R²≥0.40</code> <strong>and</strong> display-amplitude <code>≥2</code> — e.g. a raw NSA
+national-accounts block), add it to <strong><code>GVAR_DUMMY_BLOCS</code></strong>. On this branch the default set grows from
+16 to <strong>18</strong> by adding <strong>HK</strong> and <strong>PE</strong> (PE's BCRP real-expenditure block is raw NSA — <code>build_PE.py</code>
+flags it; HK clears the same scan). The dummies stay in <strong>estimation + imputation</strong>, but the shipped
+<strong>forward forecast is seasonally adjusted</strong> (it uses the annual-mean deterministic term); set
+<code>GVAR_NSA_FORECAST=1</code> only if you want the quarter-specific (NSA) forecast. See
+<strong><code>REESTIMATING_MODELS.md</code> §1.3</strong> for the full seasonal-v2 knob table — do not re-tune it here.</p>
+</blockquote>
+<p><strong>6. Re-estimate the whole coupled set</strong> (adding a bloc changes everyone's trade-weighted RoW, so all
+blocs are re-estimated — §B6.2). The current 38-bloc command:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">US_ENDOGENOUS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
+<span class="nv">GVAR_WEIGHTS_FILE</span><span class="o">=</span>&lt;repo&gt;/pipeline/fsap_expansion_staging/weights/weights_full_38.json<span class="w"> </span><span class="se">\</span>
+<span class="nv">GVAR_DUMMY_BLOCS</span><span class="o">=</span><span class="s2">&quot;CL CN CO CR EA ID IL IN IS JP KR MX NO TR UK ZA HK PE&quot;</span><span class="w"> </span><span class="se">\</span>
+matlab<span class="w"> </span>-batch<span class="w"> </span><span class="s2">&quot;run(&#39;pipeline/export_bvar_gvar24_loop.m&#39;)&quot;</span>
+</code></pre></div>
+<p><strong>7. Port + regenerate the coupling.</strong> Then follow the §A3–A5 gate, with two extra 38-bloc steps
+(swap the shipped weights; rebuild the coverage manifest):</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>pipeline/port_gvar_exports.py<span class="w">                     </span><span class="c1"># all blocs -&gt; app/public/data/bvar/&lt;CC&gt; (6 sig-figs)</span>
+cp<span class="w"> </span>pipeline/fsap_expansion_staging/weights/weights_full_38.json<span class="w"> </span>app/public/data/bvar/gvar/weights_24bloc.json
+<span class="nb">cd</span><span class="w"> </span>app
+npx<span class="w"> </span>vite-node<span class="w"> </span>scripts/precompute_gvar_coupling.mjs<span class="w">        </span><span class="c1"># dim grows 2060 -&gt; 2360; MATLAB BLAS inverts (I - M)</span>
+node<span class="w"> </span>scripts/build_coverage_manifest.mjs<span class="w">                  </span><span class="c1"># rebuild the provenance/coverage manifest</span>
+</code></pre></div>
+<p>(If any fiscal bloc's variable order shifted, also run <code>node pipeline/fix_fiscal_meta_indices.mjs</code> — §C4.)</p>
+<p><strong>8. Rebase to the display quarter, gate, deploy.</strong> The estimation vintage is 2025Q4; move the display
+origin forward with the established quarterly shift (estimate once, shift the frozen companion) —
+<code>app/scripts/refresh-quarter.mjs</code> re-projects the frozen companion for the new quarter and
+<code>app/scripts/nowcast_complete.mjs</code> fills the ragged 2026Q1 edge with the cross-bloc G-BVAR nowcast; then
+set <code>DEFAULT_LAST_HIST_DATE='2026-01-01'</code> in <code>app/src/lib/dates.ts</code> (both scripts are seasonal-aware; see
+<code>docs/data-refresh-rollout.md</code> for the full procedure). Finish with the <strong>green gate</strong> (§A5) and deploy
+<strong>only on user confirm</strong> — prod is <code>bvarscenario/main</code>, and the coupling + weights swap overwrites every
+live bloc.</p>
 <hr />
 <h2 id="c-add-refresh-a-4-variable-fiscal-block">C. Add / refresh a 4-variable fiscal block<a class="headerlink" href="#c-add-refresh-a-4-variable-fiscal-block" title="Permanent link">&para;</a></h2>
 <p>The 6 fiscal countries (US/EA/JP/UK/CA/CN) carry <code>{FREV_GDP, FPEXP_GDP, EFFI, SFA}</code> (<code>block:'fiscal'</code>,
@@ -1859,7 +2024,7 @@ count): run <code>node pipeline/fix_fiscal_meta_indices.mjs</code>.</strong></p>
 </blockquote>
 <p><code>fiscal_meta.json</code> stores the fiscal-driver columns <strong>by POSITION</strong> (<code>idx = {gdp, deflator, revenue,
 primaryExp, effRate, sfa}</code>), and the debt recursion in
-<a href="../app/src/lib/compute/fiscalAccounting.ts"><code>fiscalAccounting.ts</code></a> reads the level path at exactly those
+<a href="https://github.com/matyasfarkas/BVARScenarioTool/blob/main/app/src/lib/compute/fiscalAccounting.ts"><code>fiscalAccounting.ts</code></a> reads the level path at exactly those
 positional indices. <strong>Any change to a bloc's variable order or count silently re-points those indices at
 the WRONG columns.</strong> This is not hypothetical: the 33-bloc GVAR-EM refit inserted variables <em>ahead</em> of the
 fiscal block in every spec except US, which re-pointed (e.g.) EA's <code>effRate</code> onto the equity index (~col
@@ -1921,11 +2086,15 @@ backstop, but the explicit re-index is the fix — a green build with stale indi
 </tr>
 <tr>
 <td>GVAR coupling regen (optional)</td>
-<td><code>app/scripts/precompute_gvar_coupling.mjs</code> → <code>app/public/data/bvar/gvar/coupling_default.json.gz</code> (gzipped, dim-2060 augmented endogenous-US, ρ≈0.924)</td>
+<td><code>app/scripts/precompute_gvar_coupling.mjs</code> → <code>app/public/data/bvar/gvar/coupling_default.json.gz</code> (gzipped, dim-2060 augmented endogenous-US, ρ≈0.922)</td>
 </tr>
 <tr>
 <td>Topology (auto, no edit)</td>
 <td><code>app/src/lib/compute/gvarSolve.ts</code> self-configures from spec + weights (<code>US_ENDOGENOUS</code>, <code>configureGVARTopology</code>)</td>
+</tr>
+<tr>
+<td><strong>Manual tables regen (RULE)</strong></td>
+<td><code>python3 docs/generate_manual_tables.py</code> regenerates the manual's per-economy Appendix B from the shipped specs; rebuild <code>docs/MFFM_User_Manual.pdf</code> and <code>cp</code> to <code>app/public/MFFM_User_Manual.pdf</code> after any spec/roster change</td>
 </tr>
 <tr>
 <td>Fiscal recursion (read-only)</td>

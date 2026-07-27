@@ -23,7 +23,7 @@
     
     
       
-        <title>Euro-area Spillover & Harmonization - Monetary-Financial Model — Documentation</title>
+        <title>Euro-area Spillover & Harmonization - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -340,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -348,6 +348,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -945,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1120,8 +1148,8 @@ risk-free curve, sovereign spreads) are kept coherent across all of them.</p>
 <p>If you just want the "how do I use it" version, jump to <a href="#using-it-step-by-step">Using it, step by step</a>.</p>
 <hr />
 <h2 id="the-setup-why-members-need-special-treatment">The setup: why members need special treatment<a class="headerlink" href="#the-setup-why-members-need-special-treatment" title="Permanent link">&para;</a></h2>
-<p>Each <strong>member</strong> (DE, FR, IT, …) is estimated as its <strong>own standalone BVAR</strong>. The <strong>EA aggregate</strong> is a
-full bloc of the coupled <strong>GVAR</strong> (it trades and co-moves with the US, China, etc.). The members are
+<p>Each <strong>member</strong> (DE, FR, IT, …) is estimated as its <strong>own standalone BVAR</strong> (Bayesian VAR). The <strong>EA aggregate</strong> is a
+full bloc of the coupled <strong>GVAR</strong> (Global VAR) (it trades and co-moves with the US, China, etc.). The members are
 <strong>not</strong> in the GVAR coupling — they hang off the EA.</p>
 <p>That design is deliberate (a member's domestic detail — its fiscal block, its house prices, its
 sovereign spread — lives in the member model, while cross-border transmission is carried by the
@@ -1224,7 +1252,7 @@ draggable charts:</p>
   widening <strong>Italian</strong> spread (weight ≈ 14%) transmits far more to the area than an <strong>Estonian</strong> one
   (≈ 0.3%).</li>
 </ul>
-<p>The GDP weights are <strong>real Eurostat data</strong> (current-price GDP, 4-quarter-trailing share of the EA20,
+<p>The GDP weights are <strong>real Eurostat data</strong> (current-price GDP, 4-quarter-trailing share of the 20-member euro area (EA20),
 <code>app/public/data/bvar/gvar/ea_gdp_weights.json</code>) — not assumed. If both a Bund pin and a spread pin are
 set, their effects <strong>add</strong> on the area yield.</p>
 <hr />

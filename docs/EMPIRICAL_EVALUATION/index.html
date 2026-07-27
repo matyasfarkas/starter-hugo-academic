@@ -23,7 +23,7 @@
     
     
       
-        <title>Empirical Evaluation - Monetary-Financial Model — Documentation</title>
+        <title>Empirical Evaluation - Monetary-Financial-Fiscal Macromodel — Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-header__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Monetary-Financial Model — Documentation
+            Monetary-Financial-Fiscal Macromodel — Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,13 +214,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Monetary-Financial Model — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial Model — Documentation" data-md-component="logo">
+    <a href=".." title="Monetary-Financial-Fiscal Macromodel — Documentation" class="md-nav__button md-logo" aria-label="Monetary-Financial-Fiscal Macromodel — Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Monetary-Financial Model — Documentation
+    Monetary-Financial-Fiscal Macromodel — Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -340,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MFM_User_Manual.pdf" class="md-nav__link">
+      <a href="../MFFM_User_Manual.pdf" class="md-nav__link">
         
   
   
@@ -348,6 +348,34 @@
     
   
     User Manual (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MFFM_US_bloc_model.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The US Bloc Model (PDF)
   
 
     
@@ -1290,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../paper_outline.pdf" class="md-nav__link">
+      <a href="../paper/mffm_platform_paper.pdf" class="md-nav__link">
         
   
   
@@ -1813,7 +1841,7 @@ repository</strong> that implements them.</p>
 <p class="admonition-title">Empirical results are IN — read them honestly</p>
 <p>The OOS sweep has <strong>run</strong>: <strong>56 raw forecast origins</strong> (2010Q1–2024Q4), which leave
 <strong>~55 scorable headline origins</strong> once the four 2020 origins are dropped (§4.2),
-× <strong>9 models</strong>, CRPS-primary density scoring + a 90% Model
+× <strong>9 models</strong>, CRPS (Continuous Ranked Probability Score)-primary density scoring + a 90% Model
 Confidence Set. The headline numbers and the honest caveats are in
 <a href="#9-results-the-oos-horse-race">Results</a> and
 <a href="#10-tier-a-spillover-results">Tier-A spillover</a>. The short version: <strong>AR(p)/DFM lead
@@ -1826,7 +1854,7 @@ the robust primaries</strong>.</p>
 </div>
 <hr />
 <h2 id="1-purpose">1. Purpose<a class="headerlink" href="#1-purpose" title="Permanent link">&para;</a></h2>
-<p>The methodology manual (<a href="user_manual.pdf">User Manual PDF</a>, §Empirical Results) lays out
+<p>The methodology manual (<a href="../MFFM_User_Manual.pdf">User Manual PDF</a>, §Evaluation) lays out
 the estimation machinery; this page covers how that machinery is <strong>evaluated</strong>. The
 paper rests on two empirical pillars:</p>
 <ol>
@@ -1887,7 +1915,7 @@ exercised by <code>app/src/__tests__/compute/gvar-us-endogenous.test.ts</code> i
 <td><code>pipeline/export_bvar_gvar24_loop.m</code></td>
 </tr>
 <tr>
-<td>Single-bloc estimator (GLP prior + Durbin–Koopman smoother)</td>
+<td>Single-bloc estimator (GLP (Giannone–Lenza–Primiceri) prior + Durbin–Koopman smoother)</td>
 <td><code>BVAR/MFBVAR/cgl_bvarV5.m</code></td>
 </tr>
 <tr>
@@ -1938,7 +1966,7 @@ matlab/
     run_dfm.m                    # (v)  Bayesian dynamic factor model
     bench_common.m               # shared bloc-loading / scoring-space helpers
   spillover/
-    tier_a_scenario.m            # Tier-A orchestrator (shells out to Node/vitest)
+    tier_a_scenario.m            # Tier-A orchestrator (shells out to Node)
 eval/
   score.py                       # PURE post-processing: RMSE/MAE/CRPS/LPS/PIT ingestion+aggregation
   tests.py                       # GW / CW / DM + Romano–Wolf + Model Confidence Set
@@ -2155,7 +2183,7 @@ computes:</p>
   <strong>explodes</strong> on the under-covered GVAR-family clouds (magnitudes up to ~<code>1e16</code>, §9.3) —
   it is a scoring artifact of fitting a Gaussian to a sub-0.90-coverage cloud, not a model
   pathology. <strong>The LPS column is not reported; CRPS + the MCS are the density primaries.</strong></li>
-<li><strong>Calibration.</strong> Randomized <strong>PIT</strong> of each realization in its ensemble → PIT
+<li><strong>Calibration.</strong> Randomized probability-integral-transform (<strong>PIT</strong>) of each realization in its ensemble → PIT
   histograms per <code>(model, horizon)</code>, with <strong>50% / 90% coverage</strong> and a χ² uniformity
   p-value.</li>
 </ul>
@@ -2250,13 +2278,13 @@ it):</p>
    the <strong>gap = endogenous − frozen</strong> (the channel the frozen anchor <em>cannot represent</em> —
    the world→US direction is structurally <em>absent</em>, not "present but zero"); and the
    spectral radius <code>ρ(M)</code> per topology (the multiplier strength). The <strong>deployed</strong>
-   coupling artifact <code>coupling_default.json.gz</code> reports <code>rhoSpectral = 0.924</code> for the
+   coupling artifact <code>coupling_default.json.gz</code> reports <code>rhoSpectral = 0.945494</code> for the
    endogenous 33-bloc system at <code>dim = 2060</code> (the frozen-anchor 24-bloc production
    configuration is <code>≈0.723</code> at <code>dim = 1380</code>). The Tier-A test itself runs on the <strong>6-bloc</strong> US-anchored
    subset (US, EA, JP, UK, CA, CN) and reports, in <code>results/tierA/us_rate_100bp.json</code>, a
    frozen-route <code>rhoSpectral ≈ 0.506</code> (direct inverse) versus an endogenous route solved
    in a <strong>single Neumann sweep</strong> (<code>sweepCount = 1</code>) — a <em>different, smaller</em> operator than
-   the deployed 33-bloc system, so its radius is not the deployed <code>0.924</code>.</li>
+   the deployed 33-bloc system, so its radius is not the deployed <code>0.947</code>.</li>
 </ol>
 <p>This example doubles as a <strong>solver-validation canary</strong>: the closed-form endogenous result
 reproduces the iterative <code>solveGVAR</code> fixed point to <code>&lt; 1e-4</code> across every bloc, and a warm
@@ -2715,7 +2743,7 @@ converged to <code>1e-7</code>). The endogenous route here closes in a <strong>s
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Protocol (authoritative):</strong> <code>/home/farkas/github/em-bayesian-gvar-eval/docs/EMPIRICAL_PROTOCOL.md</code></li>
-<li><strong><a href="user_manual.pdf">User Manual (PDF)</a></strong> — §Empirical Results scaffold, the estimation
+<li><strong><a href="../MFFM_User_Manual.pdf">User Manual (PDF)</a></strong> — §Evaluation summary, the estimation
   methodology these scores evaluate, and the per-economy variable (transformation · prior ·
   financial) tables.</li>
 <li><strong><a href="../ARCHITECTURE_FOR_AI/">Architecture</a></strong> — the GVAR topology, the closed-form
