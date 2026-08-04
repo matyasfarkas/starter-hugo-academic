@@ -1,0 +1,2000 @@
+{
+ "schema": "gmaps-drivers-index/1",
+ "generated": "2026-08-04",
+ "horizonQuarters": 12,
+ "commonObservables": [
+  "output",
+  "inflationq",
+  "interest"
+ ],
+ "collinearThreshold": 0.95,
+ "note": "Model-conditional decomposition metadata (experimental Drivers feature). Collinear pairs use |cos|>0.95 between unit-normalised stacked 3-obs H=12 response paths, exactly as pipeline/bench_simple_decomp.m. Zero-response shocks are dropped and listed. clusters (FRB/US census models) are connected components of that collinearity graph — empirical structure, not economic classes. shockClasses is pipeline/_shockbench/class_maps.json copied verbatim (the single source of truth for class membership); the class VIEW is licensed ONLY where bench_class_recovery.m passes (docs/paper/class_recovery_results.txt): US_SW07 at the full extended observable set.",
+ "shockClasses": {
+  "schema": "gmaps-shock-classes/1",
+  "note": "Single source of truth for the universal shock-class layer (Drivers feature + bench_class_recovery.m). Classes: Monetary, Demand, Supply, Financial, Other. SW07/CMR14 assignments follow the papers' own shock descriptions; census-generic follows the injected shock semantics; FRB/US assignments are RULE-BASED on the equation each _aerr residual attaches to (basis field = equation name from aerr_equation_map.json) — spending-block equations to Demand, price/wage/productivity/labour equations to Supply, premia/asset-price/FX equations to Financial, accounting and trend identities to Other. Amend here, not in the app.",
+  "censusGeneric": {
+   "interest_": "Monetary",
+   "fiscal_": "Demand",
+   "demand_": "Demand",
+   "pref_": "Demand",
+   "inv_": "Demand",
+   "markup_": "Supply",
+   "tech_": "Supply",
+   "wage_": "Supply",
+   "flex_": "Supply"
+  },
+  "models": {
+   "US_SW07": {
+    "Monetary": [
+     "interest_"
+    ],
+    "Demand": [
+     "eb",
+     "fiscal_",
+     "eqs"
+    ],
+    "Supply": [
+     "ea",
+     "epinf",
+     "ew"
+    ]
+   },
+   "US_CMR14": {
+    "Monetary": [
+     "interest_"
+    ],
+    "Demand": [
+     "fiscal_",
+     "e_zetac",
+     "e_zetai"
+    ],
+    "Supply": [
+     "e_muzstar",
+     "e_muup",
+     "e_lambdaf"
+    ],
+    "Financial": [
+     "e_sigma",
+     "e_gamma"
+    ]
+   },
+   "US_FRB22_mcap": {
+    "Monetary": [
+     "interest_"
+    ],
+    "Demand": [
+     "fiscal_",
+     "eco_l_aerr",
+     "ecd_l_aerr",
+     "ech_l_aerr",
+     "eh_l_aerr",
+     "ebfi_l_aerr",
+     "ex_l_aerr",
+     "emo_l_aerr",
+     "egfe_l_aerr",
+     "egfl_l_aerr",
+     "egse_l_aerr",
+     "egsl_l_aerr",
+     "gtrd_aerr",
+     "trp_aerr",
+     "trci_aerr",
+     "fxgap_aerr"
+    ],
+    "Supply": [
+     "picxfe_aerr",
+     "pieci_aerr",
+     "pcer_l_aerr",
+     "pcfr_l_aerr",
+     "pegfr_l_aerr",
+     "pegsr_l_aerr",
+     "pmo_l_aerr",
+     "pxr_l_aerr",
+     "pbfir_l_aerr",
+     "poilr_l_aerr",
+     "mfpt_l_aerr",
+     "hmfpt_aerr",
+     "lurnat_aerr",
+     "lfpr_aerr",
+     "leo_l_aerr",
+     "lww_l_aerr",
+     "lhp_l_aerr",
+     "emp_l_aerr",
+     "hqlfpr_aerr",
+     "hqlww_aerr"
+    ],
+    "Financial": [
+     "rbbbp_aerr",
+     "reqp_aerr",
+     "rg5p_aerr",
+     "rg10p_aerr",
+     "rg30p_aerr",
+     "rme_aerr",
+     "rcar_aerr",
+     "rcgain_aerr",
+     "rfynic_aerr",
+     "rfynil_aerr",
+     "rgfint_aerr",
+     "fpxrr_l_aerr",
+     "phouse_l_aerr",
+     "phr_l_aerr"
+    ],
+    "Other": [
+     "ki_l_aerr",
+     "ynidn_l_aerr",
+     "ynirn_l_aerr"
+    ]
+   }
+  },
+  "aliases": {
+   "US_FRB22_var": "US_FRB22_mcap"
+  }
+ },
+ "models": {
+  "US_SW07": {
+   "file": "/data/dsge/irfs/US_SW07/SW.json",
+   "source": "app/public/data/dsge/irfs/US_SW07/SW.json",
+   "sha256": "9f39397f9159a251787bad034e2ac35827350251a41c388606387c707d3d5cdb",
+   "sha256Source": "sha256(app/public/data/dsge/irfs/US_SW07/SW.json)",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "ea",
+    "eb",
+    "eqs",
+    "epinf",
+    "ew"
+   ],
+   "dropped": [
+    {
+     "shock": "em",
+     "reason": "zero-response"
+    }
+   ],
+   "hasOutput": true,
+   "collinearPairs": []
+  },
+  "US_CMR14": {
+   "file": "/data/dsge/irfs/US_CMR14/SW.json",
+   "source": "app/public/data/dsge/irfs/US_CMR14/SW.json",
+   "sha256": "45551ddff41893d68647cc11dab7b9385a9d9e6ee3386d1b35fb666da863749c",
+   "sha256Source": "sha256(app/public/data/dsge/irfs/US_CMR14/SW.json)",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "e_sigma",
+    "e_gamma",
+    "e_zetac",
+    "e_zetai",
+    "e_lambdaf",
+    "e_muzstar",
+    "e_muup"
+   ],
+   "dropped": [
+    {
+     "shock": "e_term",
+     "reason": "zero-response"
+    }
+   ],
+   "hasOutput": true,
+   "collinearPairs": [
+    {
+     "a": "e_sigma",
+     "b": "e_gamma",
+     "cos": 0.997711
+    },
+    {
+     "a": "e_sigma",
+     "b": "e_zetai",
+     "cos": 0.975082
+    },
+    {
+     "a": "e_gamma",
+     "b": "e_zetai",
+     "cos": 0.982712
+    }
+   ]
+  },
+  "US_FRB22_mcap": {
+   "file": "/data/dsge/irfs/US_FRB22_mcap/SW.json",
+   "source": "app/public/data/dsge/irfs/US_FRB22_mcap/SW.json",
+   "title": "FRB/US linearised (2022, MMB) — monetary + fiscal",
+   "sourceNote": "MMB rule file",
+   "menuHidden": true,
+   "classMapKey": "US_FRB22_mcap",
+   "sha256": "e2d5d163992ae0812ba68cd855d35aa2033196e45a8ef2acb7c86e3086d6c3b0",
+   "sha256Source": "sha256(app/public/data/dsge/irfs/US_FRB22_mcap/SW.json)",
+   "shocks": [
+    "interest_",
+    "fiscal_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": []
+  },
+  "US_FRB08": {
+   "file": "/data/dsge/irfs/US_FRB08/SW.json",
+   "source": "app/public/data/dsge/irfs/US_FRB08/SW.json",
+   "title": "FRB/US linearised (2008, MMB)",
+   "sourceNote": "MMB rule file",
+   "sha256": "6818dcf75693b57da862efa6f89a944bc161dbb449778825f373638ee6687319",
+   "sha256Source": "sha256(app/public/data/dsge/irfs/US_FRB08/SW.json)",
+   "shocks": [
+    "interest_",
+    "fiscal_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": []
+  },
+  "US_FRB22": {
+   "file": "/data/dsge/census/US_FRB22.json",
+   "source": "pipeline/census_irfs/US_FRB22_mcap/Taylor.json",
+   "title": "FRB/US linearised (2022, MMB) — 54-shock census",
+   "sourceNote": "MMB census run",
+   "classMapKey": "US_FRB22_mcap",
+   "sha256": "e3b0f25bd8357a7aa94f4fb02eeea67aa74d5c2504cbd2ad61d8ce4bae625ad3",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "ebfi_l_aerr",
+    "ecd_l_aerr",
+    "ech_l_aerr",
+    "eco_l_aerr",
+    "egfe_l_aerr",
+    "egfl_l_aerr",
+    "egse_l_aerr",
+    "egsl_l_aerr",
+    "eh_l_aerr",
+    "emo_l_aerr",
+    "emp_l_aerr",
+    "ex_l_aerr",
+    "fpxrr_l_aerr",
+    "fxgap_aerr",
+    "gtrd_aerr",
+    "hmfpt_aerr",
+    "hqlfpr_aerr",
+    "hqlww_aerr",
+    "ki_l_aerr",
+    "leo_l_aerr",
+    "lfpr_aerr",
+    "lhp_l_aerr",
+    "lurnat_aerr",
+    "lww_l_aerr",
+    "mfpt_l_aerr",
+    "pbfir_l_aerr",
+    "pcer_l_aerr",
+    "pcfr_l_aerr",
+    "pegfr_l_aerr",
+    "pegsr_l_aerr",
+    "phouse_l_aerr",
+    "phr_l_aerr",
+    "picxfe_aerr",
+    "pieci_aerr",
+    "pmo_l_aerr",
+    "poilr_l_aerr",
+    "pxr_l_aerr",
+    "rbbbp_aerr",
+    "rcar_aerr",
+    "rcgain_aerr",
+    "reqp_aerr",
+    "rfynic_aerr",
+    "rfynil_aerr",
+    "rg10p_aerr",
+    "rg30p_aerr",
+    "rg5p_aerr",
+    "rgfint_aerr",
+    "rme_aerr",
+    "trci_aerr",
+    "trp_aerr",
+    "ynidn_l_aerr",
+    "ynirn_l_aerr"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": [
+    {
+     "a": "fiscal_",
+     "b": "ech_l_aerr",
+     "cos": 0.984597
+    },
+    {
+     "a": "fiscal_",
+     "b": "eh_l_aerr",
+     "cos": 0.977577
+    },
+    {
+     "a": "fiscal_",
+     "b": "phouse_l_aerr",
+     "cos": 0.950847
+    },
+    {
+     "a": "fiscal_",
+     "b": "phr_l_aerr",
+     "cos": 0.950723
+    },
+    {
+     "a": "fiscal_",
+     "b": "rbbbp_aerr",
+     "cos": 0.985431
+    },
+    {
+     "a": "fiscal_",
+     "b": "rcgain_aerr",
+     "cos": 0.9913
+    },
+    {
+     "a": "fiscal_",
+     "b": "reqp_aerr",
+     "cos": 0.972972
+    },
+    {
+     "a": "fiscal_",
+     "b": "rg30p_aerr",
+     "cos": 0.991476
+    },
+    {
+     "a": "fiscal_",
+     "b": "rg5p_aerr",
+     "cos": 0.961215
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "ech_l_aerr",
+     "cos": 0.962046
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "eh_l_aerr",
+     "cos": 0.963569
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "rbbbp_aerr",
+     "cos": 0.952179
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.958736
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "rfynic_aerr",
+     "cos": 0.963653
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "eco_l_aerr",
+     "cos": 0.984838
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egfe_l_aerr",
+     "cos": 0.998004
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egfl_l_aerr",
+     "cos": 0.978763
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.9953
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.984097
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.994106
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.992558
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.979912
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.990872
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "eh_l_aerr",
+     "cos": 0.998535
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rbbbp_aerr",
+     "cos": 0.977724
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rcar_aerr",
+     "cos": 0.961698
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.960534
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.987162
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.969985
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.979054
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egfe_l_aerr",
+     "cos": 0.97618
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egfl_l_aerr",
+     "cos": 0.990669
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.996471
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.99229
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.975598
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.991573
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.981659
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.990147
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "egfl_l_aerr",
+     "cos": 0.971974
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.988975
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.977498
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.989177
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.991042
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.980876
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.989724
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.9897
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.999407
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.961037
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.987542
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.986735
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.989375
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.992919
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.988752
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.994323
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.982893
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.992404
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.968505
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.989845
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.986447
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.991683
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rbbbp_aerr",
+     "cos": 0.966415
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rcar_aerr",
+     "cos": 0.962129
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.978995
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.957436
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.973568
+    },
+    {
+     "a": "emo_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.97656
+    },
+    {
+     "a": "emo_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.954833
+    },
+    {
+     "a": "emo_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.972675
+    },
+    {
+     "a": "ex_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.995436
+    },
+    {
+     "a": "ex_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.998733
+    },
+    {
+     "a": "fpxrr_l_aerr",
+     "b": "rg10p_aerr",
+     "cos": 0.961688
+    },
+    {
+     "a": "gtrd_aerr",
+     "b": "trp_aerr",
+     "cos": 0.99484
+    },
+    {
+     "a": "hqlfpr_aerr",
+     "b": "hqlww_aerr",
+     "cos": 0.994312
+    },
+    {
+     "a": "hqlfpr_aerr",
+     "b": "pbfir_l_aerr",
+     "cos": 0.974843
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "pbfir_l_aerr",
+     "cos": 0.986846
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "phr_l_aerr",
+     "cos": 0.956441
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.968244
+    },
+    {
+     "a": "leo_l_aerr",
+     "b": "lfpr_aerr",
+     "cos": 0.975373
+    },
+    {
+     "a": "leo_l_aerr",
+     "b": "lww_l_aerr",
+     "cos": 0.995309
+    },
+    {
+     "a": "leo_l_aerr",
+     "b": "pieci_aerr",
+     "cos": 0.98316
+    },
+    {
+     "a": "lfpr_aerr",
+     "b": "lww_l_aerr",
+     "cos": 0.954048
+    },
+    {
+     "a": "lfpr_aerr",
+     "b": "pieci_aerr",
+     "cos": 0.998132
+    },
+    {
+     "a": "lww_l_aerr",
+     "b": "pieci_aerr",
+     "cos": 0.963162
+    },
+    {
+     "a": "pbfir_l_aerr",
+     "b": "phr_l_aerr",
+     "cos": 0.963297
+    },
+    {
+     "a": "pbfir_l_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.974356
+    },
+    {
+     "a": "pegfr_l_aerr",
+     "b": "rme_aerr",
+     "cos": 0.958712
+    },
+    {
+     "a": "pegsr_l_aerr",
+     "b": "pxr_l_aerr",
+     "cos": 0.989296
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "phr_l_aerr",
+     "cos": 0.992873
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.972416
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.957815
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.98124
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.976525
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.968421
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.995589
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.987887
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.990763
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.99607
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.967024
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.961284
+    },
+    {
+     "a": "rcar_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.963851
+    },
+    {
+     "a": "rcar_aerr",
+     "b": "rfynic_aerr",
+     "cos": 0.951739
+    },
+    {
+     "a": "rcar_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.984471
+    },
+    {
+     "a": "rcgain_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.964866
+    },
+    {
+     "a": "rcgain_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.997501
+    },
+    {
+     "a": "rcgain_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.982806
+    },
+    {
+     "a": "reqp_aerr",
+     "b": "rfynic_aerr",
+     "cos": 0.962255
+    },
+    {
+     "a": "reqp_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.97786
+    },
+    {
+     "a": "reqp_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.988614
+    },
+    {
+     "a": "rg30p_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.9809
+    }
+   ],
+   "clusters": [
+    {
+     "id": "hqlfpr",
+     "label": "hqlfpr cluster (17 shocks)",
+     "members": [
+      "fiscal_",
+      "ebfi_l_aerr",
+      "ech_l_aerr",
+      "eh_l_aerr",
+      "hqlfpr_aerr",
+      "hqlww_aerr",
+      "pbfir_l_aerr",
+      "phouse_l_aerr",
+      "phr_l_aerr",
+      "rbbbp_aerr",
+      "rcar_aerr",
+      "rcgain_aerr",
+      "reqp_aerr",
+      "rfynic_aerr",
+      "rg30p_aerr",
+      "rg5p_aerr",
+      "ynirn_l_aerr"
+     ]
+    },
+    {
+     "id": "eco_l",
+     "label": "eco_l cluster (10 shocks)",
+     "members": [
+      "ecd_l_aerr",
+      "eco_l_aerr",
+      "egfe_l_aerr",
+      "egfl_l_aerr",
+      "egse_l_aerr",
+      "egsl_l_aerr",
+      "emo_l_aerr",
+      "ex_l_aerr",
+      "gtrd_aerr",
+      "trp_aerr"
+     ]
+    },
+    {
+     "id": "lww_l",
+     "label": "lww_l cluster (4 shocks)",
+     "members": [
+      "leo_l_aerr",
+      "lfpr_aerr",
+      "lww_l_aerr",
+      "pieci_aerr"
+     ]
+    },
+    {
+     "id": "fpxrr_l",
+     "label": "fpxrr_l cluster (2 shocks)",
+     "members": [
+      "fpxrr_l_aerr",
+      "rg10p_aerr"
+     ]
+    },
+    {
+     "id": "pegfr_l",
+     "label": "pegfr_l cluster (2 shocks)",
+     "members": [
+      "pegfr_l_aerr",
+      "rme_aerr"
+     ]
+    },
+    {
+     "id": "pxr_l",
+     "label": "pxr_l cluster (2 shocks)",
+     "members": [
+      "pegsr_l_aerr",
+      "pxr_l_aerr"
+     ]
+    },
+    {
+     "id": "emp_l",
+     "label": "emp_l_aerr",
+     "members": [
+      "emp_l_aerr"
+     ]
+    },
+    {
+     "id": "fxgap",
+     "label": "fxgap_aerr",
+     "members": [
+      "fxgap_aerr"
+     ]
+    },
+    {
+     "id": "hmfpt",
+     "label": "hmfpt_aerr",
+     "members": [
+      "hmfpt_aerr"
+     ]
+    },
+    {
+     "id": "interest_",
+     "label": "interest_",
+     "members": [
+      "interest_"
+     ]
+    },
+    {
+     "id": "ki_l",
+     "label": "ki_l_aerr",
+     "members": [
+      "ki_l_aerr"
+     ]
+    },
+    {
+     "id": "lhp_l",
+     "label": "lhp_l_aerr",
+     "members": [
+      "lhp_l_aerr"
+     ]
+    },
+    {
+     "id": "lurnat",
+     "label": "lurnat_aerr",
+     "members": [
+      "lurnat_aerr"
+     ]
+    },
+    {
+     "id": "mfpt_l",
+     "label": "mfpt_l_aerr",
+     "members": [
+      "mfpt_l_aerr"
+     ]
+    },
+    {
+     "id": "pcer_l",
+     "label": "pcer_l_aerr",
+     "members": [
+      "pcer_l_aerr"
+     ]
+    },
+    {
+     "id": "pcfr_l",
+     "label": "pcfr_l_aerr",
+     "members": [
+      "pcfr_l_aerr"
+     ]
+    },
+    {
+     "id": "picxfe",
+     "label": "picxfe_aerr",
+     "members": [
+      "picxfe_aerr"
+     ]
+    },
+    {
+     "id": "pmo_l",
+     "label": "pmo_l_aerr",
+     "members": [
+      "pmo_l_aerr"
+     ]
+    },
+    {
+     "id": "poilr_l",
+     "label": "poilr_l_aerr",
+     "members": [
+      "poilr_l_aerr"
+     ]
+    },
+    {
+     "id": "rfynil",
+     "label": "rfynil_aerr",
+     "members": [
+      "rfynil_aerr"
+     ]
+    },
+    {
+     "id": "rgfint",
+     "label": "rgfint_aerr",
+     "members": [
+      "rgfint_aerr"
+     ]
+    },
+    {
+     "id": "trci",
+     "label": "trci_aerr",
+     "members": [
+      "trci_aerr"
+     ]
+    },
+    {
+     "id": "ynidn_l",
+     "label": "ynidn_l_aerr",
+     "members": [
+      "ynidn_l_aerr"
+     ]
+    }
+   ],
+   "defaultNamed": [
+    "hqlfpr",
+    "interest_",
+    "pcer_l"
+   ]
+  },
+  "US_FRB22_var": {
+   "file": "/data/dsge/census/US_FRB22_var.json",
+   "source": "pipeline/census_irfs/US_FRB22_var/Taylor.json",
+   "title": "FRB/US linearised (2022, MMB) — 54-shock census (VAR expectations)",
+   "sourceNote": "MMB census run",
+   "classMapKey": "US_FRB22_mcap",
+   "sha256": "76cd24c218d26136222ae2df076a49e39a2e98fbed17a6e549d63c0a9ab829aa",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "ebfi_l_aerr",
+    "ecd_l_aerr",
+    "ech_l_aerr",
+    "eco_l_aerr",
+    "egfe_l_aerr",
+    "egfl_l_aerr",
+    "egse_l_aerr",
+    "egsl_l_aerr",
+    "eh_l_aerr",
+    "emo_l_aerr",
+    "emp_l_aerr",
+    "ex_l_aerr",
+    "fpxrr_l_aerr",
+    "fxgap_aerr",
+    "gtrd_aerr",
+    "hmfpt_aerr",
+    "hqlfpr_aerr",
+    "hqlww_aerr",
+    "ki_l_aerr",
+    "leo_l_aerr",
+    "lfpr_aerr",
+    "lhp_l_aerr",
+    "lurnat_aerr",
+    "lww_l_aerr",
+    "mfpt_l_aerr",
+    "pbfir_l_aerr",
+    "pcer_l_aerr",
+    "pcfr_l_aerr",
+    "pegfr_l_aerr",
+    "pegsr_l_aerr",
+    "phouse_l_aerr",
+    "phr_l_aerr",
+    "picxfe_aerr",
+    "pieci_aerr",
+    "pmo_l_aerr",
+    "poilr_l_aerr",
+    "pxr_l_aerr",
+    "rbbbp_aerr",
+    "rcar_aerr",
+    "rcgain_aerr",
+    "reqp_aerr",
+    "rfynic_aerr",
+    "rfynil_aerr",
+    "rg10p_aerr",
+    "rg30p_aerr",
+    "rg5p_aerr",
+    "rgfint_aerr",
+    "rme_aerr",
+    "trci_aerr",
+    "trp_aerr",
+    "ynidn_l_aerr",
+    "ynirn_l_aerr"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": [
+    {
+     "a": "fiscal_",
+     "b": "ech_l_aerr",
+     "cos": 0.986794
+    },
+    {
+     "a": "fiscal_",
+     "b": "eh_l_aerr",
+     "cos": 0.982894
+    },
+    {
+     "a": "fiscal_",
+     "b": "phouse_l_aerr",
+     "cos": 0.959266
+    },
+    {
+     "a": "fiscal_",
+     "b": "rbbbp_aerr",
+     "cos": 0.984779
+    },
+    {
+     "a": "fiscal_",
+     "b": "rcgain_aerr",
+     "cos": 0.993239
+    },
+    {
+     "a": "fiscal_",
+     "b": "reqp_aerr",
+     "cos": 0.973771
+    },
+    {
+     "a": "fiscal_",
+     "b": "rg30p_aerr",
+     "cos": 0.99111
+    },
+    {
+     "a": "fiscal_",
+     "b": "rg5p_aerr",
+     "cos": 0.959438
+    },
+    {
+     "a": "fiscal_",
+     "b": "ynirn_l_aerr",
+     "cos": 0.959307
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "ech_l_aerr",
+     "cos": 0.963081
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "eh_l_aerr",
+     "cos": 0.961546
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "rbbbp_aerr",
+     "cos": 0.96434
+    },
+    {
+     "a": "ebfi_l_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.964341
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "eco_l_aerr",
+     "cos": 0.980657
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egfe_l_aerr",
+     "cos": 0.997531
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egfl_l_aerr",
+     "cos": 0.980004
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.993751
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.985632
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.991293
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.992717
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.976887
+    },
+    {
+     "a": "ecd_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.99183
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "eh_l_aerr",
+     "cos": 0.99904
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rbbbp_aerr",
+     "cos": 0.978125
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rcar_aerr",
+     "cos": 0.952877
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.966635
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.986439
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.971376
+    },
+    {
+     "a": "ech_l_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.986378
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egfe_l_aerr",
+     "cos": 0.969092
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egfl_l_aerr",
+     "cos": 0.985902
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.995618
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.985581
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.967418
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.989726
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.978653
+    },
+    {
+     "a": "eco_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.988283
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "egfl_l_aerr",
+     "cos": 0.969754
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.98534
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.976382
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.985898
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.989805
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.976347
+    },
+    {
+     "a": "egfe_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.989057
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "egse_l_aerr",
+     "cos": 0.990296
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.999145
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.964584
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.980089
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.973966
+    },
+    {
+     "a": "egfl_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.982275
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "egsl_l_aerr",
+     "cos": 0.992361
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.984531
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.99381
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.979858
+    },
+    {
+     "a": "egse_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.992232
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "emo_l_aerr",
+     "cos": 0.971763
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.98289
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.974129
+    },
+    {
+     "a": "egsl_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.98542
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rbbbp_aerr",
+     "cos": 0.969525
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rcar_aerr",
+     "cos": 0.951235
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.95834
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.979294
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.96273
+    },
+    {
+     "a": "eh_l_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.982783
+    },
+    {
+     "a": "emo_l_aerr",
+     "b": "ex_l_aerr",
+     "cos": 0.972554
+    },
+    {
+     "a": "emo_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.96968
+    },
+    {
+     "a": "ex_l_aerr",
+     "b": "gtrd_aerr",
+     "cos": 0.993526
+    },
+    {
+     "a": "ex_l_aerr",
+     "b": "trp_aerr",
+     "cos": 0.998334
+    },
+    {
+     "a": "fpxrr_l_aerr",
+     "b": "rg10p_aerr",
+     "cos": 0.963583
+    },
+    {
+     "a": "gtrd_aerr",
+     "b": "trp_aerr",
+     "cos": 0.991865
+    },
+    {
+     "a": "hqlfpr_aerr",
+     "b": "hqlww_aerr",
+     "cos": 0.994045
+    },
+    {
+     "a": "hqlfpr_aerr",
+     "b": "pbfir_l_aerr",
+     "cos": 0.973907
+    },
+    {
+     "a": "hqlfpr_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.956889
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "pbfir_l_aerr",
+     "cos": 0.984737
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "phr_l_aerr",
+     "cos": 0.966627
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.953148
+    },
+    {
+     "a": "hqlww_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.980787
+    },
+    {
+     "a": "leo_l_aerr",
+     "b": "lfpr_aerr",
+     "cos": 0.976344
+    },
+    {
+     "a": "leo_l_aerr",
+     "b": "lww_l_aerr",
+     "cos": 0.998614
+    },
+    {
+     "a": "leo_l_aerr",
+     "b": "pieci_aerr",
+     "cos": 0.987514
+    },
+    {
+     "a": "lfpr_aerr",
+     "b": "lww_l_aerr",
+     "cos": 0.964185
+    },
+    {
+     "a": "lfpr_aerr",
+     "b": "pieci_aerr",
+     "cos": 0.997846
+    },
+    {
+     "a": "lww_l_aerr",
+     "b": "pieci_aerr",
+     "cos": 0.978177
+    },
+    {
+     "a": "pbfir_l_aerr",
+     "b": "phouse_l_aerr",
+     "cos": 0.950792
+    },
+    {
+     "a": "pbfir_l_aerr",
+     "b": "phr_l_aerr",
+     "cos": 0.976475
+    },
+    {
+     "a": "pbfir_l_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.981215
+    },
+    {
+     "a": "pegsr_l_aerr",
+     "b": "pxr_l_aerr",
+     "cos": 0.983216
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "phr_l_aerr",
+     "cos": 0.992903
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.977846
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.967717
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.985007
+    },
+    {
+     "a": "phouse_l_aerr",
+     "b": "ynidn_l_aerr",
+     "cos": 0.989552
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.966808
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.963365
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.994023
+    },
+    {
+     "a": "phr_l_aerr",
+     "b": "ynidn_l_aerr",
+     "cos": 0.986198
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "rcgain_aerr",
+     "cos": 0.98688
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.991097
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.995792
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.967829
+    },
+    {
+     "a": "rbbbp_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.963878
+    },
+    {
+     "a": "rcar_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.956474
+    },
+    {
+     "a": "rcar_aerr",
+     "b": "rfynic_aerr",
+     "cos": 0.992114
+    },
+    {
+     "a": "rcar_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.985629
+    },
+    {
+     "a": "rcgain_aerr",
+     "b": "reqp_aerr",
+     "cos": 0.966924
+    },
+    {
+     "a": "rcgain_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.996881
+    },
+    {
+     "a": "rcgain_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.978448
+    },
+    {
+     "a": "reqp_aerr",
+     "b": "rfynic_aerr",
+     "cos": 0.956114
+    },
+    {
+     "a": "reqp_aerr",
+     "b": "rg30p_aerr",
+     "cos": 0.977967
+    },
+    {
+     "a": "reqp_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.986887
+    },
+    {
+     "a": "rfynic_aerr",
+     "b": "ynirn_l_aerr",
+     "cos": 0.977075
+    },
+    {
+     "a": "rfynil_aerr",
+     "b": "rme_aerr",
+     "cos": 0.952018
+    },
+    {
+     "a": "rfynil_aerr",
+     "b": "trci_aerr",
+     "cos": 0.959342
+    },
+    {
+     "a": "rg30p_aerr",
+     "b": "rg5p_aerr",
+     "cos": 0.981649
+    },
+    {
+     "a": "rg5p_aerr",
+     "b": "ynidn_l_aerr",
+     "cos": 0.964595
+    },
+    {
+     "a": "rme_aerr",
+     "b": "trci_aerr",
+     "cos": 0.997541
+    }
+   ],
+   "clusters": [
+    {
+     "id": "hqlfpr",
+     "label": "hqlfpr cluster (18 shocks)",
+     "members": [
+      "fiscal_",
+      "ebfi_l_aerr",
+      "ech_l_aerr",
+      "eh_l_aerr",
+      "hqlfpr_aerr",
+      "hqlww_aerr",
+      "pbfir_l_aerr",
+      "phouse_l_aerr",
+      "phr_l_aerr",
+      "rbbbp_aerr",
+      "rcar_aerr",
+      "rcgain_aerr",
+      "reqp_aerr",
+      "rfynic_aerr",
+      "rg30p_aerr",
+      "rg5p_aerr",
+      "ynidn_l_aerr",
+      "ynirn_l_aerr"
+     ]
+    },
+    {
+     "id": "eco_l",
+     "label": "eco_l cluster (10 shocks)",
+     "members": [
+      "ecd_l_aerr",
+      "eco_l_aerr",
+      "egfe_l_aerr",
+      "egfl_l_aerr",
+      "egse_l_aerr",
+      "egsl_l_aerr",
+      "emo_l_aerr",
+      "ex_l_aerr",
+      "gtrd_aerr",
+      "trp_aerr"
+     ]
+    },
+    {
+     "id": "lww_l",
+     "label": "lww_l cluster (4 shocks)",
+     "members": [
+      "leo_l_aerr",
+      "lfpr_aerr",
+      "lww_l_aerr",
+      "pieci_aerr"
+     ]
+    },
+    {
+     "id": "trci",
+     "label": "trci cluster (3 shocks)",
+     "members": [
+      "rfynil_aerr",
+      "rme_aerr",
+      "trci_aerr"
+     ]
+    },
+    {
+     "id": "fpxrr_l",
+     "label": "fpxrr_l cluster (2 shocks)",
+     "members": [
+      "fpxrr_l_aerr",
+      "rg10p_aerr"
+     ]
+    },
+    {
+     "id": "pxr_l",
+     "label": "pxr_l cluster (2 shocks)",
+     "members": [
+      "pegsr_l_aerr",
+      "pxr_l_aerr"
+     ]
+    },
+    {
+     "id": "emp_l",
+     "label": "emp_l_aerr",
+     "members": [
+      "emp_l_aerr"
+     ]
+    },
+    {
+     "id": "fxgap",
+     "label": "fxgap_aerr",
+     "members": [
+      "fxgap_aerr"
+     ]
+    },
+    {
+     "id": "hmfpt",
+     "label": "hmfpt_aerr",
+     "members": [
+      "hmfpt_aerr"
+     ]
+    },
+    {
+     "id": "interest_",
+     "label": "interest_",
+     "members": [
+      "interest_"
+     ]
+    },
+    {
+     "id": "ki_l",
+     "label": "ki_l_aerr",
+     "members": [
+      "ki_l_aerr"
+     ]
+    },
+    {
+     "id": "lhp_l",
+     "label": "lhp_l_aerr",
+     "members": [
+      "lhp_l_aerr"
+     ]
+    },
+    {
+     "id": "lurnat",
+     "label": "lurnat_aerr",
+     "members": [
+      "lurnat_aerr"
+     ]
+    },
+    {
+     "id": "mfpt_l",
+     "label": "mfpt_l_aerr",
+     "members": [
+      "mfpt_l_aerr"
+     ]
+    },
+    {
+     "id": "pcer_l",
+     "label": "pcer_l_aerr",
+     "members": [
+      "pcer_l_aerr"
+     ]
+    },
+    {
+     "id": "pcfr_l",
+     "label": "pcfr_l_aerr",
+     "members": [
+      "pcfr_l_aerr"
+     ]
+    },
+    {
+     "id": "pegfr_l",
+     "label": "pegfr_l_aerr",
+     "members": [
+      "pegfr_l_aerr"
+     ]
+    },
+    {
+     "id": "picxfe",
+     "label": "picxfe_aerr",
+     "members": [
+      "picxfe_aerr"
+     ]
+    },
+    {
+     "id": "pmo_l",
+     "label": "pmo_l_aerr",
+     "members": [
+      "pmo_l_aerr"
+     ]
+    },
+    {
+     "id": "poilr_l",
+     "label": "poilr_l_aerr",
+     "members": [
+      "poilr_l_aerr"
+     ]
+    },
+    {
+     "id": "rgfint",
+     "label": "rgfint_aerr",
+     "members": [
+      "rgfint_aerr"
+     ]
+    }
+   ],
+   "defaultNamed": [
+    "eco_l",
+    "interest_",
+    "ki_l"
+   ]
+  },
+  "EA_SW03": {
+   "file": "/data/dsge/census/EA_SW03.json",
+   "source": "pipeline/census_irfs/EA_SW03/Taylor.json",
+   "sha256": "64979f1d997f145a4bb84442ef553367d2a80f6b94357dab82625df68e0b112a",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "markup_",
+    "demand_",
+    "wage_",
+    "inv_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": [
+    {
+     "a": "fiscal_",
+     "b": "inv_",
+     "cos": 0.963437
+    }
+   ]
+  },
+  "EA_SWW14": {
+   "file": "/data/dsge/census/EA_SWW14.json",
+   "source": "pipeline/census_irfs/EA_SWW14/Taylor.json",
+   "sha256": "33e777927c7ca923dcb833ff4c301c69cd260dc787976df2e51c95753f6e01a2",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "markup_",
+    "demand_",
+    "flex_",
+    "pref_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": []
+  },
+  "CA_LS07": {
+   "file": "/data/dsge/census/CA_LS07.json",
+   "source": "pipeline/census_irfs/CA_LS07/Taylor.json",
+   "sha256": "a07d9ef1a149116036518e3c585ee4429310dc30921ccb77b4e884c5870a3a85",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "markup_",
+    "flex_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": [
+    {
+     "a": "markup_",
+     "b": "flex_",
+     "cos": 0.974943
+    }
+   ]
+  },
+  "HK_FP13": {
+   "file": "/data/dsge/census/HK_FP13.json",
+   "source": "pipeline/census_irfs/HK_FP13/Taylor.json",
+   "sha256": "79508be62b1ecf6b0e431e91e2dd6afbdcd928edae6546c7700db5c1a416ee9d",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "markup_",
+    "demand_",
+    "flex_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": [
+    {
+     "a": "interest_",
+     "b": "flex_",
+     "cos": 1
+    },
+    {
+     "a": "markup_",
+     "b": "demand_",
+     "cos": 0.959529
+    }
+   ]
+  },
+  "BRA_SAMBA08": {
+   "file": "/data/dsge/census/BRA_SAMBA08.json",
+   "source": "pipeline/census_irfs/BRA_SAMBA08/Taylor.json",
+   "sha256": "0b1395e79432a12d88f386b433be942826824e0a5063ae995a994d427a831484",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "markup_",
+    "demand_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": []
+  },
+  "UK_SM11": {
+   "file": "/data/dsge/census/UK_SM11.json",
+   "source": "pipeline/census_irfs/UK_SM11/Taylor.json",
+   "sha256": "b2419d58f8731547a3c8ed5f4405f0e55cf1dbf6ab34f05bc6793d5a792e46d7",
+   "sha256Source": "pipeline/census_irfs/MANIFEST.json",
+   "shocks": [
+    "interest_",
+    "fiscal_",
+    "tech_"
+   ],
+   "dropped": [],
+   "hasOutput": true,
+   "collinearPairs": []
+  }
+ }
+}
